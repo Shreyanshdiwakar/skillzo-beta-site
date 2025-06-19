@@ -29,10 +29,10 @@
     <!-- Carousel Section -->
     <div class="relative bg-background text-foreground py-16">
       <h2 class="text-center text-4xl font-bold mb-8">Why Should You Join?</h2>
-      <div class="carousel-container flex overflow-hidden space-x-8 px-4">
+      <div class="carousel-container flex overflow-hidden space-x-8 px-6">
         <!-- Carousel Items -->
         <div
-          class="carousel-item flex-shrink-0 w-[30%] h-[600px] flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
+          class="carousel-item flex-shrink-0 w-[32%] h-[600px] flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
         >
           <div class="text-6xl mb-4">🌟</div>
           <h3 class="text-2xl font-semibold mb-2">Learn by Doing</h3>
@@ -43,19 +43,20 @@
           </p>
         </div>
         <div
-          class="carousel-item flex-shrink-0 w-[30%] h-[600px] flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
+          class="carousel-item flex-shrink-0 w-[32%] h-[600px] flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
         >
           <div class="text-6xl mb-4">📚</div>
           <h3 class="text-2xl font-semibold mb-2">All-In-One Platform</h3>
           <p class="text-center text-gray-300">
-            We’re empowering a generation of learners with hands-on experience
-            and<br />
-            actionable resources to pursue passion-fueled careers and start<br />
+            We’re empowering a generation of learners with hands-on
+            experience<br />
+            and actionable resources to pursue passion-fueled careers and
+            start<br />
             profitable businesses.
           </p>
         </div>
         <div
-          class="carousel-item flex-shrink-0 w-[30%] h-[600px] flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
+          class="carousel-item flex-shrink-0 w-[32%] h-[600px] flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
         >
           <div class="text-6xl mb-4">🤝</div>
           <h3 class="text-2xl font-semibold mb-2">Extensive Exposure</h3>
@@ -66,7 +67,7 @@
           </p>
         </div>
         <div
-          class="carousel-item flex-shrink-0 w-[30%] h-[600px] flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
+          class="carousel-item flex-shrink-0 w-[32%] h-[600px] flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
         >
           <div class="text-6xl mb-4">🚀</div>
           <h3 class="text-2xl font-semibold mb-2">
@@ -86,7 +87,9 @@
       const carouselContainer = document.querySelector(".carousel-container");
       const carouselItems = document.querySelectorAll(".carousel-item");
       const totalItems = carouselItems.length;
-      const itemWidth = carouselItems[0].offsetWidth;
+
+      // Dynamically calculate the width of each item
+      const itemWidth = carouselItems[0].offsetWidth + 32; // Add spacing (space-x-8)
 
       // Clone the carousel items multiple times to ensure seamless looping
       for (let i = 0; i < totalItems; i++) {
