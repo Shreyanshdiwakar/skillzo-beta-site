@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skillzo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-background: #000000;
+        --color-foreground: #ffffff;
+        --color-primary: #ffcc00;
+        --font-cal-sans: "Cal Sans", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-background text-foreground min-h-screen relative">
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center px-8 py-6">
+      <span class="text-3xl font-bold text-primary">SKILLZO</span>
+      <a
+        class="bg-primary text-black px-6 py-3 rounded-full font-semibold text-lg shadow hover:bg-blue-700 transition"
+        >Join now</a
+      >
+    </nav>
+
+    <!-- Carousel Section -->
+    <div class="relative bg-background text-foreground py-16">
+      <h2 class="text-center text-4xl font-bold mb-8">Why Should You Join?</h2>
+      <div class="carousel-container flex overflow-hidden">
+        <!-- Carousel Items -->
+        <div
+          class="carousel-item flex-shrink-0 w-1/3 h-96 flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
+        >
+          <div class="text-6xl mb-4">🌟</div>
+          <h3 class="text-2xl font-semibold mb-2">Exclusive Benefits</h3>
+          <p class="text-center text-gray-300">
+            Unlock unique perks and rewards available only to our members.
+          </p>
+        </div>
+        <div
+          class="carousel-item flex-shrink-0 w-1/3 h-96 flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
+        >
+          <div class="text-6xl mb-4">📚</div>
+          <h3 class="text-2xl font-semibold mb-2">Learn New Skills</h3>
+          <p class="text-center text-gray-300">
+            Gain access to resources and workshops to enhance your abilities.
+          </p>
+        </div>
+        <div
+          class="carousel-item flex-shrink-0 w-1/3 h-96 flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
+        >
+          <div class="text-6xl mb-4">🤝</div>
+          <h3 class="text-2xl font-semibold mb-2">Build Connections</h3>
+          <p class="text-center text-gray-300">
+            Network with like-minded individuals and grow your community.
+          </p>
+        </div>
+        <div
+          class="carousel-item flex-shrink-0 w-1/3 h-96 flex flex-col items-center justify-center border border-gray-700 bg-gray-900/50 rounded-lg p-6"
+        >
+          <div class="text-6xl mb-4">🚀</div>
+          <h3 class="text-2xl font-semibold mb-2">Boost Your Career</h3>
+          <p class="text-center text-gray-300">
+            Take your professional journey to the next level with our support.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const carouselContainer = document.querySelector(".carousel-container");
+      const carouselItems = document.querySelectorAll(".carousel-item");
+      const totalItems = carouselItems.length;
+      const itemWidth = carouselItems[0].offsetWidth;
+
+      // Clone the carousel items multiple times to ensure seamless looping
+      for (let i = 0; i < totalItems; i++) {
+        carouselItems.forEach((item) => {
+          const clone = item.cloneNode(true);
+          carouselContainer.appendChild(clone);
+        });
+      }
+
+      let isScrolling = false;
+      let autoScrollTimeout;
+
+      // Auto-scroll function
+      function autoScroll() {
+        if (!isScrolling) {
+          const scrollLeft = carouselContainer.scrollLeft;
+          const maxScrollLeft = (totalItems - 1) * itemWidth; // Adjust to reset one tile earlier
+
+          // Smoothly scroll to the next item
+          carouselContainer.scrollTo({
+            left: scrollLeft + itemWidth,
+            behavior: "smooth",
+          });
+
+          // Reset scroll position when reaching the adjusted end of the cloned items
+          if (scrollLeft >= maxScrollLeft) {
+            setTimeout(() => {
+              carouselContainer.scrollLeft = 0;
+            }, 500); // Wait for the smooth scroll to finish before resetting
+          }
+        }
+      }
+
+      // Start auto-scrolling every 3 seconds
+      let autoScrollInterval = setInterval(autoScroll, 3000);
+
+      // Snap to the nearest item
+      function snapToNearestItem() {
+        const nearestIndex = Math.round(
+          carouselContainer.scrollLeft / itemWidth
+        );
+        const scrollPosition = nearestIndex * itemWidth;
+
+        // Smoothly scroll to the nearest item
+        carouselContainer.scrollTo({
+          left: scrollPosition,
+          behavior: "smooth",
+        });
+
+        // Restart auto-scroll after snapping
+        autoScrollInterval = setInterval(autoScroll, 3000);
+      }
+
+      // Handle mouse scroll
+      carouselContainer.addEventListener("wheel", (event) => {
+        event.preventDefault(); // Prevent default scrolling behavior
+        clearInterval(autoScrollInterval); // Pause auto-scroll on manual interaction
+        isScrolling = true;
+
+        carouselContainer.scrollLeft += event.deltaY; // Adjust scroll position based on mouse wheel
+
+        // Clear timeout and set a new one to detect when scrolling stops
+        clearTimeout(autoScrollTimeout);
+        autoScrollTimeout = setTimeout(() => {
+          isScrolling = false;
+          snapToNearestItem();
+        }, 300); // Wait 300ms after scrolling stops to snap
+      });
+    </script>
+
+    <style>
+      .carousel-container {
+        display: flex;
+        overflow-x: hidden;
+        white-space: nowrap;
+      }
+    </style>
+  </body>
+</html>
