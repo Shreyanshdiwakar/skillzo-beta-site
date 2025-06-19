@@ -1,1 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-foreground: #FFFFFF;
+  --color-primary: #ffcc00;
+  --font-cal-sans: 'Cal Sans', sans-serif;
+}
