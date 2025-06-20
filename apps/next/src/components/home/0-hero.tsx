@@ -26,7 +26,7 @@ export default function Hero() {
                     Join our community for FREE!
                 </Link>
             </div>
-            <div className="w-full flex justify-center items-center gap-1 py-8 px-4">
+            <div className="w-full max-w-5xl flex justify-center items-center gap-1 py-8 px-4">
                 <Image width={120} height={60} src="https://v0.dev/placeholder.svg?width=120&height=60" alt="Placeholder 1" className="w-full rounded shadow-md" />
                 <Image width={120} height={60} src="https://v0.dev/placeholder.svg?width=120&height=60" alt="Placeholder 2" className="w-full rounded shadow-md" />
                 <Image width={120} height={60} src="https://v0.dev/placeholder.svg?width=120&height=60" alt="Placeholder 3" className="w-full rounded shadow-md" />
