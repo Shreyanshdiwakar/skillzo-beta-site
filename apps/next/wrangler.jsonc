@@ -18,5 +18,11 @@
       // See https://developers.cloudflare.com/workers/wrangler/commands/#r2-bucket-create
       "bucket_name": "skillzo-cache"
     }
-  ]
+  ],
+    "routes": [
+      {
+        "pattern": "skillzo.anayparaswani.dev",
+        "custom_domain": true
+      }
+    ]
 }
