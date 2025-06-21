@@ -3,9 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About | Skillzo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;700&family=Inter:wght@400;600&family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="/src/globals.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script>
+        // Ensure Cal Sans is used as the font for Tailwind
+        document.documentElement.classList.add('dark');
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      document.documentElement.classList.add('dark');
+      window.addEventListener('DOMContentLoaded', () => { AOS.init({ once: true, duration: 700, offset: 60 }); });
+    </script>
+    <style>
+        html { overflow-x: hidden; scroll-behavior: smooth; }
+        body { font-family: 'Inter', 'Open Sans', Arial, sans-serif; }
+        .font-heading { font-family: 'Poppins', 'Satoshi', 'Cal Sans', Arial, sans-serif; }
+        .font-body { font-family: 'Inter', 'Open Sans', Arial, sans-serif; }
+        /* Hide scrollbar for carousel */
+        .scrollbar-hide {
+          -ms-overflow-style: none;  /* Internet Explorer 10+ */
+          scrollbar-width: none;  /* Firefox */
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;  /* Safari and Chrome */
+        }
+        /* Additional scrollbar hiding for better browser support */
+        #mediaCarousel {
+          -ms-overflow-style: none !important;
+          scrollbar-width: none !important;
+        }
+        #mediaCarousel::-webkit-scrollbar {
+          display: none !important;
+          width: 0 !important;
+          height: 0 !important;
+        }
+        #mediaCarousel::-webkit-scrollbar-track {
+          display: none !important;
+        }
+        #mediaCarousel::-webkit-scrollbar-thumb {
+          display: none !important;
+        }
+    </style>
 </head>
-<body>
-    about
+<body class="bg-black text-white min-h-screen relative flex flex-col">
+    <!-- Subtle Sectional Gradient Highlights -->
+    <!-- Hero highlight left -->
+    <div class="pointer-events-none absolute left-0 top-24 md:top-32 h-40 w-24 md:w-40 z-0" aria-hidden="true">
+      <div class="absolute left-0 top-0 h-full w-full"
+        style="background: linear-gradient(180deg, #FF008A 0%, #6100FF 80%); filter: blur(48px); opacity: 0.10;"></div>
+    </div>
+
+    <!-- SVG Accent at the Top -->
+    <svg class="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 w-screen h-auto" width="1171" fill="none" viewBox="0 0 1171 241" style="z-index:0;" aria-hidden="true">
+        <g filter="url(#filter0_f)" opacity="0.16">
+            <path fill="url(#paint0_linear)" d="M731.735-179.55C596.571-157.762 516.36-74.181 552.576 7.132s175.148 129.569 310.311 107.781C998.051 93.125 1078.26 9.545 1042.05-71.769c-36.22-81.313-175.152-129.568-310.315-107.781" />
+            <path fill="url(#paint1_linear)" d="M378 114.106c142.489 0 258-68.218 258-152.368 0-84.151-115.511-152.368-258-152.368S120-122.413 120-38.262s115.511 152.368 258 152.368" />
+        </g>
+        <defs>
+            <linearGradient id="paint0_linear" x1="567.5" x2="1029.02" y1="1.04" y2="64.647" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#001AFF" />
+                <stop offset="1" stop-color="#6EE5C2" />
+            </linearGradient>
+            <linearGradient id="paint1_linear" x1="155" x2="511.855" y1="-11.023" y2="-162.127" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFC83A" />
+                <stop offset="0.504" stop-color="#FF008A" />
+                <stop offset="1" stop-color="#6100FF" />
+            </linearGradient>
+            <filter id="filter0_f" width="1170.74" height="550.775" x="0" y="-310.63" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="60" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center px-8 py-6 relative z-10">
+        <span class="text-3xl font-bold" style="color: #ffcc00;">SKILLZO</span>
+        <a href="#apply" class="bg-primary text-black px-6 py-3 rounded-full font-semibold text-lg shadow hover:bg-blue-700 transition">Join now</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center text-center px-4 py-12 relative overflow-hidden z-10 my-8 md:my-12" data-aos="fade-down" data-aos-delay="100">
+        <h2 class="text-base md:text-lg font-bold font-heading" style="color: #ffcc00;">About Us</h2>
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight tracking-wide font-heading">
+            Our Story & Mission
+        </h1>
+        <p class="text-base md:text-lg text-gray-200 mb-6 max-w-xl mx-auto">
+            This is a placeholder for a jaw-dropping, minimalistic, and futuristic about page. <br class="hidden md:inline" />
+            Learn more about Skillzo, our journey, and the people behind the vision.<br class="hidden md:inline" />
+            All text and images are placeholders.
+        </p>
+        <a href="#founder" class="bg-yellow-400 text-black px-10 py-3 rounded-full font-bold text-xl shadow hover:bg-yellow-500 transition">Meet the Founder</a>
+    </section>
+
+    <!-- About Content Section -->
+    <main class="flex-1 flex flex-col items-center justify-start w-full px-2 sm:px-4 md:px-8">
+        <section class="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl flex flex-col gap-4 py-2 sm:py-4 md:py-8 my-6 sm:my-8 md:my-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="space-y-3">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading" style="color: #ffcc00;" data-aos="fade-right" data-aos-delay="300">Our Mission</h2>
+                <p class="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body" data-aos="fade-up" data-aos-delay="400">
+                    Placeholder text for Skillzo's mission. Replace this with a compelling story about your vision, values, and what makes your platform unique. <br />
+                    Use this space to connect with your audience and share your journey. Add as much text as you need—this section is designed for readability and flow.
+                </p>
+            </div>
+            <div class="space-y-3">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading" style="color: #ffcc00;" data-aos="fade-left" data-aos-delay="350">What We Do</h2>
+                <p class="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body" data-aos="fade-up" data-aos-delay="450">
+                    Placeholder for a brief description of what Skillzo offers. Highlight your core features, approach, and the impact you aim to create. <br />
+                    This section can be expanded with more details as needed. The layout is open and text-friendly, perfect for longer content.
+                </p>
+            </div>
+        </section>
+        <!-- Founder Section -->
+        <section id="founder" class="w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl flex flex-col gap-8 my-6 sm:my-8 md:my-12" data-aos="zoom-in-up" data-aos-delay="500">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-4" style="color: #ffcc00;">Founder</h2>
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                <img src="https://placehold.co/128x128" alt="Founder Placeholder" class="w-28 h-28 rounded-full object-cover grayscale mb-4 md:mb-0 md:mr-6" />
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold font-heading mb-2" style="color: #ffcc00;">Founder Name</h3>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-200 font-body">
+                        This is a short placeholder description for the founder of Skillzo.co. Replace this with a real bio to tell your story and vision.<br />
+                        Add more details about the founder's background, expertise, and passion.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Founder highlight right -->
+        <div class="pointer-events-none absolute right-0 md:top-[1200px] top-[900px] h-40 w-24 md:w-40 z-0" aria-hidden="true">
+          <div class="absolute right-0 top-0 h-full w-full"
+            style="background: linear-gradient(180deg, #FFC83A 0%, #FF008A 100%); filter: blur(48px); opacity: 0.10;"></div>
+        </div>
+        <!-- Core Team Section -->
+        <section class="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl flex flex-col items-center my-8 md:my-16" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-8" style="color: #ffcc00;">Core Team</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full">
+                <!-- Team Member 1 -->
+                <div class="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10">
+                    <img src="https://placehold.co/96x96" alt="Team Member" class="w-24 h-24 rounded-full object-cover grayscale mb-3" />
+                    <div class="font-bold font-heading text-[#ffcc00]">Name 1</div>
+                    <div class="text-gray-300 text-sm font-body">Position 1</div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10">
+                    <img src="https://placehold.co/96x96" alt="Team Member" class="w-24 h-24 rounded-full object-cover grayscale mb-3" />
+                    <div class="font-bold font-heading text-[#ffcc00]">Name 2</div>
+                    <div class="text-gray-300 text-sm font-body">Position 2</div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10">
+                    <img src="https://placehold.co/96x96" alt="Team Member" class="w-24 h-24 rounded-full object-cover grayscale mb-3" />
+                    <div class="font-bold font-heading text-[#ffcc00]">Name 3</div>
+                    <div class="text-gray-300 text-sm font-body">Position 3</div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10">
+                    <img src="https://placehold.co/96x96" alt="Team Member" class="w-24 h-24 rounded-full object-cover grayscale mb-3" />
+                    <div class="font-bold font-heading text-[#ffcc00]">Name 4</div>
+                    <div class="text-gray-300 text-sm font-body">Position 4</div>
+                </div>
+                <!-- Team Member 5 -->
+                <div class="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10">
+                    <img src="https://placehold.co/96x96" alt="Team Member" class="w-24 h-24 rounded-full object-cover grayscale mb-3" />
+                    <div class="font-bold font-heading text-[#ffcc00]">Name 5</div>
+                    <div class="text-gray-300 text-sm font-body">Position 5</div>
+                </div>
+                <!-- Team Member 6 -->
+                <div class="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10">
+                    <img src="https://placehold.co/96x96" alt="Team Member" class="w-24 h-24 rounded-full object-cover grayscale mb-3" />
+                    <div class="font-bold font-heading text-[#ffcc00]">Name 6</div>
+                    <div class="text-gray-300 text-sm font-body">Position 6</div>
+                </div>
+                <!-- Team Member 7 -->
+                <div class="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10">
+                    <img src="https://placehold.co/96x96" alt="Team Member" class="w-24 h-24 rounded-full object-cover grayscale mb-3" />
+                    <div class="font-bold font-heading text-[#ffcc00]">Name 7</div>
+                    <div class="text-gray-300 text-sm font-body">Position 7</div>
+                </div>
+                <!-- Team Member 8 -->
+                <div class="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10">
+                    <img src="https://placehold.co/96x96" alt="Team Member" class="w-24 h-24 rounded-full object-cover grayscale mb-3" />
+                    <div class="font-bold font-heading text-[#ffcc00]">Name 8</div>
+                    <div class="text-gray-300 text-sm font-body">Position 8</div>
+                </div>
+            </div>
+        </section>
+        <!-- Core Team highlight left -->
+        <div class="pointer-events-none absolute left-0 md:top-[1600px] top-[1400px] h-40 w-24 md:w-40 z-0" aria-hidden="true">
+          <div class="absolute left-0 top-0 h-full w-full"
+            style="background: linear-gradient(180deg, #6EE5C2 0%, #001AFF 100%); filter: blur(48px); opacity: 0.10;"></div>
+        </div>
+        <!-- Media Mentions and Collaborations Section -->
+        <section class="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl flex flex-col items-center my-8 md:my-16" data-aos="fade-up" data-aos-delay="200">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-8" style="color: #ffcc00;">Media Mentions & Collaborations</h2>
+          <div class="relative w-full">
+            <!-- Carousel Container -->
+            <div class="flex overflow-x-auto scrollbar-hide gap-6 px-4 py-4 snap-x snap-mandatory" id="mediaCarousel">
+              <!-- Instagram Post 1 -->
+              <div class="flex-shrink-0 w-80 md:w-96 snap-start">
+                <a href="https://www.instagram.com/p/C-hO07ISviE/" target="_blank" rel="noopener noreferrer">
+                  <div class="bg-zinc-900/90 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-4 h-96 hover:border-yellow-400/40 transition-colors">
+                    <div class="flex items-center mb-3">
+                      <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mr-3"></div>
+                      <div>
+                        <div class="font-semibold text-white text-sm">skillzo_official</div>
+                        <div class="text-gray-400 text-xs">Instagram</div>
+                      </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg h-48 mb-3 flex items-center justify-center">
+                      <div class="text-center">
+                        <div class="text-2xl mb-2">📱</div>
+                        <div class="text-white text-sm">Instagram Post Preview</div>
+                      </div>
+                    </div>
+                    <div class="text-white text-sm mb-2">Amazing collaboration with @partner! 🚀</div>
+                    <div class="text-gray-400 text-xs">5 weeks ago • 30 reactions</div>
+                  </div>
+                </a>
+              </div>
+              <!-- LinkedIn Post 1 -->
+              <div class="flex-shrink-0 w-80 md:w-96 snap-start">
+                <a href="https://www.linkedin.com/company/skillzoco/" target="_blank" rel="noopener noreferrer">
+                  <div class="bg-zinc-900/90 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-4 h-96 hover:border-yellow-400/40 transition-colors">
+                    <div class="flex items-center mb-3">
+                      <div class="w-8 h-8 bg-blue-600 rounded-full mr-3"></div>
+                      <div>
+                        <div class="font-semibold text-white text-sm">Skillzo Team</div>
+                        <div class="text-gray-400 text-xs">LinkedIn</div>
+                      </div>
+                    </div>
+                    <div class="bg-blue-600/20 rounded-lg h-48 mb-3 flex items-center justify-center">
+                      <div class="text-center">
+                        <div class="text-2xl mb-2">💼</div>
+                        <div class="text-white text-sm">LinkedIn Post Preview</div>
+                      </div>
+                    </div>
+                    <div class="text-white text-sm mb-2">Excited to announce our latest partnership! 🎉</div>
+                    <div class="text-gray-400 text-xs">1 day ago • 456 reactions</div>
+                  </div>
+                </a>
+              </div>
+              <!-- Instagram Post 2 -->
+              <div class="flex-shrink-0 w-80 md:w-96 snap-start">
+                <a href="https://www.instagram.com/p/C-hO07ISviE/" target="_blank" rel="noopener noreferrer">
+                  <div class="bg-zinc-900/90 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-4 h-96 hover:border-yellow-400/40 transition-colors">
+                    <div class="flex items-center mb-3">
+                      <div class="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-full mr-3"></div>
+                      <div>
+                        <div class="font-semibold text-white text-sm">skillzo_community</div>
+                        <div class="text-gray-400 text-xs">Instagram</div>
+                      </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg h-48 mb-3 flex items-center justify-center">
+                      <div class="text-center">
+                        <div class="text-2xl mb-2">🌟</div>
+                        <div class="text-white text-sm">Instagram Post Preview</div>
+                      </div>
+                    </div>
+                    <div class="text-white text-sm mb-2">Our community is growing stronger every day! 💪</div>
+                    <div class="text-gray-400 text-xs">3 hours ago • 856 likes</div>
+                  </div>
+                </a>
+              </div>
+              <!-- LinkedIn Post 2 -->
+              <div class="flex-shrink-0 w-80 md:w-96 snap-start">
+                <a href="https://www.linkedin.com/company/skillzoco/" target="_blank" rel="noopener noreferrer">
+                  <div class="bg-zinc-900/90 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-4 h-96 hover:border-yellow-400/40 transition-colors">
+                    <div class="flex items-center mb-3">
+                      <div class="w-8 h-8 bg-green-600 rounded-full mr-3"></div>
+                      <div>
+                        <div class="font-semibold text-white text-sm">Skillzo Leadership</div>
+                        <div class="text-gray-400 text-xs">LinkedIn</div>
+                      </div>
+                    </div>
+                    <div class="bg-green-600/20 rounded-lg h-48 mb-3 flex items-center justify-center">
+                      <div class="text-center">
+                        <div class="text-2xl mb-2">🎯</div>
+                        <div class="text-white text-sm">LinkedIn Post Preview</div>
+                      </div>
+                    </div>
+                    <div class="text-white text-sm mb-2">Proud to be featured in TechCrunch! 🚀</div>
+                    <div class="text-gray-400 text-xs">2 days ago • 789 reactions</div>
+                  </div>
+                </a>
+              </div>
+              <!-- Instagram Post 3 -->
+              <div class="flex-shrink-0 w-80 md:w-96 snap-start">
+                <a href="https://www.instagram.com/p/C-hO07ISviE/" target="_blank" rel="noopener noreferrer">
+                  <div class="bg-zinc-900/90 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-4 h-96 hover:border-yellow-400/40 transition-colors">
+                    <div class="flex items-center mb-3">
+                      <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full mr-3"></div>
+                      <div>
+                        <div class="font-semibold text-white text-sm">skillzo_events</div>
+                        <div class="text-gray-400 text-xs">Instagram</div>
+                      </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg h-48 mb-3 flex items-center justify-center">
+                      <div class="text-center">
+                        <div class="text-2xl mb-2">🎪</div>
+                        <div class="text-white text-sm">Instagram Post Preview</div>
+                      </div>
+                    </div>
+                    <div class="text-white text-sm mb-2">What an incredible event! Thank you everyone! 🙏</div>
+                    <div class="text-gray-400 text-xs">5 hours ago • 1.5k likes</div>
+                  </div>
+                </a>
+              </div>
+              <!-- LinkedIn Post 3 -->
+              <div class="flex-shrink-0 w-80 md:w-96 snap-start">
+                <a href="https://www.linkedin.com/company/skillzoco/" target="_blank" rel="noopener noreferrer">
+                  <div class="bg-zinc-900/90 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-4 h-96 hover:border-yellow-400/40 transition-colors">
+                    <div class="flex items-center mb-3">
+                      <div class="w-8 h-8 bg-purple-600 rounded-full mr-3"></div>
+                      <div>
+                        <div class="font-semibold text-white text-sm">Skillzo Innovation</div>
+                        <div class="text-gray-400 text-xs">LinkedIn</div>
+                      </div>
+                    </div>
+                    <div class="bg-purple-600/20 rounded-lg h-48 mb-3 flex items-center justify-center">
+                      <div class="text-center">
+                        <div class="text-2xl mb-2">🔬</div>
+                        <div class="text-white text-sm">LinkedIn Post Preview</div>
+                      </div>
+                    </div>
+                    <div class="text-white text-sm mb-2">Innovation at its finest! New features coming soon! 🚀</div>
+                    <div class="text-gray-400 text-xs">1 week ago • 1.2k reactions</div>
+                  </div>
+                </a>
+              </div>
+              <!-- Instagram Post 4 -->
+              <div class="flex-shrink-0 w-80 md:w-96 snap-start">
+                <a href="https://www.instagram.com/p/C-hO07ISviE/" target="_blank" rel="noopener noreferrer">
+                  <div class="bg-zinc-900/90 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-4 h-96 hover:border-yellow-400/40 transition-colors">
+                    <div class="flex items-center mb-3">
+                      <div class="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full mr-3"></div>
+                      <div>
+                        <div class="font-semibold text-white text-sm">skillzo_success</div>
+                        <div class="text-gray-400 text-xs">Instagram</div>
+                      </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-lg h-48 mb-3 flex items-center justify-center">
+                      <div class="text-center">
+                        <div class="text-2xl mb-2">🏆</div>
+                        <div class="text-white text-sm">Instagram Post Preview</div>
+                      </div>
+                    </div>
+                    <div class="text-white text-sm mb-2">Success stories that inspire! Keep pushing forward! 💫</div>
+                    <div class="text-gray-400 text-xs">1 day ago • 2.1k likes</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- Navigation Arrows -->
+            <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors" onclick="scrollCarousel('left')">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors" onclick="scrollCarousel('right')">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </section>
+    </main>
+    <script>
+      function scrollCarousel(direction) {
+        const carousel = document.getElementById('mediaCarousel');
+        const scrollAmount = 320; // Width of one card + gap
+        if (direction === 'left') {
+          carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+          carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+      }
+    </script>
 </body>
 </html>
