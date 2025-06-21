@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Mentorship</title>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-background: #000000;
+        --color-foreground: #ffffff;
+        --color-primary: #ffcc00;
+        --font-cal-sans: "Cal Sans", sans-serif;
+      }
+      body {
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+        font-family: var(--font-cal-sans);
+      }
+      .bg-primary {
+        background-color: var(--color-primary) !important;
+      }
+      .text-primary {
+        color: var(--color-primary) !important;
+      }
+      .text-black {
+        color: var(--color-background) !important;
+      }
+      .bg-gray-900,
+      .shadow-md,
+      .rounded,
+      .rounded-lg,
+      .rounded-xl,
+      .border {
+        background: rgba(0, 0, 0, 0.5) !important;
+        border-color: #444 !important;
+      }
+      .text-gray-200,
+      .text-gray-300,
+      .text-gray-400 {
+        color: var(--color-foreground) !important;
+        opacity: 0.8;
+      }
+      .hover\:bg-blue-700:hover,
+      .hover\:bg-yellow-500:hover {
+        filter: brightness(0.9);
+      }
+      .font-cal-sans {
+        font-family: var(--font-cal-sans);
+      }
+      /* Fix for yellow-400 button */
+      .bg-yellow-400 {
+        background-color: var(--color-primary) !important;
+      }
+      :root {
+        --success-bg: #23272e; /* or any color you want */
+      }
+    </style>
+  </head>
+  <body class="min-h-screen relative">
+    <!-- Static Colorful SVG Accent at the Top -->
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center px-8 py-6">
+      <span class="text-3xl font-bold text-primary">SKILLZO</span>
+      <a
+        href="/about.html"
+        class="bg-primary text-black px-6 py-3 rounded-full font-semibold text-lg shadow transition"
+        >About Us</a
+      >
+    </nav>
+
+    <!-- Hero Section - Purpose -->
+    <section
+      class="flex flex-col items-center justify-center text-center px-4 py-12 relative overflow-hidden"
+    >
+      <h2 class="text-base md:text-lg font-bold text-primary mb-1">
+        Skillzo Mentorship
+      </h2>
+      <h1
+        class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight tracking-wide font-cal-sans"
+      >
+        Unlock Your Potential with 1:1 Mentorship
+      </h1>
+      <p class="text-base md:text-lg text-gray-200 mb-6 max-w-xl mx-auto">
+        Mentorship at Skillzo is a game-changer for aspiring teenpreneurs. Get
+        personalized guidance, insights, and support from experienced
+        individuals to navigate your entrepreneurial journey.
+      </p>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="px-4 py-12 max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
+        Why Mentorship Matters at Skillzo
+      </h2>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <p class="text-base text-gray-200 mb-4">
+            At Skillzo, we believe in the power of connection and shared
+            knowledge. Our mentorship program connects ambitious students with
+            mentors who have real-world experience, offering invaluable advice
+            and support.
+          </p>
+          <p class="text-base text-gray-200">
+            Whether you need guidance on developing your business idea, honing
+            your skills, or navigating challenges, a Skillzo mentor is here to
+            help you succeed.
+          </p>
+        </div>
+        <div class="md:w-1/2 grid grid-cols-2 gap-4">
+          <img
+            src="https://v0.dev/placeholder.svg?width=200&height=150"
+            alt="Mentor visual"
+            class="rounded shadow-md"
+          />
+          <img
+            src="https://v0.dev/placeholder.svg?width=200&height=150"
+            alt="Mentee visual"
+            class="rounded shadow-md"
+          />
+          <img
+            src="https://v0.dev/placeholder.svg?width=200&height=150"
+            alt="Mentorship session visual 1"
+            class="rounded shadow-md"
+          />
+          <img
+            src="https://v0.dev/placeholder.svg?width=200&height=150"
+            alt="Mentorship session visual 2"
+            class="rounded shadow-md"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="px-4 py-12 bg-gray-900">
+      <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
+        How It Works
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto text-center"
+      >
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-primary text-black rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-4"
+          >
+            1
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Apply</h3>
+          <p class="text-base text-gray-300">
+            Fill out our mentorship application form to tell us about your
+            goals.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-primary text-black rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-4"
+          >
+            2
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Match</h3>
+          <p class="text-base text-gray-300">
+            We carefully match you with a mentor based on your interests and
+            needs.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-primary text-black rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-4"
+          >
+            3
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Connect & Grow</h3>
+          <p class="text-base text-gray-300">
+            Begin your 1:1 mentorship sessions and start working towards your
+            goals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentor Highlights & Student Success Section -->
+    <section class="px-4 py-12 max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">
+        Success Stories
+      </h2>
+      <p class="text-base text-gray-200 mb-8">
+        Hear from our mentors and mentees about the transformative impact of the
+        Skillzo mentorship program.
+      </p>
+      <!-- Success stories with separate border and customizable background -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          class="p-6 rounded-lg shadow-md text-left border-2 border-primary bg-[var(--success-bg,rgba(0,0,0,0.5))]"
+        >
+          <p class="italic text-gray-300 mb-4">
+            "Mentoring at Skillzo has been incredibly rewarding. Seeing my
+            mentee develop their skills and confidence is a fantastic feeling."
+          </p>
+          <p class="font-semibold text-primary">- Experienced Mentor</p>
+        </div>
+        <div
+          class="p-6 rounded-lg shadow-md text-left border-2 border-primary bg-[var(--success-bg,rgba(0,0,0,0.5))]"
+        >
+          <p class="italic text-gray-300 mb-4">
+            "My mentor provided me with practical advice and motivation that
+            helped me launch my first project. Highly recommend!"
+          </p>
+          <p class="font-semibold text-primary">- Skillzo Student</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="flex flex-col items-center justify-center text-center px-4 py-12"
+    >
+      <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">
+        Ready to Get Started?
+      </h2>
+      <div class="flex flex-col md:flex-row gap-4">
+        <a
+          href="#become-mentor"
+          class="bg-primary text-black px-8 py-3 rounded-full font-bold text-lg shadow transition"
+          >Become a Mentor</a
+        >
+        <a
+          href="#find-mentor"
+          class="bg-primary text-black px-8 py-3 rounded-full font-bold text-lg shadow transition"
+          >Find a Mentor</a
+        >
+      </div>
+      <p class="text-sm text-gray-400 mt-4">
+        Links redirect to application forms.
+      </p>
+    </section>
+  </body>
+</html>
