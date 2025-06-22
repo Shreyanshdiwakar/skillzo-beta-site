@@ -3,7 +3,7 @@
 
 @theme {
   --color-background: #000000;
-  --color-foreground: #FFFFFF;
+  --color-foreground: hsl(0, 0%, 100%);
   --color-primary: #ffcc00;
   --font-cal-sans: 'Cal Sans', sans-serif;
 }
