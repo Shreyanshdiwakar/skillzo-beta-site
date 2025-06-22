@@ -4,16 +4,19 @@ import HighlightedProgram from "@/components/home/2-highlighted-program";
 import FeaturedStories from "@/components/home/3-featured-stories";
 import Photos from "@/components/home/4-photos";
 import MentorsSection from "@/components/home/6-mentors";
+import CTA from "@/components/home/8-cta";
 
 export default function Home() {
   return (
-    <main className="space-y-4">
+    <main className="space-y-8">
       <Hero />
       <WhatWeDo />
       <HighlightedProgram />
       <FeaturedStories />
       <Photos />
       <MentorsSection />
+
+      <CTA />
     </main>
   );
 }
