@@ -17,19 +17,6 @@ const PlaceholderImage = ({ width, height, ...props }: PlaceholderImageProps) =>
   />
 );
 
-const photos = [
-    { src: "https://placehold.co/600x400", alt: "Wide Event 1", width: 600, height: 400, colSpan: 2, aspect: "auto" },
-    { src: "https://placehold.co/400x400", alt: "Square Event 2", width: 400, height: 400 },
-    { src: "https://placehold.co/400x400", alt: "Square Event 3", width: 400, height: 400 },
-    { src: "https://placehold.co/400x400", alt: "Square Event 4", width: 400, height: 400 },
-    { src: "https://placehold.co/600x400", alt: "Wide Event 5", width: 600, height: 400, colSpan: 2, aspect: "auto" },
-    { src: "https://placehold.co/400x400", alt: "Square Event 6", width: 400, height: 400 },
-    { src: "https://placehold.co/400x400", alt: "Square Event 7", width: 400, height: 400 },
-    { src: "https://placehold.co/400x400", alt: "Square Event 8", width: 400, height: 400 },
-    { src: "https://placehold.co/400x400", alt: "Square Event 9", width: 400, height: 400 },
-    { src: "https://placehold.co/400x400", alt: "Square Event 10", width: 400, height: 400 },
-];
-
 export default function PhotosSection() {
     return (
         <section className="px-12">
