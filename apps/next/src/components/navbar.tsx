@@ -17,10 +17,10 @@ const navLinks = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav className="w-full flex items-center justify-between px-4 md:px-8 py-4 md:py-6 bg-transparent backdrop-blur z-50 sticky top-0">
+    <nav className="w-full flex items-center justify-between px-4 md:px-8 py-4 bg-transparent backdrop-blur z-50 sticky top-0">
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2">
-        <Image src={"/skillzo_transparent.png"} width={352 / 2.5} height={87 / 2.5} alt="Skillzo Logo" />
+        <Image src={"/skillzo_transparent.png"} width={352 / 3} height={87 / 3} alt="Skillzo Logo" />
       </Link>
 
       {/* Desktop Nav Links */}
