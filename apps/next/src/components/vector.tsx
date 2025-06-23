@@ -6,7 +6,7 @@ export default function Vector() {
             width="1171"
             fill="none"
             aria-hidden={true}
-            className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 w-screen h-auto z-0"
+            className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 max-w-screen h-auto z-0"
             viewBox="0 0 1171 241"
         >
             <g filter="url(#filter0_f)" opacity="0.16">

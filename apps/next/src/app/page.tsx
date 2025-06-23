@@ -8,7 +8,7 @@ import CTA from "@/components/home/8-cta";
 
 export default function Home() {
   return (
-    <main className="space-y-8">
+    <main className="space-y-8 ">
       <Hero />
       <WhatWeDo />
       <HighlightedProgram />
