@@ -16,7 +16,7 @@ export default function Home() {
       <Photos />
       <MentorsSection />
 
-      <CTA />
+      {/* <CTA /> */}
     </main>
   );
 }

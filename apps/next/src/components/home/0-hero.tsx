@@ -6,7 +6,7 @@ export default function Hero() {
         { value: "19,500+", label: "Students" },
         { value: "1,500+", label: "Mentors" },
         { value: "75+", label: "Cities" },
-        {value: "10+", label: "Programs"}
+        { value: "10+", label: "Programs" }
     ] as const;
     return (
         <section className="flex flex-col items-center justify-center text-center px-4  relative overflow-hidden">
@@ -28,7 +28,7 @@ export default function Hero() {
                     </p>
                     <Link
                         href="#join"
-                        className="bg-primary text-black px-10 py-3 rounded-full font-bold text-xl shadow hover:bg-yellow-500 transition"
+                        className="bg-primary text-black px-10 py-3 rounded-full font-bold sm:text-xl shadow hover:bg-yellow-500 transition"
                     >
                         Join our community for FREE!
                     </Link>

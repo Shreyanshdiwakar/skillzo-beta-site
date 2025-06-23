@@ -36,7 +36,7 @@ export function SplitStart() {
 export function SplitEnd() {
     return (
         <div
-            className="absolute bottom-0 mx-auto w-full px-6 sm:max-w-[40rem] md:max-w-[48rem] md:px-8 lg:max-w-[64rem] xl:max-w-[80rem]"
+            className="absolute bottom-0 inset-x-0 mx-auto w-full px-6 sm:max-w-[40rem] md:max-w-[48rem] md:px-8 lg:max-w-[64rem] xl:max-w-[80rem]"
         >
             <div className="relative -mx-2.5 flex -bottom-1 -mt-12">
                 <svg
