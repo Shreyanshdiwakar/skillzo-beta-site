@@ -146,7 +146,7 @@ export default function AboutPage() {
             <div className="space-y-3">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading" style={{ color: "#ffcc00" }}>Our Mission</h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body">
-                Placeholder text for Skillzo's mission. Replace this with a compelling story about your vision, values, and what makes your platform unique. <br />
+                Placeholder text for Skillzo&apos;s mission. Replace this with a compelling story about your vision, values, and what makes your platform unique. <br />
                 Use this space to connect with your audience and share your journey. Add as much text as you need—this section is designed for readability and flow.
               </p>
             </div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
                 <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2" style={{ color: "#ffcc00" }}>Founder Name</h3>
                 <p className="text-base sm:text-lg md:text-xl text-gray-200 font-body">
                   This is a short placeholder description for the founder of Skillzo.co. Replace this with a real bio to tell your story and vision.<br />
-                  Add more details about the founder's background, expertise, and passion.
+                  Add more details about the founder&apos;s background, expertise, and passion.
                 </p>
               </div>
             </div>
