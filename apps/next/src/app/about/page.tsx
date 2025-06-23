@@ -126,7 +126,7 @@ export default function AboutPage() {
         </defs>
       </svg>
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-start w-full">
+      <main className="flex-1 flex flex-col items-center justify-start w-full px-4 my-6 sm:px-4 sm:my-0 md:px-8">
         {/* Hero Section */}
         <section className="flex flex-col items-center justify-center text-center px-4 py-12 relative overflow-hidden z-10 my-8 md:my-12">
           <h2 className="text-base md:text-lg font-bold font-heading" style={{ color: "#ffcc00" }}>About Us</h2>
@@ -141,7 +141,7 @@ export default function AboutPage() {
           <Link href="#founder" className="bg-yellow-400 text-black px-10 py-3 rounded-full font-bold text-xl shadow hover:bg-yellow-500 transition">Meet the Founder</Link>
         </section>
         {/* About Content Section */}
-        <section className="flex-1 flex flex-col items-center justify-start w-full px-2 sm:px-4 md:px-8">
+        <section className="flex-1 flex flex-col items-center justify-start w-full px-4 my-6 sm:px-4 sm:my-0 md:px-8">
           <div className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl flex flex-col gap-4 py-2 sm:py-4 md:py-8 my-6 sm:my-8 md:my-12">
             <div className="space-y-3">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading" style={{ color: "#ffcc00" }}>Our Mission</h2>
