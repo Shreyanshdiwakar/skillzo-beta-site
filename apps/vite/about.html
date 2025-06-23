@@ -6,11 +6,6 @@
     <title>About | Skillzo</title>
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;700&family=Inter:wght@400;600&family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link href="/src/globals.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      window.addEventListener('DOMContentLoaded', () => { AOS.init({ once: true, duration: 700, offset: 60 }); });
-    </script>
     <style>
         html { overflow-x: hidden; scroll-behavior: smooth; }
         body { font-family: 'Inter', 'Open Sans', Arial, sans-serif; }
@@ -81,9 +76,9 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-1 flex flex-col items-center justify-start w-full">
+    <main class="flex-1 flex flex-col items-center justify-start w-full px-4 my-6 sm:px-4 sm:my-0 md:px-8">
       <!-- Hero Section -->
-      <section class="flex flex-col items-center justify-center text-center px-4 py-12 relative overflow-hidden z-10 my-8 md:my-12" data-aos="fade-down" data-aos-delay="100">
+      <section class="flex flex-col items-center justify-center text-center px-4 py-12 relative overflow-hidden z-10 my-8 md:my-12">
           <h2 class="text-base md:text-lg font-bold font-heading" style="color: #ffcc00;">About Us</h2>
           <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight tracking-wide font-heading">
               Our Story & Mission
@@ -97,25 +92,25 @@
       </section>
 
       <!-- About Content Section -->
-      <section class="flex-1 flex flex-col items-center justify-start w-full px-2 sm:px-4 md:px-8">
-        <div class="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl flex flex-col gap-4 py-2 sm:py-4 md:py-8 my-6 sm:my-8 md:my-12" data-aos="fade-up" data-aos-delay="200">
+      <div class="flex-1 flex flex-col items-center justify-start w-full px-4 my-6 sm:px-4 sm:my-0 md:px-8">
+        <section class="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl flex flex-col gap-4 py-2 sm:py-4 md:py-8 my-6 sm:my-8 md:my-12">
             <div class="space-y-3">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading" style="color: #ffcc00;" data-aos="fade-right" data-aos-delay="300">Our Mission</h2>
-                <p class="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body" data-aos="fade-up" data-aos-delay="400">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading" style="color: #ffcc00;">Our Mission</h2>
+                <p class="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body">
                     Placeholder text for Skillzo's mission. Replace this with a compelling story about your vision, values, and what makes your platform unique. <br />
                     Use this space to connect with your audience and share your journey. Add as much text as you need—this section is designed for readability and flow.
                 </p>
             </div>
             <div class="space-y-3">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading" style="color: #ffcc00;" data-aos="fade-left" data-aos-delay="350">What We Do</h2>
-                <p class="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body" data-aos="fade-up" data-aos-delay="450">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading" style="color: #ffcc00;">What We Do</h2>
+                <p class="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body">
                     Placeholder for a brief description of what Skillzo offers. Highlight your core features, approach, and the impact you aim to create. <br />
                     This section can be expanded with more details as needed. The layout is open and text-friendly, perfect for longer content.
                 </p>
             </div>
         </div>
         <!-- Founder Section -->
-        <section id="founder" class="w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl flex flex-col gap-8 my-6 sm:my-8 md:my-12" data-aos="zoom-in-up" data-aos-delay="500">
+        <section id="founder" class="w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl flex flex-col gap-8 my-6 sm:my-8 md:my-12">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-4" style="color: #ffcc00;">Founder</h2>
             <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
                 <img src="https://placehold.co/128x128" alt="Founder Placeholder" class="w-28 h-28 rounded-full object-cover grayscale mb-4 md:mb-0 md:mr-6" />
@@ -134,7 +129,7 @@
             style="background: linear-gradient(180deg, #FFC83A 0%, #FF008A 100%); filter: blur(48px); opacity: 0.10;"></div>
         </div>
         <!-- Core Team Section -->
-        <section class="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl flex flex-col items-center my-8 md:my-16" data-aos="fade-up" data-aos-delay="200">
+        <section class="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl flex flex-col items-center my-8 md:my-16">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-8" style="color: #ffcc00;">Core Team</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full">
                 <!-- Team Member 1 -->
@@ -193,7 +188,7 @@
             style="background: linear-gradient(180deg, #6EE5C2 0%, #001AFF 100%); filter: blur(48px); opacity: 0.10;"></div>
         </div>
         <!-- Media Mentions and Collaborations Section -->
-        <section class="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl flex flex-col items-center my-8 md:my-16" data-aos="fade-up" data-aos-delay="200">
+        <section class="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl flex flex-col items-center my-8 md:my-16">
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-8" style="color: #ffcc00;">Media Mentions & Collaborations</h2>
           <div class="relative w-full">
             <!-- Carousel Container -->
