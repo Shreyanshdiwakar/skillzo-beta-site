@@ -4,6 +4,15 @@ import Link from "next/link";
 export default function HighlightedProgram() {
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-between gap-8 bg-neutral-900/80 border border-yellow-400 rounded-3xl px-6 py-12 md:px-16 md:py-16 shadow-lg max-w-5xl mx-4 sm:mx-auto my-16 overflow-hidden">
+      {/* Decorative radiant gradient top left */}
+      <div
+        className="pointer-events-none absolute -top-32 -left-32 w-[38rem] h-[38rem] z-0 blur-3xl"
+        style={{
+          background: "radial-gradient(circle at 40% 40%, #fffbe6cc 0%, #ffe06633 60%, transparent 100%)",
+          opacity: 0.28,
+          borderRadius: '50%',
+        }}
+      />
       {/* Program Image */}
       <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
         <Image
@@ -21,14 +30,14 @@ export default function HighlightedProgram() {
           A flagship Skillzo program empowering high schoolers from every corner of India to launch real projects, build confidence, and create change in their communities.
         </p>
         {/* Impact Stats */}
-        <div className="flex flex-wrap gap-4 justify-center md:justify-start my-2">
-          <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-4 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
+        <div className="flex flex-col gap-4 justify-center items-center md:flex-row md:gap-4 md:justify-start md:items-stretch my-2">
+          <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-2 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
             500+<br />Students
           </div>
-          <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-4 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
+          <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-2 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
             30+<br />Cities
           </div>
-          <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-4 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
+          <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-2 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
             20+<br />Projects Launched
           </div>
         </div>

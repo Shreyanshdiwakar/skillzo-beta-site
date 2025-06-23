@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
 const features = [
   {
@@ -28,65 +28,46 @@ const features = [
   },
 ];
 
-function GlassyBlob({ show, x, y }: { show: boolean; x: number; y: number }) {
-  return show ? (
-    <svg
-      className="pointer-events-none absolute z-10"
-      style={{
-        left: x - 110,
-        top: y - 90,
-        width: 220,
-        height: 180,
-        transition: 'left 0.1s, top 0.1s',
-      }}
-      viewBox="0 0 220 180"
-      fill="none"
-    >
-      <defs>
-        <radialGradient id="yellowBlob" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-          <stop offset="0%" stopColor="#FFD600" stopOpacity="0.18" />
-          <stop offset="100%" stopColor="#FFD600" stopOpacity="0" />
-        </radialGradient>
-        <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur stdDeviation="32" />
-        </filter>
-      </defs>
-      <path
-        d="M80,90 Q100,20 180,60 Q210,100 160,150 Q120,180 80,150 Q40,120 80,90 Z"
-        fill="url(#yellowBlob)"
-        filter="url(#blur)"
-      />
-    </svg>
-  ) : null;
-}
-
 export default function WhatWeDo() {
-  const [hovered, setHovered] = useState<number | null>(null);
-  const [spot, setSpot] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  // const [hovered, setHovered] = useState<number | null>(null);
+  // const [spot, setSpot] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+
+  // Gradient backgrounds for each card
+  const gradients = [
+    // Programs: subtle yellow
+    "radial-gradient(circle at 60% 40%, #fffde780 0%, #ffe06633 70%, transparent 100%)",
+    // Mentorship: subtle purple
+    "radial-gradient(circle at 60% 40%, #ede9fe55 0%, #a78bfa22 70%, transparent 100%)",
+    // Community: subtle blue-green
+    "radial-gradient(circle at 60% 40%, #d1fae555 0%, #38bdf822 70%, transparent 100%)",
+  ];
 
   return (
     <section className="max-w-5xl mx-auto py-16 px-4">
       <h2 className="text-3xl md:text-s4xl font-extrabold text-center mb-12">What We Do</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
         {features.map((f, i) => (
           <div
             key={f.title}
-            className="group bg-neutral-900/80 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-neutral-800 relative overflow-hidden hover:border-yellow-400"
-            onMouseMove={e => {
-              const rect = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
-              setHovered(i);
-              setSpot({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-            }}
-            onMouseLeave={() => setHovered(null)}
+            className="group bg-neutral-900/80 rounded-2xl p-8 flex flex-col items-center text-center border border-neutral-800 relative overflow-hidden hover:border-yellow-400 transition hover:scale-105"
+            style={{ zIndex: 1 }}
           >
-            {/* Organic glassy yellow blob effect follows mouse */}
-            <GlassyBlob show={hovered === i} x={spot.x} y={spot.y} />
-            <div className="mb-4 transition-transform duration-300 group-hover:scale-125 z-20">
+            {/* Decorative gradient background */}
+            <div
+              className="absolute inset-0 -z-10"
+              style={{
+                background: gradients[i],
+              }}
+              aria-hidden="true"
+            />
+            {/* Creative GlassyBlob effect */}
+            {/* <GlassyBlob show={hovered === i} x={spot.x} y={spot.y} color={['#ffe066', '#a78bfa', '#38bdf8'][i]} /> */}
+            {/* Icon */}
+            <div className="mb-4 z-20">
               {f.icon}
             </div>
             <h3 className="text-xl font-bold mb-2 text-yellow-400 transition-colors duration-300 z-20">{f.title}</h3>
             <p className="text-neutral-300 transition-colors duration-300 z-20">{f.description}</p>
-            <span className="absolute -z-10 left-1/2 top-1/2 w-40 h-40 bg-yellow-400 opacity-0 group-hover:opacity-10 rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2 transition-all duration-500"></span>
           </div>
         ))}
       </div>

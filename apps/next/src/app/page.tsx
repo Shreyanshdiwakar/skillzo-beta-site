@@ -4,6 +4,7 @@ import HighlightedProgram from "@/components/home/2-highlighted-program";
 import FeaturedStories from "@/components/home/3-featured-stories";
 import Photos from "@/components/home/4-photos";
 import MentorsSection from "@/components/home/6-mentors";
+import Partners from "@/components/home/7-partners";
 import CTA from "@/components/home/8-cta";
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
       <Photos />
       <MentorsSection />
       <FeaturedStories />
-
+      <Partners />
       <CTA />
     </main>
   );

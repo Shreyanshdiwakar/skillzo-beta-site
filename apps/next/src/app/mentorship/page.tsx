@@ -79,13 +79,13 @@ export default function MentorshipPage() {
           Hear from our mentors and mentees about the transformative impact of the Skillzo mentorship program.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-6 rounded-lg shadow-md text-left border-2 border-primary bg-background">
+          <div className="p-6 rounded-lg shadow-md text-left border border-primary bg-background">
             <p className="italic text-gray-300 mb-4">
               &quot;Mentoring at Skillzo has been incredibly rewarding. Seeing my mentee develop their skills and confidence is a fantastic feeling.&quot;
             </p>
             <p className="font-semibold text-primary">- Experienced Mentor</p>
           </div>
-          <div className="p-6 rounded-lg shadow-md text-left border-2 border-primary bg-[var(--success-bg,rgba(0,0,0,0.5))]">
+          <div className="p-6 rounded-lg shadow-md text-left border border-primary bg-[var(--success-bg,rgba(0,0,0,0.5))]">
             <p className="italic text-gray-300 mb-4">
               &quot;My mentor provided me with practical advice and motivation that helped me launch my first project. Highly recommend!&quot;
             </p>
