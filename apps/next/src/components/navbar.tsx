@@ -4,12 +4,11 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const navLinks = [
-  { name: "Home", href: "/" },
   { name: "Programs", href: "/programs" },
   { name: "Community", href: "/community" },
   { name: "Mentorship", href: "/mentorship" },
   { name: "Stories", href: "/stories" },
-  { name: "Blog", href: "/blog" },
+  // { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

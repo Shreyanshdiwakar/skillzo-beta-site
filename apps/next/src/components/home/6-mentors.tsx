@@ -31,7 +31,7 @@ const mentors = [
 export default function MentorsSection() {
     return (
         <>
-            <section className="py-16 px-4 md:px-12 lg:px-24 bg-primary relative mt-32 -mb-16">
+            <section className="pt-16 pb-32 px-4 md:px-12 lg:px-24 bg-primary relative mt-32 -mb-16">
                 <SplitStart />
                 <div className="">
                     <div className="max-w-5xl mx-auto text-center mb-12 text-primary-foreground">

@@ -12,9 +12,9 @@ export default function Home() {
       <Hero />
       <WhatWeDo />
       <HighlightedProgram />
-      <FeaturedStories />
       <Photos />
       <MentorsSection />
+      <FeaturedStories />
 
       <CTA />
     </main>

@@ -24,7 +24,7 @@ const stories = [
 
 export default function FeaturedStories() {
   return (
-    <section className="relative max-w-6xl mx-4 sm:mx-auto my-16 py-12 px-4 bg-gradient-to-b from-yellow-400/5 via-transparent to-yellow-400/5 rounded-3xl flex flex-col items-center overflow-visible">
+    <section className="relative max-w-6xl mx-4 sm:mx-auto my-16 py-12 px-4 bg-gradient-to-b from-yellow-400/5 via-transparent to-yellow-400/5 rounded-3xl flex flex-col items-center overflow-visible  mt-32">
       <h2 className="text-3xl md:text-4xl font-extrabold text-yellow-400 mb-2 tracking-tight text-center">Featured Student Stories</h2>
       <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl text-center">
         Real journeys. Real impact. Meet Skillzo students who are changing their lives—and their communities.

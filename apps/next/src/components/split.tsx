@@ -41,17 +41,17 @@ export function SplitEnd() {
             <div className="relative -mx-2.5 flex -bottom-1 -mt-12">
                 <svg
                     viewBox="0 0 64 48"
-                    className="w-16 flex-none fill-neutral-900"
+                    className="w-16 flex-none fill-background"
                     aria-hidden="true"
                 >
                     <path
                         d="M51.657 2.343 12.343 41.657A8 8 0 0 1 6.686 44H0v4h64V0h-6.686a8 8 0 0 0-5.657 2.343Z"
                     />
                 </svg>
-                <div className="-mx-px flex-auto bg-neutral-900" />
+                <div className="-mx-px flex-auto bg-background" />
                 <svg
                     viewBox="0 0 64 48"
-                    className="w-16 flex-none fill-neutral-900"
+                    className="w-16 flex-none fill-background"
                     aria-hidden="true"
                 >
                     <path
