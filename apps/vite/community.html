@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skillzo Community</title>
+  <link href="/src/globals.css" rel="stylesheet">
+</head>
+
+<body class="bg-background text-foreground min-h-screen relative overflow-x-hidden">
+  <!-- Static Colorful SVG Accent at the Top -->
+  <svg class="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 w-screen h-auto" width="1171" fill="none"
+    viewBox="0 0 1171 241" style="z-index:0;" aria-hidden="true">
+    <g filter="url(#filter0_f)" opacity="0.16">
+      <path fill="url(#paint0_linear)"
+        d="M731.735-179.55C596.571-157.762 516.36-74.181 552.576 7.132s175.148 129.569 310.311 107.781C998.051 93.125 1078.26 9.545 1042.05-71.769c-36.22-81.313-175.152-129.568-310.315-107.781" />
+      <path fill="url(#paint1_linear)"
+        d="M378 114.106c142.489 0 258-68.218 258-152.368 0-84.151-115.511-152.368-258-152.368S120-122.413 120-38.262s115.511 152.368 258 152.368" />
+    </g>
+    <defs>
+      <linearGradient id="paint0_linear" x1="567.5" x2="1029.02" y1="1.04" y2="64.647" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#001AFF" />
+        <stop offset="1" stop-color="#6EE5C2" />
+      </linearGradient>
+      <linearGradient id="paint1_linear" x1="155" x2="511.855" y1="-11.023" y2="-162.127"
+        gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FFC83A" />
+        <stop offset="0.504" stop-color="#FF008A" />
+        <stop offset="1" stop-color="#6100FF" />
+      </linearGradient>
+      <filter id="filter0_f" width="1170.74" height="550.775" x="0" y="-310.63" color-interpolation-filters="sRGB"
+        filterUnits="userSpaceOnUse">
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+        <feGaussianBlur result="effect1_foregroundBlur" stdDeviation="60" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Navbar -->
+  <nav class="w-full flex items-center justify-between px-4 md:px-8 py-4 md:py-6 bg-transparent backdrop-blur z-50 sticky top-0 relative">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2">
+      <img src="/skillzo_transparent.png" alt="Skillzo Logo" class="h-10 w-auto" />
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <div class="hidden md:flex gap-6 items-center text-base font-semibold">
+      <a href="/" class="hover:text-yellow-400 transition">Home</a>
+      <a href="/programs" class="hover:text-yellow-400 transition">Programs</a>
+      <a href="/community" class="hover:text-yellow-400 transition">Community</a>
+      <a href="/mentorship" class="hover:text-yellow-400 transition">Mentorship</a>
+      <a href="/stories" class="hover:text-yellow-400 transition">Stories</a>
+      <a href="/blog" class="hover:text-yellow-400 transition">Blog</a>
+      <a href="/about" class="hover:text-yellow-400 transition">About</a>
+      <a href="/contact" class="hover:text-yellow-400 transition">Contact</a>
+    </div>
+
+    <!-- Join Button (Desktop) -->
+    <a href="#join" class="hidden md:inline bg-primary text-black px-6 py-3 rounded-full font-bold text-lg shadow hover:bg-yellow-500 transition">
+      Join Skillzo
+    </a>
+
+    <!-- Hamburger (Mobile) -->
+    <button id="navbar-hamburger" class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-yellow-400 mb-1 transition-all"></span>
+      <span class="block w-6 h-0.5 bg-yellow-400 mb-1 transition-all"></span>
+      <span class="block w-6 h-0.5 bg-yellow-400 transition-all"></span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div id="navbar-mobile-menu" class="hidden absolute top-full left-0 w-full bg-neutral-950/95 shadow-lg flex-col items-center py-6 gap-4 md:hidden z-50 animate-fade-in">
+      <a href="/" class="text-lg font-semibold hover:text-yellow-400 transition block py-2">Home</a>
+      <a href="/programs" class="text-lg font-semibold hover:text-yellow-400 transition block py-2">Programs</a>
+      <a href="/community" class="text-lg font-semibold hover:text-yellow-400 transition block py-2">Community</a>
+      <a href="/mentorship" class="text-lg font-semibold hover:text-yellow-400 transition block py-2">Mentorship</a>
+      <a href="/stories" class="text-lg font-semibold hover:text-yellow-400 transition block py-2">Stories</a>
+      <a href="/blog" class="text-lg font-semibold hover:text-yellow-400 transition block py-2">Blog</a>
+      <a href="/about" class="text-lg font-semibold hover:text-yellow-400 transition block py-2">About</a>
+      <a href="/contact" class="text-lg font-semibold hover:text-yellow-400 transition block py-2">Contact</a>
+      <a href="#join" class="bg-primary text-black px-6 py-3 rounded-full font-bold text-lg shadow hover:bg-yellow-500 transition mt-2 block">Join Skillzo</a>
+    </div>
+  </nav>
+
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('navbar-hamburger');
+    const mobileMenu = document.getElementById('navbar-mobile-menu');
+    let menuOpen = false;
+    hamburger.addEventListener('click', function () {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.remove('hidden');
+        hamburger.classList.add('open');
+      } else {
+        mobileMenu.classList.add('hidden');
+        hamburger.classList.remove('open');
+      }
+    });
+    // Optional: Close menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.add('hidden');
+        hamburger.classList.remove('open');
+      });
+    });
+  </script>
+
+  <!-- Community Hero Section -->
+  <section class="flex flex-col items-center justify-center text-center px-4 py-12 relative overflow-hidden">
+    <h2 class="text-base md:text-lg font-bold text-primary mb-1">Welcome to the</h2>
+    <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight tracking-wide font-cal-sans">
+      Skillzo Community
+    </h1>
+    <p class="text-base md:text-lg text-gray-200 mb-6 max-w-xl mx-auto">
+      Connect, collaborate, and grow with India's most vibrant community of teenpreneurs. Share your journey, learn from others, and unlock new opportunities together.
+    </p>
+    <a href="#join"
+      class="bg-yellow-400 text-black px-10 py-3 rounded-full font-bold text-xl shadow hover:bg-yellow-500 transition">Join the Community</a>
+  </section>
+
+  <!-- Section 2: What Happens Inside -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-yellow-400">What Happens Inside?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Daily Updates -->
+      <div class="border border-yellow-400/20 rounded-2xl bg-neutral-900 p-6 flex flex-col items-center text-center shadow-lg h-full">
+        <h3 class="font-bold text-lg mb-2 text-yellow-400">Daily Updates</h3>
+        <p class="text-gray-200 text-base">Get one actionable update every day — from scholarships to competitions and more. Stay ahead with the latest opportunities, handpicked for you.</p>
+      </div>
+      <!-- Webinars & Events -->
+      <div class="border border-blue-400/20 rounded-2xl bg-neutral-900 p-6 flex flex-col items-center text-center shadow-lg h-full">
+        <h3 class="font-bold text-lg mb-2 text-blue-400">Webinars & Events</h3>
+        <p class="text-gray-200 text-base">Be the first to know about Skillzo workshops, student panels, and expert webinars. Learn, interact, and grow with the best in the field.</p>
+      </div>
+      <!-- Exclusive Opportunities -->
+      <div class="border border-pink-400/20 rounded-2xl bg-neutral-900 p-6 flex flex-col items-center text-center shadow-lg h-full">
+        <h3 class="font-bold text-lg mb-2 text-pink-400">Exclusive Opportunities</h3>
+        <p class="text-gray-200 text-base">Access programs, internships, and resources only available to our community members. Unlock doors to your future.</p>
+      </div>
+      <!-- 1:1 Mentorship Access -->
+      <div class="border border-green-300/20 rounded-2xl bg-neutral-900 p-6 flex flex-col items-center text-center shadow-lg h-full">
+        <h3 class="font-bold text-lg mb-2 text-green-300">1:1 Mentorship Access</h3>
+        <p class="text-gray-200 text-base">Book one-on-one calls with Skillzo mentors and team members directly through the group. Get personalized guidance and support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Why Join? -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-yellow-400">Why Join?</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-full">
+      <div class="bg-neutral-900 border border-yellow-400/20 rounded-xl shadow-lg shadow-yellow-400/10 p-6 flex flex-col items-center text-center">
+        <h3 class="font-bold text-lg mb-2 text-yellow-400">Stay Ahead</h3>
+        <p class="text-gray-200 text-base">Never miss out on real-time global and national opportunities—scholarships, competitions, and more, delivered right to you.</p>
+      </div>
+      <div class="bg-neutral-900 border border-yellow-400/20 rounded-xl shadow-lg shadow-yellow-400/10 p-6 flex flex-col items-center text-center">
+        <h3 class="font-bold text-lg mb-2 text-yellow-400">Find Your Path</h3>
+        <p class="text-gray-200 text-base">No more confusion or feeling lost. Get clear direction, curated resources, and step-by-step guidance to kickstart your journey.</p>
+      </div>
+      <div class="bg-neutral-900 border border-yellow-400/20 rounded-xl shadow-lg shadow-yellow-400/10 p-6 flex flex-col items-center text-center">
+        <h3 class="font-bold text-lg mb-2 text-yellow-400">Mentorship & Support</h3>
+        <p class="text-gray-200 text-base">Access 1:1 mentorship, peer support, and a team that cares about your growth—all for free, with no hidden costs.</p>
+      </div>
+      <div class="bg-neutral-900 border border-yellow-400/20 rounded-xl shadow-lg shadow-yellow-400/10 p-6 flex flex-col items-center text-center">
+        <h3 class="font-bold text-lg mb-2 text-yellow-400">Purpose-Driven Community</h3>
+        <p class="text-gray-200 text-base">Join a vibrant, positive group of students who want to make an impact, share ideas, and grow together—where you truly belong.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Community in Action -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-yellow-400">Community in Action</h2>
+    <div class="space-y-8">
+      <div class="bg-neutral-900 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-6">
+        <p class="italic text-lg text-gray-100 mb-2">"Because of the Skillzo Community, I found a fellowship that changed how I think."</p>
+        <p class="text-sm text-gray-400">— Zoya, Class 10, Jharkhand</p>
+      </div>
+      <div class="bg-neutral-900 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-6">
+        <p class="italic text-lg text-gray-100 mb-2">"Every time I check the group, I learn something new. It's not just info — it's impact."</p>
+        <p class="text-sm text-gray-400">— Saurabh, Class 12, Bihar</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: How It Works -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-14 text-yellow-400">How It Works</h2>
+    <div class="flex flex-col md:flex-row justify-center items-start md:items-stretch gap-12 md:gap-8">
+      <!-- Step 1 -->
+      <div class="flex-1 flex flex-col items-center text-center">
+        <div class="w-20 h-20 flex items-center justify-center rounded-full bg-yellow-400 text-black text-3xl font-bold mb-6 shadow-lg">1</div>
+        <h3 class="text-2xl font-bold mb-3 text-white">Sign Up Using the Form</h3>
+        <p class="text-gray-300 text-lg">Tell us a bit about yourself — it only takes a minute.</p>
+      </div>
+      <!-- Step 2 -->
+      <div class="flex-1 flex flex-col items-center text-center">
+        <div class="w-20 h-20 flex items-center justify-center rounded-full bg-yellow-400 text-black text-3xl font-bold mb-6 shadow-lg">2</div>
+        <h3 class="text-2xl font-bold mb-3 text-white">Get Added to the Community</h3>
+        <p class="text-gray-300 text-lg"> You'll start receiving daily updates, handpicked for students like you.</p>
+      </div>
+      <!-- Step 3 -->
+      <div class="flex-1 flex flex-col items-center text-center">
+        <div class="w-20 h-20 flex items-center justify-center rounded-full bg-yellow-400 text-black text-3xl font-bold mb-6 shadow-lg">3</div>
+        <h3 class="text-2xl font-bold mb-3 text-white">Have a question? Just DM the admin</h3>
+        <p class="text-gray-300 text-lg">Whether it's a doubt or a dream, we're here to help you move forward.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Code of Respect -->
+  <section class="max-w-2xl mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-yellow-400">Code of Respect</h2>
+    <div class="bg-neutral-900 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-6 text-center">
+      <p class="text-gray-200 text-lg mb-2">This is a growth-first, safe space.</p>
+      <p class="text-gray-400">No spam. No distractions. Just support, access, and action.</p>
+    </div>
+  </section>
+
+</body>
+
+</html>
