@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <Link href="https://instagram.com/skillzo.co" target="_blank" rel="noopener" aria-label="Instagram" className="hover:text-primary transition flex items-center justify-center">
               <Image
-                src="/logos/instagram.svg"
+                src="/logos/instagram.png"
                 alt="Instagram"
                 width={32}
                 height={32}
