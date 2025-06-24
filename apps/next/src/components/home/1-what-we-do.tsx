@@ -34,12 +34,12 @@ export default function WhatWeDo() {
 
   // Gradient backgrounds for each card
   const gradients = [
-    // Programs: subtle yellow
-    "radial-gradient(circle at 60% 40%, #fffde780 0%, #ffe06633 70%, transparent 100%)",
-    // Mentorship: subtle purple
-    "radial-gradient(circle at 60% 40%, #ede9fe55 0%, #a78bfa22 70%, transparent 100%)",
-    // Community: subtle blue-green
-    "radial-gradient(circle at 60% 40%, #d1fae555 0%, #38bdf822 70%, transparent 100%)",
+    // Programs: teal gradient
+    "radial-gradient(circle at 60% 40%, #40DDC280 0%, #2AC9B033 70%, transparent 100%)",
+    // Mentorship: pink-purple gradient
+    "radial-gradient(circle at 60% 40%, #FF52A280 0%, #B4298E33 70%, transparent 100%)",
+    // Community: orange gradient
+    "radial-gradient(circle at 60% 40%, #FF7B4A80 0%, #FF5B3733 70%, transparent 100%)",
   ];
 
   return (
