@@ -47,7 +47,7 @@ export default function WhatWeDo() {
       <h2 className="text-3xl md:text-s4xl font-extrabold text-center mb-12">What We Do</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
         {features.map((f, i) => (
-          <div
+          <div 
             key={f.title}
             className="group bg-neutral-900/80 rounded-2xl p-8 flex flex-col items-center text-center border border-neutral-800 relative overflow-hidden hover:border-yellow-400 transition hover:scale-105"
             style={{ zIndex: 1 }}
