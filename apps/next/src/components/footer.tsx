@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "motion/react";
-import Image from 'next/image';
 import { cn } from "@/lib/utils";
 import { ClassValue } from "clsx";
 
