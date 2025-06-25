@@ -65,7 +65,7 @@ export default function Footer() {
         </div>
 
         {/* Skillzo Logo */}
-        <div className="relative">
+        <div className="absolute left-1/2  transform -translate-x-1/2 text-center">
           <SkillzoFooterLogo />
         </div>
       </div>
@@ -109,13 +109,13 @@ function SkillzoFooterLogo() {
   return (
     <motion.span
       ref={ref}
-      className="w-full text-center text-[25vw] font-extrabold tracking-tight leading-none pointer-events-auto select-none z-0 skillzo-gradient-text"
-      style={{ WebkitTextStroke: "1px rgba(255,255,255,0.12)" }}
+      className="w-full  text-[25vw]  font-extrabold tracking-tight leading-none pointer-events-auto select-none z-0 skillzo-gradient-text"
+      style={{ WebkitTextStroke: "1px rgba(255,255,255,0.12)" }}text-center
       animate={controls}
       initial={{ backgroundPosition: "-200% 50%" }}
       whileHover={{ scale: 1.07, backgroundPosition: "200% 50%" }}
     >
-      Skillzo
+       Skillzo
     </motion.span>
   );
 }
