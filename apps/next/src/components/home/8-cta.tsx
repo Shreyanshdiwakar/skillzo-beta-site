@@ -6,7 +6,7 @@ export default function CTA() {
       <h2 className="text-3xl md:text-4xl font-extrabold mb-6 font-cal-sans text-primary">Ready to take the next step?</h2>
       <div className="flex flex-col sm:flex-row justify-center gap-6 mt-4">
         <Link
-          href="/community"
+          href="/joincommunity"
           className="inline-block px-8 py-3 rounded-lg bg-primary text-primary-foreground font-bold text-lg shadow hover:bg-primary/90 transition"
         >
           Join the Community

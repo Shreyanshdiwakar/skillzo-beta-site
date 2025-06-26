@@ -18,8 +18,8 @@ type  NavLink =  {
 
 const navLinks : NavLink[] = [
   { name: "Programs", dropdown: [
+    { name: "Community", href: "/community", desc: "A curated WhatsApp-based peer community where students receive daily opportunities, mentorship access, and real-time updates on scholarships, internships, fellowships, and more." },
     { name: "IgniteBharat", href: "/programs/ignitebharat", desc: "Lorem ipsum description" },
-    { name: "Community", href: "/community", desc: "Lorem ipsum description" },
     { name: "E-21", href: "/e-21", desc: "Lorem ipsum description" },
     { name: "Sparkle", href: "/sparkle", desc: "Lorem ipsum description" },
     { name: "Skillzo Stories", href: "/stories", desc: "Lorem ipsum description" },
@@ -76,7 +76,7 @@ export default function Navbar() {
                         }}
                       />
                       <span className="font-bold text-base mb-1 relative z-10">{item.name}</span>
-                      <span className="text-sm relative z-10">{item.desc}</span>
+                      <span className="text-xs relative z-10">{item.desc}</span>
                     </Link>
                   ))}
                 </div>
