@@ -27,18 +27,21 @@ export default function HighlightedProgram() {
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left gap-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-yellow-400 mb-2 tracking-tight">IgniteBharat</h2>
         <p className="text-lg md:text-xl text-gray-200 mb-2 max-w-lg">
-          A flagship Skillzo program empowering high schoolers from every corner of India to launch real projects, build confidence, and create change in their communities.
+        IgniteBharat is a nationwide initiative that brings entrepreneurship and innovation directly to schools across India — especially in Tier 2, Tier 3 cities and rural regions. It helps students understand real-world problem-solving and build community-driven projects that spark change from the ground up.
+It’s not just about starting companies — it’s about igniting a mindset that transforms students into problem-solvers, innovators, and leaders in their own communities.
+
+
         </p>
         {/* Impact Stats */}
         <div className="flex flex-col gap-4 justify-center items-center md:flex-row md:gap-4 md:justify-start md:items-stretch my-2">
           <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-2 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
-            500+<br />Students
+            5000+<br />Students
           </div>
-          <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-2 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
+          {/* <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-2 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
             30+<br />Cities
-          </div>
+          </div> */}
           <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-2 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
-            20+<br />Projects Launched
+            200+<br />Projects Launched
           </div>
         </div>
         {/* Testimonial */}

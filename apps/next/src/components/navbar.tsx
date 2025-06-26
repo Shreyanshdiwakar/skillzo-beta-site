@@ -55,7 +55,7 @@ export default function Navbar() {
                 className="mt-2 w-[700px] rounded-xl bg-accent text-accent-foreground shadow-xl border border-muted p-4"
               >
                 <div className="grid grid-cols-3 gap-4">
-                  {link.dropdown.map((item, idx) => (
+                  {link.dropdown.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}

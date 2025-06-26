@@ -110,7 +110,7 @@ function SkillzoFooterLogo() {
     <motion.span
       ref={ref}
       className="w-full  text-[25vw]  font-extrabold tracking-tight leading-none pointer-events-auto select-none z-0 skillzo-gradient-text"
-      style={{ WebkitTextStroke: "1px rgba(255,255,255,0.12)" }}text-center
+      style={{ WebkitTextStroke: "1px rgba(255,255,255,0.12)" }}
       animate={controls}
       initial={{ backgroundPosition: "-200% 50%" }}
       whileHover={{ scale: 1.07, backgroundPosition: "200% 50%" }}

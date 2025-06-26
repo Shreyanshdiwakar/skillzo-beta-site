@@ -11,7 +11,7 @@ export default function CommunityPage() {
           Skillzo Community
         </h1>
         <p className="text-base md:text-lg text-gray-200 mb-6 max-w-xl mx-auto">
-          Connect, collaborate, and grow with India's most vibrant community of teenpreneurs. Share your journey, learn from others, and unlock new opportunities together.
+          Connect, collaborate, and grow with India&apos;s most vibrant community of teenpreneurs. Share your journey, learn from others, and unlock new opportunities together.
         </p>
         <Link href="#join"
           className="bg-yellow-400 text-black px-10 py-3 rounded-full font-bold text-xl shadow hover:bg-yellow-500 transition">Join the Community</Link>
@@ -100,11 +100,11 @@ export default function CommunityPage() {
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-yellow-400">Community in Action</h2>
         <div className="space-y-8">
           <div className="bg-yellow-400 rounded-lg shadow-md p-6">
-            <p className="italic text-lg text-black mb-2">"Because of the Skillzo Community, I found a fellowship that changed how I think."</p>
+            <p className="italic text-lg text-black mb-2">&quot;Because of the Skillzo Community, I found a fellowship that changed how I think.&quot;</p>
             <p className="text-sm text-black">— Zoya, Class 10, Jharkhand</p>
           </div>
           <div className="bg-yellow-400 rounded-lg shadow-md p-6">
-            <p className="italic text-lg text-black mb-2">"Every time I check the group, I learn something new. It's not just info — it's impact."</p>
+            <p className="italic text-lg text-black mb-2">&quot;Every time I check the group, I learn something new. It&apos;s not just info — it&apos;s impact.&quot;</p>
             <p className="text-sm text-black">— Saurabh, Class 12, Bihar</p>
           </div>
         </div>
@@ -124,13 +124,13 @@ export default function CommunityPage() {
           <div className="flex-1 flex flex-col items-center text-center">
             <div className="w-20 h-20 flex items-center justify-center rounded-full bg-yellow-400 text-black text-3xl font-bold mb-6 shadow-lg">2</div>
             <h3 className="text-2xl font-bold mb-3 text-white">Get Added to the Community</h3>
-            <p className="text-gray-300 text-lg"> You'll start receiving daily updates, handpicked for students like you.</p>
+            <p className="text-gray-300 text-lg"> You&apos;ll start receiving daily updates, handpicked for students like you.</p>
           </div>
           {/* Step 3 */}
           <div className="flex-1 flex flex-col items-center text-center">
             <div className="w-20 h-20 flex items-center justify-center rounded-full bg-yellow-400 text-black text-3xl font-bold mb-6 shadow-lg">3</div>
             <h3 className="text-2xl font-bold mb-3 text-white">Have a question? Just DM the admin</h3>
-            <p className="text-gray-300 text-lg">Whether it's a doubt or a dream, we're here to help you move forward.</p>
+            <p className="text-gray-300 text-lg">Whether it&apos;s a doubt or a dream, we&apos;re here to help you move forward.</p>
           </div>
         </div>
       </section>

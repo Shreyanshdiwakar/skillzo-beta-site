@@ -1,42 +1,72 @@
-import Image, { ImageProps } from "next/image";
-
-// Add types for remaining props
-type PlaceholderImageProps = {
-  width: number;
-  height: number;
-} & Omit<ImageProps, "width" | "height" | "alt" | "src">;
-
-const PlaceholderImage = ({ width, height, ...props }: PlaceholderImageProps) => (
-  <Image
-    src={`https://placehold.co/${width}x${height}/#262626`}
-    alt={`${width}x${height}`}
-    width={width}
-    height={height}
-    unoptimized
-    {...props}
-  />
-);
+import Image from "next/image";
 
 export default function PhotosSection() {
-    return (
-        <section className="px-12">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                <div className="flex aspect-square h-full flex-col justify-between rounded-md bg-muted lg:col-span-2 lg:aspect-auto">
-                        <PlaceholderImage width={700} height={300} className="object-cover object-center h-full w-auto" />
-                </div>
-                <div className="flex aspect-square flex-col justify-between rounded-md bg-muted">
-                <PlaceholderImage width={300} height={300} className="object-cover object-center h-full w-auto" />
-                </div>
-                <div className="flex aspect-square flex-col justify-between rounded-md bg-muted ">
-                <PlaceholderImage width={300} height={300} className="object-cover object-center h-full w-auto" />
-                    
-                </div>
-                <div className="flex aspect-square h-full flex-col justify-between rounded-md bg-muted lg:col-span-2 lg:aspect-auto">
-                <PlaceholderImage width={700} height={300} className="object-cover object-center h-full w-auto" />
-                    
-                </div>
-            </div>
-        </section>
 
-    );
+  return (
+    <section className="px-12">
+      {/* Mobile: 2-column grid, all squares */}
+      <div className="block md:hidden">
+        <div className="grid grid-cols-2 gap-4">
+          <div className="aspect-square rounded-md bg-muted overflow-hidden">
+            <Image src="/images/home/gallery-1.JPG" alt="Rungta" width={1600} height={1024} className="object-cover w-full h-full" />
+          </div>
+          <div className="aspect-square rounded-md bg-muted overflow-hidden">
+            <Image src="/images/home/gallery-2.JPG" alt="G20" width={960} height={1280} className="object-cover w-full h-full" />
+          </div>
+          <div className="aspect-square rounded-md bg-muted overflow-hidden">
+            <Image src="/images/home/gallery-3.jpg" alt="Team" width={4284} height={5712} className="object-cover w-full h-full" />
+          </div>
+          <div className="aspect-square rounded-md bg-muted overflow-hidden">
+            <Image src="/images/home/gallery-4.jpg" alt="TechIndia" width={4032} height={3024} className="object-cover w-full h-full" />
+          </div>
+        </div>
+      </div>
+      {/* Desktop: flexbox layout for wide/square rows */}
+      <div className="hidden md:block">
+        {/* First row: wide + square */}
+        <div className="flex gap-8 mb-8 h-72">
+          <div className="flex-1 rounded-md bg-muted overflow-hidden">
+            <Image
+              src="/images/home/gallery-1.JPG"
+              alt="Rungta"
+              width={1600}
+              height={1024}
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="w-72 flex-shrink-0 rounded-md bg-muted overflow-hidden">
+            <Image
+              src="/images/home/gallery-2.JPG"
+              alt="G20"
+              width={960}
+              height={1280}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+        {/* Second row: square + wide */}
+        <div className="flex gap-8 h-72">
+          <div className="w-72 rounded-md bg-muted overflow-hidden">
+            <Image
+              src="/images/home/gallery-3.jpg"
+              alt="Team"
+              width={4284}
+              height={5712}
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <div className="flex-1 rounded-md bg-muted overflow-hidden">
+            <Image
+              src="/images/home/gallery-4.jpg"
+              alt="TechIndia"
+              width={4032}
+              height={3024}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  );
 }
