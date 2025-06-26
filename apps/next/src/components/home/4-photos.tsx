@@ -24,7 +24,7 @@ export default function PhotosSection() {
       {/* Desktop: flexbox layout for wide/square rows */}
       <div className="hidden md:block">
         {/* First row: wide + square */}
-        <div className="flex gap-8 mb-8 h-72">
+        <div className="flex gap-8 mb-8">
           <div className="flex-1 rounded-md bg-muted overflow-hidden">
             <Image
               src="/images/home/gallery-1.JPG"
@@ -34,7 +34,7 @@ export default function PhotosSection() {
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="w-72 flex-shrink-0 rounded-md bg-muted overflow-hidden">
+          <div className="w-1/3 flex-shrink-0 rounded-md bg-muted overflow-hidden">
             <Image
               src="/images/home/gallery-2.JPG"
               alt="G20"
@@ -45,8 +45,8 @@ export default function PhotosSection() {
           </div>
         </div>
         {/* Second row: square + wide */}
-        <div className="flex gap-8 h-72">
-          <div className="w-72 rounded-md bg-muted overflow-hidden">
+        <div className="flex gap-8 ">
+          <div className="w-1/3 rounded-md bg-muted overflow-hidden">
             <Image
               src="/images/home/gallery-3.jpg"
               alt="Team"

@@ -1,5 +1,9 @@
 "use client";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+// const InstagramEmbed = dynamic(() => import("react-social-media-embed").then(a => a.InstagramEmbed), { ssr: false})
+
 
 export default function CommunityPage() {
   return (
@@ -11,9 +15,10 @@ export default function CommunityPage() {
           Skillzo Community
         </h1>
         <p className="text-base md:text-lg text-gray-200 mb-6 max-w-xl mx-auto">
-          Connect, collaborate, and grow with India&apos;s most vibrant community of teenpreneurs. Share your journey, learn from others, and unlock new opportunities together.
+        A curated WhatsApp-based peer community where students receive daily opportunities, mentorship access, and real-time updates on scholarships, internships, fellowships, and more. 
+        <br /> Free, inclusive, and impact-driven.
         </p>
-        <Link href="#join"
+        <Link href="/joincommunity"
           className="bg-yellow-400 text-black px-10 py-3 rounded-full font-bold text-xl shadow hover:bg-yellow-500 transition">Join the Community</Link>
       </section>
 
@@ -96,19 +101,19 @@ export default function CommunityPage() {
       </section>
 
       {/* Section 4: Community in Action */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+      {/* <section className=" mx-auto px-4 sm:px-6 py-12">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-yellow-400">Community in Action</h2>
-        <div className="space-y-8">
-          <div className="bg-yellow-400 rounded-lg shadow-md p-6">
-            <p className="italic text-lg text-black mb-2">&quot;Because of the Skillzo Community, I found a fellowship that changed how I think.&quot;</p>
-            <p className="text-sm text-black">— Zoya, Class 10, Jharkhand</p>
-          </div>
-          <div className="bg-yellow-400 rounded-lg shadow-md p-6">
-            <p className="italic text-lg text-black mb-2">&quot;Every time I check the group, I learn something new. It&apos;s not just info — it&apos;s impact.&quot;</p>
-            <p className="text-sm text-black">— Saurabh, Class 12, Bihar</p>
-          </div>
+        <div className="flex flex-wrap gap-6 justify-center">
+          <InstagramEmbed url="https://www.instagram.com/p/C1b3sCRvRj3/" width={328}  />
+          <InstagramEmbed url="https://www.instagram.com/p/C06VIExvhuS/" width={328}  />
+          <InstagramEmbed url="https://www.instagram.com/p/CzqiPpFRaEv/" width={328}  />
+          <InstagramEmbed url="https://www.instagram.com/p/DEiGq_kzV1a/?img_index=1" width={328}  />
+          <InstagramEmbed url="https://www.instagram.com/p/DDcalS1o1Jl/?img_index=1" width={328}  />
+          <InstagramEmbed url="https://www.instagram.com/p/DDhDTKhI0TF/?img_index=1" width={328}  />
+          <InstagramEmbed url="https://www.instagram.com/p/DJzb36rID74/?img_index=1" width={328}  />
+
         </div>
-      </section>
+      </section> */}
 
       {/* Section 5: How It Works */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-16">
