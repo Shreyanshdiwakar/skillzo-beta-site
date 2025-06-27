@@ -19,11 +19,11 @@ type  NavLink =  {
 const navLinks : NavLink[] = [
   { name: "Programs", dropdown: [
     { name: "Community", href: "/community", desc: "A curated WhatsApp-based peer community where students receive daily opportunities, mentorship access, and real-time updates on scholarships, internships, fellowships, and more." },
-    { name: "IgniteBharat", href: "/programs/ignitebharat", desc: "Lorem ipsum description" },
-    { name: "E-21", href: "/e-21", desc: "Lorem ipsum description" },
-    { name: "Sparkle", href: "/sparkle", desc: "Lorem ipsum description" },
-    { name: "Skillzo Stories", href: "/stories", desc: "Lorem ipsum description" },
-    { name: "1:1 Mentorship", href: "/mentorship", desc: "Lorem ipsum description" },
+    { name: "Skillzo Stories", href: "/programs/skillzo-stories", desc: "A storytelling platform that celebrates students who have overcome challenges, shown resilience, or created meaningful change. Stories are documented through interviews, videos, and social media campaigns." },
+    { name: "Sparkle", href: "/programs/sparkle", desc: "An intensive, solo entrepreneurship bootcamp for students in Grades 9 to 12. Sparkle guides students through a 3-stage startup journey — from idea to pitch — with mentorship, resources, and real-world exposure." },
+    { name: "IgniteBharat", href: "/programs/ignitebharat", desc: "IgniteBharat is a nationwide program that brings entrepreneurship and innovation to schools across India, focusing on Tier 2, Tier 3 cities, and rural areas. It empowers students to become community-focused problem-solvers, innovators, and leaders through real-world, impact-driven projects." },
+    { name: "E-21", href: "/programs/e-21", desc: "A student-first entrepreneurship exploration program that nurtures curiosity, creativity, and innovation. Through hands-on activities, mentorship, and team-based learning, students build a real-world entrepreneurial mindset." },
+    { name: "1:1 Mentorship", href: "/mentorship", desc: " Skillzo's personalised mentorship program connects high school students with university mentors, professionals, and startup founders for individual guidance and long-term growth." },
   ] },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
@@ -31,6 +31,7 @@ const navLinks : NavLink[] = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   return (
     <nav className="w-full flex items-center justify-between px-4 md:px-8 py-4 bg-transparent backdrop-blur z-50 sticky top-0">
       {/* Logo */}
@@ -108,32 +109,50 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="absolute top-full left-0 w-full bg-neutral-950/95 shadow-lg flex flex-col items-center py-6 gap-4 md:hidden z-50 animate-fade-in">
-          {/* Flat list for mobile: show all links including dropdown children */}
-          {navLinks.map(link => (
-            <React.Fragment key={link.name}>
+        <div className="absolute top-full left-0 w-full bg-neutral-950/95 shadow-lg flex flex-col py-6 gap-4 md:hidden z-50 animate-fade-in px-4">
+          {/* Render navLinks with collapsible dropdowns for mobile */}
+          {navLinks.map((link, idx) =>
+            link.dropdown ? (
+              <div key={link.name} className="w-full flex flex-col items-center">
+                <button
+                  className="w-full text-lg font-semibold flex items-center justify-center gap-2 py-2 hover:text-yellow-400 transition focus:outline-none"
+                  onClick={() => setOpenDropdown(openDropdown === idx ? null : idx)}
+                  aria-expanded={openDropdown === idx}
+                  aria-controls={`dropdown-${idx}`}
+                >
+                  <span>{link.name}</span>
+                  <svg className={`w-4 h-4 transition-transform ${openDropdown === idx ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                {openDropdown === idx && (
+                  <div id={`dropdown-${idx}`} className="w-full grid grid-cols-2 gap-2 py-2">
+                    {link.dropdown.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="text-base font-medium hover:text-yellow-400 transition flex flex-col mb-2 items-center text-center px-2"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        <span>{item.name}</span>
+                        <span className="text-xs text-muted-foreground leading-tight">{item.desc}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
               <Link
+                key={link.name}
                 href={link.href ?? "/"}
-                className="text-lg font-semibold hover:text-yellow-400 transition"
+                className="text-lg font-semibold hover:text-yellow-400 transition w-full py-2 flex items-center justify-center text-center"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.name}
               </Link>
-              {link.dropdown && link.dropdown.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-lg font-semibold hover:text-yellow-400 transition pl-4"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </React.Fragment>
-          ))}
+            )
+          )}
           <Link
             href="#join"
-            className="bg-primary text-black px-6 py-3 rounded-full font-bold text-lg shadow hover:bg-yellow-500 transition mt-2"
+            className="bg-primary text-black px-6 py-3 rounded-full font-bold text-lg shadow hover:bg-yellow-500 transition mt-2 mx-auto"
             onClick={() => setMenuOpen(false)}
           >
             Join Skillzo

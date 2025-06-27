@@ -1,20 +1,26 @@
+"use client"
+
 import React from 'react';
 
-export default function Testimonials({ testimonials }: { testimonials: {name: string, text: string}[] }) {
+import dynamic from "next/dynamic";
+
+const InstagramEmbed = dynamic(() => import("react-social-media-embed").then(a => a.InstagramEmbed), { ssr: false})
+
+export default function Testimonials({ links }: { links: string[] }) {
   return (
-    <section className="px-4 py-12 max-w-3xl mx-auto text-center">
-      <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Success Stories</h2>
-      <p className="text-base text-gray-200 mb-8">
-        Hear from our mentors and mentees about the transformative impact of the Skillzo mentorship program.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {testimonials.map(testimonial => (
-          <div key={testimonial.name} className="p-6 rounded-lg shadow-md text-left border border-primary bg-background">
-            <p className="italic text-gray-300 mb-4">&quot;{testimonial.text}&quot;</p>
-            <p className="font-semibold text-primary">- {testimonial.name}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+    <section className=" mx-auto px-4 sm:px-6 py-12">
+    <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-yellow-400">Community in Action</h2>
+    <div className="flex flex-wrap gap-6 justify-center">
+      {links.map(link => (
+      <InstagramEmbed key={link} url={link} width={328}   />
+
+      ))}
+      {/* <InstagramEmbed url="https://www.instagram.com/p/DEiGq_kzV1a/?img_index=1" width={328}  />
+      <InstagramEmbed url="https://www.instagram.com/p/DDcalS1o1Jl/?img_index=1" width={328}  />
+      <InstagramEmbed url="https://www.instagram.com/p/DDhDTKhI0TF/?img_index=1" width={328}  />
+      <InstagramEmbed url="https://www.instagram.com/p/DJzb36rID74/?img_index=1" width={328}  /> */}
+
+    </div>
+  </section>
   );
 } 

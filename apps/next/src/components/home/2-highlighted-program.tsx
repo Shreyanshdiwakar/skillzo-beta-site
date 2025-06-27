@@ -27,9 +27,7 @@ export default function HighlightedProgram() {
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left gap-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-yellow-400 mb-2 tracking-tight">IgniteBharat</h2>
         <p className="text-lg md:text-xl text-gray-200 mb-2 max-w-lg">
-        IgniteBharat is a nationwide initiative that brings entrepreneurship and innovation directly to schools across India — especially in Tier 2, Tier 3 cities and rural regions. It helps students understand real-world problem-solving and build community-driven projects that spark change from the ground up.
-It’s not just about starting companies — it’s about igniting a mindset that transforms students into problem-solvers, innovators, and leaders in their own communities.
-
+        IgniteBharat is a nationwide program that brings entrepreneurship and innovation to schools across India, focusing on Tier 2, Tier 3 cities, and rural areas. It empowers students to become community-focused problem-solvers, innovators, and leaders through real-world, impact-driven projects.
 
         </p>
         {/* Impact Stats */}
@@ -40,21 +38,21 @@ It’s not just about starting companies — it’s about igniting a mindset tha
           {/* <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-2 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
             30+<br />Cities
           </div> */}
-          <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-2 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
+          {/* <div className="bg-yellow-400/10 border border-yellow-400 rounded-xl px-2 py-2 text-yellow-400 font-bold text-lg min-w-[110px] text-center">
             200+<br />Projects Launched
-          </div>
+          </div> */}
         </div>
         {/* Testimonial */}
-        <blockquote className="italic text-gray-300 border-l-4 border-yellow-400 pl-4 my-4 max-w-md">
+        {/* <blockquote className="italic text-gray-300 border-l-4 border-yellow-400 pl-4 my-4 max-w-md">
           “IgniteBharat gave me the courage to turn my idea into reality. I found mentors, friends, and a community that truly believes in me.”<br />
           <span className="not-italic font-semibold text-yellow-400">— Student Participant</span>
-        </blockquote>
+        </blockquote> */}
         {/* CTA Button */}
         <Link
-          href="#apply"
+          href="/programs/ignitebharat"
           className="bg-yellow-400 text-black px-8 py-3 rounded-full font-bold text-lg shadow hover:bg-yellow-500 transition mt-2"
         >
-          Register Now
+          Learn More
         </Link>
       </div>
       {/* Decorative Accent */}
