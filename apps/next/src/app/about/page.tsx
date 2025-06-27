@@ -76,11 +76,21 @@ const instagramPosts = [
   },
 ];
 
-const teamMembers = Array.from({ length: 8 }).map((_, i) => ({
-  name: `Name ${i + 1}`,
-  position: `Position ${i + 1}`,
-  img: `https://placehold.co/96x96`,
-}));
+const teamMembers = [
+  {
+    name: `Priyanshu Kumar`,
+    position: `Founder's Office`,
+    school: `IIT Guwahati`,
+    img: `/about/team/priyanshu-kumar.jpg`,
+  },
+  {
+    name: "Shreyansh Diwakar",
+    position: "Backend Developer",
+    school: "TBD",
+    img: "/about/team/shreyansh-diwakar.JPG"
+  }
+  // Add more team members as needed
+];
 
 export default function AboutPage() {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -142,32 +152,47 @@ export default function AboutPage() {
         </section>
         {/* About Content Section */}
         <section className="flex-1 flex flex-col items-center justify-start w-full px-4 my-6 sm:px-4 sm:my-0 md:px-8">
-          <div className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl flex flex-col gap-4 py-2 sm:py-4 md:py-8 my-6 sm:my-8 md:my-12">
-            <div className="space-y-3">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading" style={{ color: "#ffcc00" }}>Our Mission</h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body">
-                Placeholder text for Skillzo&apos;s mission. Replace this with a compelling story about your vision, values, and what makes your platform unique. <br />
-                Use this space to connect with your audience and share your journey. Add as much text as you need—this section is designed for readability and flow.
-              </p>
-            </div>
-            <div className="space-y-3">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading" style={{ color: "#ffcc00" }}>What We Do</h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body">
-                Placeholder for a brief description of what Skillzo offers. Highlight your core features, approach, and the impact you aim to create. <br />
-                This section can be expanded with more details as needed. The layout is open and text-friendly, perfect for longer content.
-              </p>
+          {/* Remove the outer flex/center container, keep only the inner container with gloss */}
+          <div className="relative w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl bg-neutral-900/90 rounded-2xl shadow-lg border border-yellow-400/10 px-4 sm:px-8 py-8 md:py-12 flex flex-col overflow-hidden my-6 sm:my-8 md:my-12">
+            {/* Subtle gloss/light effect INSIDE container */}
+            <div
+              aria-hidden="true"
+              className="absolute left-0 top-0 w-full h-full pointer-events-none z-0"
+              style={{
+                background: "radial-gradient(circle at 18% 12%, #fff9c480 0%, #ffe06600 50%)",
+                opacity: 0.25,
+              }}
+            />
+            <div className="relative z-10 flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+              {/* Our Mission */}
+              <div className="flex-1 space-y-3">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading text-primary">Our Mission</h2>
+                <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body">
+                  Placeholder text for Skillzo&apos;s mission. Replace this with a compelling story about your vision, values, and what makes your platform unique. <br />
+                  Use this space to connect with your audience and share your journey. Add as much text as you need—this section is designed for readability and flow.
+                </p>
+              </div>
+              {/* Divider for desktop */}
+              <div className="hidden md:block w-px bg-gray-700/40 h-32 self-center" />
+              {/* What We Do */}
+              <div className="flex-1 space-y-3">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading text-primary">What We Do</h2>
+                <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body">
+                  Placeholder for a brief description of what Skillzo offers. Highlight your core features, approach, and the impact you aim to create. <br />
+                  This section can be expanded with more details as needed. The layout is open and text-friendly, perfect for longer content.
+                </p>
+              </div>
             </div>
           </div>
           {/* Founder Section */}
           <section id="founder" className="w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl flex flex-col gap-8 my-6 sm:my-8 md:my-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-4" style={{ color: "#ffcc00" }}>Founder</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-4 text-primary">Founder</h2>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-              <Image src="https://placehold.co/128x128" unoptimized width={128} height={128} alt="Founder Placeholder" className="w-28 h-28 rounded-full object-cover grayscale mb-4 md:mb-0 md:mr-6" />
+              <Image src="/about/team/adarsh-kumar.JPG" width={128} height={128} alt="Founder Placeholder" className="w-28 h-28 rounded-full object-cover mb-4 md:mb-0 md:mr-6" />
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2" style={{ color: "#ffcc00" }}>Founder Name</h3>
+                <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2 text-primary">Adarsh Kumar</h3>
                 <p className="text-base sm:text-lg md:text-xl text-gray-200 font-body">
-                  This is a short placeholder description for the founder of Skillzo.co. Replace this with a real bio to tell your story and vision.<br />
-                  Add more details about the founder&apos;s background, expertise, and passion.
+                Born in rural Bihar, Adarsh Kumar failed three startups and left home before 15. After learning from industry leaders and global programs, he founded Skillzo to ensure no student lacks 21st century’s education, turning his struggles into a mission to empower youth.
                 </p>
               </div>
             </div>
@@ -181,10 +206,11 @@ export default function AboutPage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-8" style={{ color: "#ffcc00" }}>Core Team</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full">
               {teamMembers.map((member, i) => (
-                <div key={i} className="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10">
-                  <Image unoptimized src={member.img} width={96} height={96} alt="Team Member" className="w-24 h-24 rounded-full object-cover grayscale mb-3" />
-                  <div className="font-bold font-heading text-[#ffcc00]">{member.name}</div>
-                  <div className="text-gray-300 text-sm font-body">{member.position}</div>
+                <div key={i} className="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10 gap-1">
+                  <Image unoptimized src={member.img} width={96} height={96} alt="Team Member" className="w-24 h-24 rounded-full object-cover mb-3" />
+                  <div className="font-bold font-heading text-primary">{member.name}</div>
+                  <div className="text-white text-sm font-semibold">{member.position}</div>
+                  <div className="text-gray-400 text-xs font-body">{member.school}</div>
                 </div>
               ))}
             </div>

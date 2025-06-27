@@ -8,7 +8,6 @@ import Video from '@/components/programs/7-video';
 const links = [
   "https://www.instagram.com/p/C_CvHyMuM-S/?img_index=1",
   "https://www.instagram.com/p/C6qeFYlBdaf/",
-  "https://www.instagram.com/p/C_HqldQOwhl/?img_index=1",
   "https://www.instagram.com/p/C_FFTyaumOs/?img_index=1",
   "https://www.instagram.com/p/C_Df-61pgEO/",
   "https://www.instagram.com/p/C_XYWEJOiHd/",

@@ -1,30 +1,61 @@
 import Image from "next/image";
 import { SplitEnd, SplitStart } from "../split";
+import Link from "next/link";
 
 const mentors = [
     {
-        name: "Dr. Asha Singh",
-        role: "Education Advisor",
-        tagline: "Champion for equitable learning",
-        img: "https://placehold.co/200x200?text=Mentor+1",
+        name: "Prof. Gaganjit Singh",
+        role: "Director, JJ Foundation",
+        img: "/images/mentors/gaganjit-singh.jpeg",
+        linkedin: "https://www.linkedin.com/in/prof-gaganjit-singh/",
     },
     {
-        name: "Rohan Mehta",
-        role: "Startup Mentor",
-        tagline: "Empowering young founders",
-        img: "https://placehold.co/200x200?text=Mentor+2",
+        name: "Rishi Khanna",
+        role: "Chairman, TreeForest Capital",
+        img: "/images/mentors/rishi-khanna.jpg",
+        linkedin: "https://www.linkedin.com/in/rishi-khanna-ba237b7/",
     },
     {
-        name: "Priya Desai",
-        role: "Career Coach",
-        tagline: "Guiding next-gen leaders",
-        img: "https://placehold.co/200x200?text=Mentor+3",
+        name: "Mohit Satynand",
+        role: "Chairman, Teamwork Arts",
+        img: "/images/mentors/mohit-satynand.jpg",
+        linkedin: "https://www.linkedin.com/in/mohit-satyanand-baa2b820/",
     },
     {
-        name: "Anil Kapoor",
-        role: "Tech Advisor",
-        tagline: "Building for impact",
-        img: "https://placehold.co/200x200?text=Mentor+4",
+        name: "Rahul Narvekar",
+        role: "Founder, India Network",
+        img: "/images/mentors/rahul-narvekar.jpg",
+        linkedin: "https://www.linkedin.com/in/narvekarrahul/",
+    },
+    {
+        name: "Shradha Sharma",
+        role: "Founder, YourStory Media",
+        img: "/images/mentors/shradha-sharma.jpg",
+        linkedin: "https://www.linkedin.com/in/sharmashradha/",
+    },
+    {
+        name: "Subhash Choudahry",
+        role: "Co-founder Dukaan",
+        img: "/images/mentors/subhash-chaudahry.png",
+        linkedin: "https://www.linkedin.com/in/subhashchy/",
+    },
+    {
+        name: "Arunabh Sinha",
+        role: "Co-founder & CEO UClean",
+        img: "/images/mentors/arunabh-sinha.png",
+        linkedin: "https://www.linkedin.com/in/arunabhsinha/",
+    },
+    {
+        name: "Gunjan Taneja",
+        role: "Co-founder UClean",
+        img: "/images/mentors/gaunjan-taneja.jpg",
+        linkedin: "https://www.linkedin.com/in/gunjantaneja11/",
+    },
+    {
+        name: "Arjun Vaidya",
+        role: "Co-founder V3 Ventures",
+        img: "/images/mentors/arjun-vaidya.jpg",
+        linkedin: "https://www.linkedin.com/in/arjunvaidya/",
     },
 ];
 
@@ -44,7 +75,7 @@ export default function MentorsSection() {
                         {mentors.map((mentor, i) => (
                             <div
                                 key={i}
-                                className="flex flex-col items-center mx-16 sm:mx-0 bg-neutral-900 rounded-xl shadow-lg p-6 group hover:scale-105 transition-transform duration-300 relative overflow-hidden"
+                                className="flex flex-col items-center bg-neutral-900 rounded-xl shadow-lg p-6 group hover:scale-105 transition-transform duration-300 relative overflow-hidden gap-y-2 text-center"
                             >
                                 {/* Subtle gloss only on top left */}
                                 <div
@@ -57,6 +88,18 @@ export default function MentorsSection() {
                                         height: '100%',
                                     }}
                                 />
+                                {/* LinkedIn icon top right */}
+                                <Link
+                                  href={mentor.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="absolute top-4 right-4 z-10 text-blue-400 hover:text-blue-500"
+                                  aria-label={`LinkedIn profile of ${mentor.name}`}
+                                >
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                    <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z" />
+                                  </svg>
+                                </Link>
                                 <div className="w-28 h-28 mb-4 rounded-full overflow-hidden border-4 border-yellow-400 shadow relative z-10">
                                     <Image
                                         src={mentor.img}
@@ -69,7 +112,6 @@ export default function MentorsSection() {
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-1 relative z-10">{mentor.name}</h3>
                                 <p className="text-yellow-400 font-semibold mb-1 relative z-10">{mentor.role}</p>
-                                <p className="text-yellow-100 text-sm italic text-center relative z-10">{mentor.tagline}</p>
                             </div>
                         ))}
                     </div>

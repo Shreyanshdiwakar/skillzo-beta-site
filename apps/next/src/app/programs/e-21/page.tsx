@@ -1,7 +1,7 @@
 import Hero from '@/components/programs/0-hero';
-import Timeline from '@/components/programs/2-timeline';
+// import Timeline from '@/components/programs/2-timeline';
 import Impact from '@/components/programs/3-impact';
-import HowToApply from '@/components/programs/4-how-to-apply';
+// import HowToApply from '@/components/programs/4-how-to-apply';
 import Testimonials from '@/components/programs/5-testimonials';
 
 const links = [
