@@ -204,15 +204,17 @@ export default function AboutPage() {
           {/* Core Team Section */}
           <section className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl flex flex-col items-center my-8 md:my-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-8" style={{ color: "#ffcc00" }}>Core Team</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full">
-              {teamMembers.map((member, i) => (
+            <p className="text-center">Coming Soon!</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full    justify-center items-center">
+              {/* {teamMembers.map((member, i) => (
                 <div key={i} className="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10 gap-1">
                   <Image unoptimized src={member.img} width={96} height={96} alt="Team Member" className="w-24 h-24 rounded-full object-cover mb-3" />
                   <div className="font-bold font-heading text-primary">{member.name}</div>
                   <div className="text-white text-sm font-semibold">{member.position}</div>
                   <div className="text-gray-400 text-xs font-body">{member.school}</div>
                 </div>
-              ))}
+              ))} */}
             </div>
           </section>
           {/* Core Team highlight left */}
@@ -220,10 +222,9 @@ export default function AboutPage() {
             <div className="absolute left-0 top-0 h-full w-full" style={{ background: "linear-gradient(180deg, #6EE5C2 0%, #001AFF 100%)", filter: "blur(48px)", opacity: 0.10 }} />
           </div>
           {/* Media Mentions and Collaborations Section */}
-          <section className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl flex flex-col items-center my-8 md:my-16">
+          {/* <section className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl flex flex-col items-center my-8 md:my-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-8" style={{ color: "#ffcc00" }}>Media Mentions & Collaborations</h2>
             <div className="relative w-full">
-              {/* Carousel Container */}
               <div className="flex overflow-x-auto gap-6 px-4 py-4 snap-x snap-mandatory scrollbar-hide" ref={carouselRef} id="mediaCarousel">
                 {instagramPosts.map((post, i) => (
                   <div key={i} className="flex-shrink-0 w-80 md:w-96 snap-start">
@@ -249,7 +250,6 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
-              {/* Navigation Arrows */}
               <button className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors" onClick={() => scrollCarousel("left")}> 
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
@@ -261,7 +261,7 @@ export default function AboutPage() {
                 </svg>
               </button>
             </div>
-          </section>
+          </section> */}
         </section>
       </main>
     </div>

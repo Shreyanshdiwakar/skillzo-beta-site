@@ -4,8 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "motion/react";
 import { cn } from "@/lib/utils";
 import { ClassValue } from "clsx";
+import { subscribeToNewsletter } from "./actions";
+
+
 
 export default function Footer() {
+  const [email, setEmail] = useState<string>("")
   return (
     <footer className="bg-backgroud text-background-foreground py-12 px-4 md:px-12 lg:px-18 border-t border-neutral-800 mt-16">
       {/* Main Footer Content */}
@@ -38,11 +42,16 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-2">
             <h3 className="text-lg font-bold mb-3 text-primary">Newsletter</h3>
             <p className="text-base mb-3 text-neutral-400">Get updates, opportunities, and stories from Skillzo in your inbox.</p>
-            <form className="w-full max-w-md">
+            <form onSubmit={e => {
+              e.preventDefault();
+              subscribeToNewsletter(email)
+            }} className="w-full max-w-md">
               <div className="relative w-full">
                 <input
                   type="email"
                   placeholder="you@domain.com"
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                   className="w-full px-3 py-1.5 pr-24 rounded-lg bg-neutral-900 border border-neutral-700 text-neutral-100 focus:outline-none focus:border-primary text-sm"
                 />
                 <button

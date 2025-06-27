@@ -15,13 +15,14 @@ export default function HighlightedProgram() {
       />
       {/* Program Image */}
       <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
-        <Image
+        {/* <Image
           src="https://v0.dev/placeholder.svg?width=400&height=260"
           width={400}
           height={260}
           alt="IgniteBharat Program"
           className="rounded-2xl shadow-xl object-cover w-full max-w-xs md:max-w-md"
-        />
+        /> */}
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TxgxJGdRsJE" title="IgniteBharat x Your School | Humble request from Arunabh Sinha, UClean | IIT Bombay | Skillzo"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
       {/* Program Content */}
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left gap-4">

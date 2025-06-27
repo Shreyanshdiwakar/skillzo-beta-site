@@ -19,13 +19,13 @@ const faqData = [
       {
         q: "Who is Skillzo for?",
         a: (
-          <>If you&apos;re a school student (Grades 8–12), curious about the world, want to grow, or don&apos;t know where to start, Skillzo is for you. We also support educators and mentors who want to contribute to the ecosystem.</>
+          <>If you're a school student (Grades 8–12), curious about the world, want to grow, or don't know where to start, Skillzo is for you. We also support educators and mentors who want to contribute to the ecosystem.</>
         ),
       },
       {
         q: "Is Skillzo paid or free?",
         a: (
-          <>Yes, 100%. All our programs, community access, and mentorship are free of cost. We&apos;re a social enterprise built to create impact, not profit.</>
+          <>Yes, 100%. All our programs, community access, and mentorship are free of cost. We're a social enterprise built to create impact, not profit.</>
         ),
       },
     ],
@@ -36,19 +36,19 @@ const faqData = [
       {
         q: "How do I join the Skillzo community?",
         a: (
-          <>Just fill out the form on our <Link href="/community" className="underline text-primary">Community Page</Link>, and you&apos;ll be added to our curated WhatsApp group where we share daily opportunities, updates, and mentor access.</>
+          <>Just fill out the form on our <Link href="/community" className="underline text-primary">Community Page</Link>, and you'll be added to our curated WhatsApp group where we share daily opportunities, updates, and mentor access.</>
         ),
       },
       {
         q: "What kind of updates will I receive?",
         a: (
-          <>We post about scholarships, internships, fellowships, webinars, competitions, and Skillzo programs. You&apos;ll also get reminders for 1:1 mentorship slots and exclusive student resources.</>
+          <>We post about scholarships, internships, fellowships, webinars, competitions, and Skillzo programs. You'll also get reminders for 1:1 mentorship slots and exclusive student resources.</>
         ),
       },
       {
         q: "Can I ask questions or get help in the community?",
         a: (
-          <>Yes! You can always DM the admin or raise your query in the group. We&apos;re here to support you.</>
+          <>Yes! You can always DM the admin or raise your query in the group. We're here to support you.</>
         ),
       },
     ],
@@ -75,7 +75,7 @@ const faqData = [
       {
         q: "How do I apply to a program?",
         a: (
-          <>Each program has its own timeline and application process. Just go to the program&apos;s page and click on &quot;Join Waitlist&quot; or &quot;Apply Now&quot; when it&apos;s open.</>
+          <>Each program has its own timeline and application process. Just go to the program's page and click on &quot;Join Waitlist&quot; or &quot;Apply Now&quot; when it's open.</>
         ),
       },
       {
@@ -98,7 +98,7 @@ const faqData = [
       {
         q: "What is the 1:1 Mentorship Program?",
         a: (
-          <>Our mentorship program connects high schoolers with mentors — university students, professionals, and startup founders — for personalized, human conversations. The first session is always with a Skillzo core team member, and then you&apos;re matched with mentors based on your goals.</>
+          <>Our mentorship program connects high schoolers with mentors — university students, professionals, and startup founders — for personalized, human conversations. The first session is always with a Skillzo core team member, and then you're matched with mentors based on your goals.</>
         ),
       },
       {
@@ -115,13 +115,13 @@ const faqData = [
       {
         q: "Can schools collaborate with Skillzo?",
         a: (
-          <>Yes. We work with schools to bring our programs like IgniteBharat, Sparkle, or storytelling workshops directly to students. If you&apos;re an educator or principal, reach out via our <Link href="/contact" className="underline text-primary">Contact Page</Link>.</>
+          <>Yes. We work with schools to bring our programs like IgniteBharat, Sparkle, or storytelling workshops directly to students. If you're an educator or principal, reach out via our <Link href="/contact" className="underline text-primary">Contact Page</Link>.</>
         ),
       },
       {
         q: "Can I volunteer or mentor with Skillzo?",
         a: (
-          <>Absolutely. We&apos;re always looking for mentors, speakers, facilitators, and volunteers. Fill out our <Link href="/get-involved" className="underline text-primary">Get Involved</Link> form and we&apos;ll connect with you.</>
+          <>Absolutely. We're always looking for mentors, speakers, facilitators, and volunteers. Fill out our <Link href="/get-involved" className="underline text-primary">Get Involved</Link> form and we'll connect with you.</>
         ),
       },
     ],
@@ -136,9 +136,9 @@ const faqData = [
         ),
       },
       {
-        q: "How is Skillzo funded if it&apos;s free?",
+        q: "How is Skillzo funded if it's free?",
         a: (
-          <>Skillzo is a student-first social enterprise supported by philanthropists, institutional partnerships, small grants, and fellowships. We also collaborate with educational and innovation-focused organisations. We&apos;re building ethical crowdfunding and donation models to sustain and grow our impact.</>
+          <>Skillzo is a student-first social enterprise supported by philanthropists, institutional partnerships, small grants, and fellowships. We also collaborate with educational and innovation-focused organisations. We're building ethical crowdfunding and donation models to sustain and grow our impact.</>
         ),
       },
       {
