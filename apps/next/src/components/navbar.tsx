@@ -27,6 +27,7 @@ const navLinks : NavLink[] = [
   ] },
   { name: "Community", href: "/community"},
   { name: "About", href: "/about" },
+  { name: "FAQs", href: "/faq"},
   { name: "Contact", href: "/contact" },
 ];
 

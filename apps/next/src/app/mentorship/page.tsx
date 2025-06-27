@@ -1,3 +1,4 @@
+import ProgramImages from "@/components/programs/8-images";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,7 +25,7 @@ export default function MentorshipPage() {
           Why Mentorship Matters at Skillzo
         </h2>
         <div className="flex flex-col md:flex-row mt-12 gap-8">
-          <div className="md:w-1/2 text-center md:text-left space-y-4">
+          <div className="text-center md:text-left space-y-4">
             <p className="text-base text-gray-200">
               At Skillzo, we believe in the power of connection and shared knowledge. Our mentorship program connects ambitious students with mentors who have real-world experience, offering invaluable advice and support.
             </p>
@@ -35,12 +36,12 @@ export default function MentorshipPage() {
               Whether you need guidance on developing your business idea, honing your skills, or navigating challenges, a Skillzo mentor is here to help you succeed.
             </p>
           </div>
-          <div className="md:w-1/2 grid grid-cols-2 gap-4 place-items-center">
+          {/* <div className="md:w-1/2 grid grid-cols-2 gap-4 place-items-center">
             <Image src="https://v0.dev/placeholder.svg?width=200&height=150" width={200} height={150} alt="Mentor visual" className="rounded shadow-md" />
             <Image src="https://v0.dev/placeholder.svg?width=200&height=150" width={200} height={150} alt="Mentee visual" className="rounded shadow-md" />
             <Image src="https://v0.dev/placeholder.svg?width=200&height=150" width={200} height={150} alt="Mentorship session visual 1" className="rounded shadow-md" />
             <Image src="https://v0.dev/placeholder.svg?width=200&height=150" width={200} height={150} alt="Mentorship session visual 2" className="rounded shadow-md" />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -73,6 +74,18 @@ export default function MentorshipPage() {
           </div>
         </div>
       </section>
+
+      <ProgramImages images={[
+        // "/images/mentorship/1.jpg",
+        "/images/mentorship/2.png",
+        "/images/mentorship/3.png",
+        "/images/mentorship/4.png",
+        "/images/mentorship/5.png",
+        "/images/mentorship/6.png",
+        "/images/mentorship/7.png",
+
+
+      ]} />
 
       {/* Mentor Highlights & Student Success Section */}
       <section className="px-4 py-12 max-w-3xl mx-auto text-center">

@@ -3,6 +3,7 @@ import Hero from '@/components/programs/0-hero';
 import Impact from '@/components/programs/3-impact';
 // import HowToApply from '@/components/programs/4-how-to-apply';
 import Testimonials from '@/components/programs/5-testimonials';
+import ProgramImages from '@/components/programs/8-images';
 
 const links = [
   "https://www.instagram.com/p/DLFzSJ3R5IR/?img_index=1",
@@ -40,6 +41,12 @@ export default function IgniteBharatPage() {
         { title: "Selection", description: "We carefully review applications and select students based on their passion and potential." },
         { title: "Participate & Grow", description: "Join the program, attend sessions, and work on real projects with mentors and peers." },
       ]} /> */}
+      <ProgramImages images={[
+        "/images/e-21/1.jpg",
+        "/images/e-21/2.jpg",
+        "/images/e-21/3.jpg",
+        "/images/e-21/4.jpg",
+      ]} />
       <Testimonials links={links} />
     </main>
   );

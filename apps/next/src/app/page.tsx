@@ -7,6 +7,7 @@ import MentorsSection from "@/components/home/6-mentors";
 import Partners from "@/components/home/7-partners";
 import CTA from "@/components/home/8-cta";
 import FAQs from "@/components/home/9-faqs";
+import ProgramImages from "@/components/programs/8-images";
 
 export default function Home() {
   return (
@@ -14,7 +15,13 @@ export default function Home() {
       <Hero />
       <WhatWeDo />
       <HighlightedProgram />
-      <Photos />
+      {/* <Photos /> */}
+      <ProgramImages images={[
+        "/images/home/1.JPG",
+        "/images/home/2.jpg",
+        "/images/home/3.jpg",
+        "/images/home/4.jpg",
+      ]} />
       <MentorsSection />
       <FeaturedStories />
       <Partners />
