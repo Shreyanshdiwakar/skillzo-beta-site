@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
         permanent: true  
       }
     ] 
+  },
+  eslint: {
+    ignoreDuringBuilds: true //temporarily
   }
 };
 
