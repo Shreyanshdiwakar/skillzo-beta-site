@@ -28,7 +28,7 @@ export default function Hero() {
                         their full potential.
                     </p>
                     <Link
-                        href="#join"
+                        href="/joincommunity"
                         className="bg-primary text-black px-10 py-3 rounded-full font-bold sm:text-xl shadow hover:bg-yellow-500 transition"
                     >
                         Join our community for FREE!
