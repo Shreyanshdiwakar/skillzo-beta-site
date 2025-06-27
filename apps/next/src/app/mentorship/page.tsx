@@ -1,5 +1,5 @@
 import ProgramImages from "@/components/programs/8-images";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 export default function MentorshipPage() {

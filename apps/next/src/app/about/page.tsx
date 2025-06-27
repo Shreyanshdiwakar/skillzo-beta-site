@@ -3,108 +3,108 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
-const instagramPosts = [
-  {
-    href: "https://www.instagram.com/p/C-hO07ISviE/",
-    user: "skillzo_official",
-    platform: "Instagram",
-    avatarClass: "bg-gradient-to-br from-purple-500 to-pink-500",
-    emoji: "📱",
-    preview: "Instagram Post Preview",
-    text: "Amazing collaboration with @partner! 🚀",
-    meta: "5 weeks ago • 30 reactions",
-  },
-  {
-    href: "https://www.linkedin.com/company/skillzoco/",
-    user: "Skillzo Team",
-    platform: "LinkedIn",
-    avatarClass: "bg-blue-600",
-    emoji: "💼",
-    preview: "LinkedIn Post Preview",
-    text: "Excited to announce our latest partnership! 🎉",
-    meta: "1 day ago • 456 reactions",
-  },
-  {
-    href: "https://www.instagram.com/p/C-hO07ISviE/",
-    user: "skillzo_community",
-    platform: "Instagram",
-    avatarClass: "bg-gradient-to-br from-orange-500 to-red-500",
-    emoji: "🌟",
-    preview: "Instagram Post Preview",
-    text: "Our community is growing stronger every day! 💪",
-    meta: "3 hours ago • 856 likes",
-  },
-  {
-    href: "https://www.linkedin.com/company/skillzoco/",
-    user: "Skillzo Leadership",
-    platform: "LinkedIn",
-    avatarClass: "bg-green-600",
-    emoji: "🎯",
-    preview: "LinkedIn Post Preview",
-    text: "Proud to be featured in TechCrunch! 🚀",
-    meta: "2 days ago • 789 reactions",
-  },
-  {
-    href: "https://www.instagram.com/p/C-hO07ISviE/",
-    user: "skillzo_events",
-    platform: "Instagram",
-    avatarClass: "bg-gradient-to-br from-blue-500 to-cyan-500",
-    emoji: "🎪",
-    preview: "Instagram Post Preview",
-    text: "What an incredible event! Thank you everyone! 🙏",
-    meta: "5 hours ago • 1.5k likes",
-  },
-  {
-    href: "https://www.linkedin.com/company/skillzoco/",
-    user: "Skillzo Innovation",
-    platform: "LinkedIn",
-    avatarClass: "bg-purple-600",
-    emoji: "🔬",
-    preview: "LinkedIn Post Preview",
-    text: "Innovation at its finest! New features coming soon! 🚀",
-    meta: "1 week ago • 1.2k reactions",
-  },
-  {
-    href: "https://www.instagram.com/p/C-hO07ISviE/",
-    user: "skillzo_success",
-    platform: "Instagram",
-    avatarClass: "bg-gradient-to-br from-yellow-500 to-orange-500",
-    emoji: "🏆",
-    preview: "Instagram Post Preview",
-    text: "Success stories that inspire! Keep pushing forward! 💫",
-    meta: "1 day ago • 2.1k likes",
-  },
-];
+// const instagramPosts = [
+//   {
+//     href: "https://www.instagram.com/p/C-hO07ISviE/",
+//     user: "skillzo_official",
+//     platform: "Instagram",
+//     avatarClass: "bg-gradient-to-br from-purple-500 to-pink-500",
+//     emoji: "📱",
+//     preview: "Instagram Post Preview",
+//     text: "Amazing collaboration with @partner! 🚀",
+//     meta: "5 weeks ago • 30 reactions",
+//   },
+//   {
+//     href: "https://www.linkedin.com/company/skillzoco/",
+//     user: "Skillzo Team",
+//     platform: "LinkedIn",
+//     avatarClass: "bg-blue-600",
+//     emoji: "💼",
+//     preview: "LinkedIn Post Preview",
+//     text: "Excited to announce our latest partnership! 🎉",
+//     meta: "1 day ago • 456 reactions",
+//   },
+//   {
+//     href: "https://www.instagram.com/p/C-hO07ISviE/",
+//     user: "skillzo_community",
+//     platform: "Instagram",
+//     avatarClass: "bg-gradient-to-br from-orange-500 to-red-500",
+//     emoji: "🌟",
+//     preview: "Instagram Post Preview",
+//     text: "Our community is growing stronger every day! 💪",
+//     meta: "3 hours ago • 856 likes",
+//   },
+//   {
+//     href: "https://www.linkedin.com/company/skillzoco/",
+//     user: "Skillzo Leadership",
+//     platform: "LinkedIn",
+//     avatarClass: "bg-green-600",
+//     emoji: "🎯",
+//     preview: "LinkedIn Post Preview",
+//     text: "Proud to be featured in TechCrunch! 🚀",
+//     meta: "2 days ago • 789 reactions",
+//   },
+//   {
+//     href: "https://www.instagram.com/p/C-hO07ISviE/",
+//     user: "skillzo_events",
+//     platform: "Instagram",
+//     avatarClass: "bg-gradient-to-br from-blue-500 to-cyan-500",
+//     emoji: "🎪",
+//     preview: "Instagram Post Preview",
+//     text: "What an incredible event! Thank you everyone! 🙏",
+//     meta: "5 hours ago • 1.5k likes",
+//   },
+//   {
+//     href: "https://www.linkedin.com/company/skillzoco/",
+//     user: "Skillzo Innovation",
+//     platform: "LinkedIn",
+//     avatarClass: "bg-purple-600",
+//     emoji: "🔬",
+//     preview: "LinkedIn Post Preview",
+//     text: "Innovation at its finest! New features coming soon! 🚀",
+//     meta: "1 week ago • 1.2k reactions",
+//   },
+//   {
+//     href: "https://www.instagram.com/p/C-hO07ISviE/",
+//     user: "skillzo_success",
+//     platform: "Instagram",
+//     avatarClass: "bg-gradient-to-br from-yellow-500 to-orange-500",
+//     emoji: "🏆",
+//     preview: "Instagram Post Preview",
+//     text: "Success stories that inspire! Keep pushing forward! 💫",
+//     meta: "1 day ago • 2.1k likes",
+//   },
+// ];
 
-const teamMembers = [
-  {
-    name: `Priyanshu Kumar`,
-    position: `Founder's Office`,
-    school: `IIT Guwahati`,
-    img: `/about/team/priyanshu-kumar.jpg`,
-  },
-  {
-    name: "Shreyansh Diwakar",
-    position: "Backend Developer",
-    school: "TBD",
-    img: "/about/team/shreyansh-diwakar.JPG"
-  }
-  // Add more team members as needed
-];
+// const teamMembers = [
+//   {
+//     name: `Priyanshu Kumar`,
+//     position: `Founder's Office`,
+//     school: `IIT Guwahati`,
+//     img: `/about/team/priyanshu-kumar.jpg`,
+//   },
+//   {
+//     name: "Shreyansh Diwakar",
+//     position: "Backend Developer",
+//     school: "TBD",
+//     img: "/about/team/shreyansh-diwakar.JPG"
+//   }
+//   // Add more team members as needed
+// ];
 
 export default function AboutPage() {
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  function scrollCarousel(direction: "left" | "right") {
-    const carousel = carouselRef.current;
-    if (!carousel) return;
-    const scrollAmount = 320;
-    if (direction === "left") {
-      carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    } else {
-      carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  }
+  // function scrollCarousel(direction: "left" | "right") {
+  //   const carousel = carouselRef.current;
+  //   if (!carousel) return;
+  //   const scrollAmount = 320;
+  //   if (direction === "left") {
+  //     carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  //   } else {
+  //     carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  //   }
+  // }
 
   return (
     <div className="bg-black text-white min-h-screen relative flex flex-col dark">
