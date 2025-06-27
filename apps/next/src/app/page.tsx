@@ -6,6 +6,7 @@ import Photos from "@/components/home/4-photos";
 import MentorsSection from "@/components/home/6-mentors";
 import Partners from "@/components/home/7-partners";
 import CTA from "@/components/home/8-cta";
+import FAQs from "@/components/home/9-faqs";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <FeaturedStories />
       <Partners />
       <CTA />
+      <FAQs/>
     </main>
   );
 }

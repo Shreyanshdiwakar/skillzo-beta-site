@@ -34,13 +34,13 @@ export default function PhotosSection() {
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="w-1/3 flex-shrink-0 rounded-md bg-muted overflow-hidden">
+          <div className="w-1/2 flex-shrink-0 rounded-md bg-muted overflow-hidden">
             <Image
               src="/images/home/gallery-2.JPG"
               alt="G20"
               width={960}
               height={1280}
-              className="object-cover w-full h-full"
+              className="object-cover w-full "
             />
           </div>
         </div>

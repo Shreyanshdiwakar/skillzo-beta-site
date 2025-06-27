@@ -18,13 +18,14 @@ type  NavLink =  {
 
 const navLinks : NavLink[] = [
   { name: "Programs", dropdown: [
-    { name: "Community", href: "/community", desc: "A curated WhatsApp-based peer community where students receive daily opportunities, mentorship access, and real-time updates on scholarships, internships, fellowships, and more." },
-    { name: "Skillzo Stories", href: "/programs/skillzo-stories", desc: "A storytelling platform that celebrates students who have overcome challenges, shown resilience, or created meaningful change. Stories are documented through interviews, videos, and social media campaigns." },
-    { name: "Sparkle", href: "/programs/sparkle", desc: "An intensive, solo entrepreneurship bootcamp for students in Grades 9 to 12. Sparkle guides students through a 3-stage startup journey — from idea to pitch — with mentorship, resources, and real-world exposure." },
-    { name: "IgniteBharat", href: "/programs/ignitebharat", desc: "IgniteBharat is a nationwide program that brings entrepreneurship and innovation to schools across India, focusing on Tier 2, Tier 3 cities, and rural areas. It empowers students to become community-focused problem-solvers, innovators, and leaders through real-world, impact-driven projects." },
-    { name: "E-21", href: "/programs/e-21", desc: "A student-first entrepreneurship exploration program that nurtures curiosity, creativity, and innovation. Through hands-on activities, mentorship, and team-based learning, students build a real-world entrepreneurial mindset." },
-    { name: "1:1 Mentorship", href: "/mentorship", desc: " Skillzo's personalised mentorship program connects high school students with university mentors, professionals, and startup founders for individual guidance and long-term growth." },
+    { name: "Community", href: "/community", desc: "A curated WhatsApp-based peer community for daily opportunities, mentorship, and real-time updates." },
+    { name: "Skillzo Stories", href: "/programs/skillzo-stories", desc: "Inspiring the next generation." },
+    { name: "Sparkle", href: "/programs/sparkle", desc: "Learn, build, and pitch like a founder — while you're still in school." },
+    { name: "IgniteBharat", href: "/programs/ignitebharat", desc: "Turning grassroots passion into entrepreneurial action." },
+    { name: "E-21", href: "/programs/e-21", desc: "Unlock your entrepreneurial spirit in school." },
+    { name: "1:1 Mentorship", href: "/mentorship", desc: "Talk to someone who's been there." },
   ] },
+  { name: "Community", href: "/community"},
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -46,7 +47,7 @@ export default function Navbar() {
             <HoverCard key={link.name} openDelay={100} closeDelay={100}>
               <HoverCardTrigger asChild>
                 <span className="hover:text-yellow-400 transition flex items-center gap-1 cursor-pointer select-none">
-                  {link.name}
+            {link.name}
                   <svg className="w-4 h-4 ml-0.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                 </span>
               </HoverCardTrigger>
@@ -78,8 +79,8 @@ export default function Navbar() {
                       />
                       <span className="font-bold text-base mb-1 relative z-10">{item.name}</span>
                       <span className="text-xs relative z-10">{item.desc}</span>
-                    </Link>
-                  ))}
+          </Link>
+        ))}
                 </div>
               </HoverCardContent>
             </HoverCard>
@@ -140,14 +141,14 @@ export default function Navbar() {
                 )}
               </div>
             ) : (
-              <Link
-                key={link.name}
+            <Link
+              key={link.name}
                 href={link.href ?? "/"}
                 className="text-lg font-semibold hover:text-yellow-400 transition w-full py-2 flex items-center justify-center text-center"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
             )
           )}
           <Link

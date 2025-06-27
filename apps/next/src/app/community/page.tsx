@@ -157,9 +157,9 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* Section 6: Code of Respect */}
+      {/* Section 6: Code of Conduct */}
       <section className="max-w-2xl mx-auto px-4 sm:px-6 py-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-yellow-400">Code of Respect</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-yellow-400">Code of Conduct</h2>
         <div className="bg-neutral-900 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-6 text-center">
           <p className="text-gray-200 text-lg mb-2">This is a growth-first, safe space.</p>
           <p className="text-gray-400">No spam. No distractions. Just support, access, and action.</p>
