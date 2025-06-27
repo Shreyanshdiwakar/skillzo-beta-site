@@ -4,4 +4,3 @@
 // const prisma = new PrismaClient().$extends(withAccelerate())
 
 // export default prisma;
-\
