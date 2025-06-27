@@ -138,7 +138,7 @@ export default function AboutPage() {
             Learn more about Skillzo, our journey, and the people behind the vision.<br className="hidden md:inline" />
             All text and images are placeholders.
           </p>
-          <Link href="#founder" className="bg-yellow-400 text-black px-10 py-3 rounded-full font-bold text-xl shadow hover:bg-yellow-500 transition">Meet the Founder</Link>
+          <Link href="#founder" className="bg-yellow-400 text-black px-10 py-3 rounded-full font-bold text-xl shadow hover:bg-yellow-500 transition">Meet the team</Link>
         </section>
         {/* About Content Section */}
         <section className="flex-1 flex flex-col items-center justify-start w-full px-4 my-6 sm:px-4 sm:my-0 md:px-8">

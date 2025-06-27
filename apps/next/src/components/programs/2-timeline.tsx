@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import React from 'react';
 
 interface Step {
@@ -5,13 +6,19 @@ interface Step {
   description: string;
 }
 
-export default function Timeline({ steps }: { steps: Step[] }) {
+export default function Timeline({ steps, title }: { steps: Step[]; title: string; }) {
+
+  const cols = {
+    [2]: "md:grid-cols-2",
+    [3]: "md:grid-cols-3",
+    [4]: "md:grid-cols-4"
+  }
   return (
     <section className="px-4 py-12">
-      <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">
-        Timeline & Phases
+      <h2 className={cn("text-2xl font-bold text-primary mb-6 text-center")}>
+        {title}
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center">
+      <div className={cn("grid grid-cols-1 mt-8 gap-8 max-w-5xl mx-auto text-center", cols[steps.length as 2 | 3 | 4])}>
         {steps.map((step, i) => (
           <div className="flex flex-col items-center" key={i}>
             <div className="bg-primary text-black rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-4">{i + 1}</div>

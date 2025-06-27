@@ -1,4 +1,5 @@
 "use client";
+import StatsStrip from "@/components/stats-strip";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
@@ -6,6 +7,20 @@ const InstagramEmbed = dynamic(() => import("react-social-media-embed").then(a =
 
 
 export default function CommunityPage() {
+
+  const stats = [{
+    label: "Active Members",
+    value: "600+"
+  },
+  {
+    label: "Cities",
+    value: "100+"
+  }, {
+    value: "Zero Cost",
+    label: "Absolutely free to join"
+  }
+]
+
   return (
     <main className="text-foreground min-h-screen relative overflow-x-hidden">
       {/* Community Hero Section */}
@@ -20,6 +35,8 @@ export default function CommunityPage() {
         </p>
         <Link href="/joincommunity"
           className="bg-yellow-400 text-black px-10 py-3 rounded-full font-bold text-xl shadow hover:bg-yellow-500 transition">Join the Community</Link>
+
+          <StatsStrip stats={stats} />
       </section>
 
       {/* Section 2: What Happens Inside */}

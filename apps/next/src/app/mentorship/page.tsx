@@ -12,7 +12,9 @@ export default function MentorshipPage() {
           Unlock Your Potential with 1:1 Mentorship
         </h1>
         <p className="text-base md:text-lg text-gray-200 mb-6 max-w-xl mx-auto">
-          Mentorship at Skillzo is a game-changer for aspiring teenpreneurs. Get personalized guidance, insights, and support from experienced individuals to navigate your entrepreneurial journey.
+        What is it?
+ Skillzo’s personalised mentorship program connects high school students with university mentors, professionals, and startup founders for individual guidance and long-term growth.
+ The first mentorship call is always scheduled with the Skillzo team — typically the founder — and then students are connected with other mentors as per their goals.
         </p>
       </section>
 
