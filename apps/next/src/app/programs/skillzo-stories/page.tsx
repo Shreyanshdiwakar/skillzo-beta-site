@@ -1,8 +1,11 @@
+import CTA from '@/components/cta';
 import Hero from '@/components/programs/0-hero';
 import Timeline from '@/components/programs/2-timeline';
 // import Impact from '@/components/programs/3-impact';
 // import HowToApply from '@/components/programs/4-how-to-apply';
 import Testimonials from '@/components/programs/5-testimonials';
+import { applicationLinks } from '@/consts';
+import Link from 'next/link';
 
 const links = [
   "https://www.instagram.com/p/DJG_nxdR_gV/?img_index=1",
@@ -38,6 +41,24 @@ export default function IgniteBharatPage() {
         { title: "Participate & Grow", description: "Join the program, attend sessions, and work on real projects with mentors and peers." },
       ]} /> */}
       <Testimonials links={links} />
+        
+      <section className="py-16 px-4 md:px-12 lg:px-24 text-center">
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-6 font-cal-sans text-primary">Ready to explore or share?</h2>
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mt-4">
+          <Link
+            href="/stories"
+            className="inline-block px-8 py-3 rounded-lg bg-primary text-primary-foreground font-bold text-lg shadow hover:bg-primary/90 transition"
+          >
+            Explore all stories
+          </Link>
+          <Link
+            href={applicationLinks.stories}
+            className="inline-block px-8 py-3 rounded-lg border border-primary font-bold text-lg shadow hover:bg-primary/90 transition"
+          >
+            Submit your story
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

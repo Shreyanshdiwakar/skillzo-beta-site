@@ -44,7 +44,7 @@ export default function Footer() {
             <p className="text-base mb-3 text-neutral-400">Get updates, opportunities, and stories from Skillzo in your inbox.</p>
             <form onSubmit={e => {
               e.preventDefault();
-              subscribeToNewsletter(email)
+              subscribeToNewsletter(email).then(console.log).catch(console.error)
             }} className="w-full max-w-md">
               <div className="relative w-full">
                 <input

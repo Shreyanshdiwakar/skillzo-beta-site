@@ -1,68 +1,19 @@
 import Image from "next/image";
-import { SplitEnd, SplitStart } from "../split";
+import { SplitEnd, SplitStart } from "./split";
 import Link from "next/link";
 
-const mentors = [
-    {
-        name: "Prof. Gaganjit Singh",
-        role: "Director, JJ Foundation",
-        img: "/images/mentors/gaganjit-singh.jpeg",
-        linkedin: "https://www.linkedin.com/in/prof-gaganjit-singh/",
-    },
-    {
-        name: "Rishi Khanna",
-        role: "Chairman, TreeForest Capital",
-        img: "/images/mentors/rishi-khanna.jpg",
-        linkedin: "https://www.linkedin.com/in/rishi-khanna-ba237b7/",
-    },
-    {
-        name: "Mohit Satynand",
-        role: "Chairman, Teamwork Arts",
-        img: "/images/mentors/mohit-satynand.jpg",
-        linkedin: "https://www.linkedin.com/in/mohit-satyanand-baa2b820/",
-    },
-    {
-        name: "Rahul Narvekar",
-        role: "Founder, India Network",
-        img: "/images/mentors/rahul-narvekar.jpg",
-        linkedin: "https://www.linkedin.com/in/narvekarrahul/",
-    },
-    {
-        name: "Shradha Sharma",
-        role: "Founder, YourStory Media",
-        img: "/images/mentors/shradha-sharma.jpg",
-        linkedin: "https://www.linkedin.com/in/sharmashradha/",
-    },
-    {
-        name: "Subhash Choudahry",
-        role: "Co-founder Dukaan",
-        img: "/images/mentors/subhash-chaudahry.png",
-        linkedin: "https://www.linkedin.com/in/subhashchy/",
-    },
-    {
-        name: "Arunabh Sinha",
-        role: "Co-founder & CEO UClean",
-        img: "/images/mentors/arunabh-sinha.png",
-        linkedin: "https://www.linkedin.com/in/arunabhsinha/",
-    },
-    {
-        name: "Gunjan Taneja",
-        role: "Co-founder UClean",
-        img: "/images/mentors/gaunjan-taneja.jpg",
-        linkedin: "https://www.linkedin.com/in/gunjantaneja11/",
-    },
-    {
-        name: "Arjun Vaidya",
-        role: "Co-founder V3 Ventures",
-        img: "/images/mentors/arjun-vaidya.jpg",
-        linkedin: "https://www.linkedin.com/in/arjunvaidya/",
-    },
-];
+interface Mentor {
+    name: string;
+    role: string;
+    img: string;
+    linkedin: string;
+}
 
-export default function MentorsSection() {
+
+export default function MentorsSection({mentors, text} : { mentors: Mentor[]; text?: string}) {
     return (
         <>
-            <section className="pt-16 pb-32 px-4 md:px-12 lg:px-24 bg-primary relative mt-32 -mb-16">
+            <section className="pt-16 pb-32 px-4 md:px-12 lg:px-24 bg-primary relative mt-32 ">
                 <SplitStart />
                 <div className="">
                     <div className="max-w-5xl mx-auto text-center mb-12 text-primary-foreground">
@@ -115,6 +66,11 @@ export default function MentorsSection() {
                             </div>
                         ))}
                     </div>
+                    {text && (
+                      <div className="text-center mt-6">
+                        <span className="text-lg text-primary-foreground font-semibold">{text}</span>
+                      </div>
+                    )}
                 </div>
                 <SplitEnd />
 

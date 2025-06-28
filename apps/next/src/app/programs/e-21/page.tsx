@@ -1,3 +1,4 @@
+import MentorsSection from '@/components/mentors';
 import Hero from '@/components/programs/0-hero';
 // import Timeline from '@/components/programs/2-timeline';
 import Impact from '@/components/programs/3-impact';
@@ -10,6 +11,41 @@ const links = [
 "https://www.instagram.com/p/DEABScNtdA1/"
 ]
 
+
+
+
+
+
+
+
+const mentors = [
+  {
+    name: "Nivedan Rathi",
+    role: "Founder, Future & AI",
+    img: "/images/e-21/mentors/nivedan-rathi.jpg",
+    linkedin: "https://www.linkedin.com/in/nivedanrathi/"
+  },
+  {
+    name: "Prabhu (Dayal) Guliani",
+    role: "Founder, Inka",
+    img: "/images/e-21/mentors/prabhu-guliani.jpg",
+    linkedin: "https://www.linkedin.com/in/prabhudayalguliani/"
+  },
+  {
+    name: "Aashna Saraf",
+    role: "Founder, CreatED",
+    img: "/images/e-21/mentors/aashna-saraf.jpg",
+    linkedin: "https://www.linkedin.com/in/aashnasaraf/"
+  },
+  {
+    name: "Abheejit K",
+    role: "WEF Top Innovator",
+    img: "/images/e-21/mentors/abheejit-k.jpg",
+    linkedin: "https://www.linkedin.com/in/abheejitk/"
+  }
+];
+
+
 export default function IgniteBharatPage() {
   return (
     <main>
@@ -21,6 +57,7 @@ export default function IgniteBharatPage() {
           label: "Students Reached",
           value: "1,500+"
         }]}
+        logos={["/images/partners/10.png"]}
       />
       {/* <Timeline steps={[
         { title: "Applications", description: "Submit your application to join IgniteBharat." },
@@ -47,6 +84,7 @@ export default function IgniteBharatPage() {
         "/images/e-21/3.jpg",
         "/images/e-21/4.jpg",
       ]} />
+      <MentorsSection mentors={mentors} text='And many more mentors...'/>
       <Testimonials links={links} />
     </main>
   );

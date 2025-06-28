@@ -17,11 +17,12 @@ const links = [
 export default function IgniteBharatPage() {
   return (
     <main>
-      <Hero 
-        name="Sparkle – Student Entrepreneurship Bootcamp" 
+      <Hero
+        name="Sparkle – Student Entrepreneurship Bootcamp"
         tagline="Learn, build, and pitch like a founder — while you're still in school."
         description="  An intensive, solo entrepreneurship bootcamp for students in Grades 9 to 12. Sparkle guides students through a 3-stage startup journey — from idea to pitch — with mentorship, resources, and real-world exposure.
 Organized in collaboration with E-Cell, IIT Guwahati — one of India's top technical institutes known for fostering next-gen startup talent."
+        logos={["/images/partners/2.png"]}
 
       />
       <Timeline title='Structure' steps={[
@@ -39,7 +40,7 @@ Organized in collaboration with E-Cell, IIT Guwahati — one of India's top tech
         { title: "Selection", description: "We carefully review applications and select students based on their passion and potential." },
         { title: "Participate & Grow", description: "Join the program, attend sessions, and work on real projects with mentors and peers." },
       ]} /> */}
-            <ProgramImages images={[
+      <ProgramImages images={[
         "/images/sparkle/1.jpg",
         "/images/sparkle/2.jpg",
         "/images/sparkle/3.jpg",

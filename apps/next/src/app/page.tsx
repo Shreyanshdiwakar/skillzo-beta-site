@@ -3,11 +3,73 @@ import WhatWeDo from "@/components/home/1-what-we-do";
 import HighlightedProgram from "@/components/home/2-highlighted-program";
 import FeaturedStories from "@/components/home/3-featured-stories";
 // import Photos from "@/components/home/4-photos";
-import MentorsSection from "@/components/home/6-mentors";
+import MentorsSection from "@/components/mentors";
 import Partners from "@/components/home/7-partners";
 import CTA from "@/components/home/8-cta";
-import FAQs from "@/components/home/9-faqs";
+import ViewFAQs from "@/components/home/9-view-faqs";
 import ProgramImages from "@/components/programs/8-images";
+
+
+
+
+
+const mentors = [
+  {
+      name: "Prof. Gaganjit Singh",
+      role: "Director, JJ Foundation",
+      img: "/images/mentors/gaganjit-singh.jpeg",
+      linkedin: "https://www.linkedin.com/in/prof-gaganjit-singh/",
+  },
+  {
+      name: "Rishi Khanna",
+      role: "Chairman, TreeForest Capital",
+      img: "/images/mentors/rishi-khanna.jpg",
+      linkedin: "https://www.linkedin.com/in/rishi-khanna-ba237b7/",
+  },
+  {
+      name: "Mohit Satynand",
+      role: "Chairman, Teamwork Arts",
+      img: "/images/mentors/mohit-satynand.jpg",
+      linkedin: "https://www.linkedin.com/in/mohit-satyanand-baa2b820/",
+  },
+  {
+      name: "Rahul Narvekar",
+      role: "Founder, India Network",
+      img: "/images/mentors/rahul-narvekar.jpg",
+      linkedin: "https://www.linkedin.com/in/narvekarrahul/",
+  },
+  {
+      name: "Shradha Sharma",
+      role: "Founder, YourStory Media",
+      img: "/images/mentors/shradha-sharma.jpg",
+      linkedin: "https://www.linkedin.com/in/sharmashradha/",
+  },
+  {
+      name: "Subhash Choudahry",
+      role: "Co-founder Dukaan",
+      img: "/images/mentors/subhash-chaudahry.png",
+      linkedin: "https://www.linkedin.com/in/subhashchy/",
+  },
+  {
+      name: "Arunabh Sinha",
+      role: "Co-founder & CEO UClean",
+      img: "/images/mentors/arunabh-sinha.png",
+      linkedin: "https://www.linkedin.com/in/arunabhsinha/",
+  },
+  {
+      name: "Gunjan Taneja",
+      role: "Co-founder UClean",
+      img: "/images/mentors/gaunjan-taneja.jpg",
+      linkedin: "https://www.linkedin.com/in/gunjantaneja11/",
+  },
+  {
+      name: "Arjun Vaidya",
+      role: "Co-founder V3 Ventures",
+      img: "/images/mentors/arjun-vaidya.jpg",
+      linkedin: "https://www.linkedin.com/in/arjunvaidya/",
+  },
+];
+
 
 export default function Home() {
   return (
@@ -22,11 +84,12 @@ export default function Home() {
         "/images/home/3.jpg",
         "/images/home/4.jpg",
       ]} />
-      <MentorsSection />
+      <MentorsSection mentors={mentors} />
       <FeaturedStories />
       <Partners />
       <CTA />
-      <FAQs/>
+      <ViewFAQs/>
+
     </main>
   );
 }

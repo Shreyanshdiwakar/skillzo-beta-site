@@ -15,7 +15,13 @@ const features = [
     description:
       "1:1 and group mentorship from industry leaders, founders, and experienced teenpreneurs.",
     icon: (
-      <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><circle cx="18" cy="18" r="16" fill="#FFD600" /><path d="M18 24v-6M18 12h.01" stroke="#000" strokeWidth="2.5" strokeLinecap="round" /></svg>
+      <svg width="36" height="36" fill="none" viewBox="0 0 36 36">
+        <circle cx="18" cy="18" r="16" fill="#FFD600" />
+        <circle cx="13" cy="16" r="3" stroke="#000" strokeWidth="2.5" />
+        <circle cx="23" cy="16" r="3" stroke="#000" strokeWidth="2.5" />
+        <path d="M10 25c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5" stroke="#000" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M18.5 25c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5" stroke="#000" strokeWidth="2.5" strokeLinecap="round" />
+      </svg>
     ),
   },
   {

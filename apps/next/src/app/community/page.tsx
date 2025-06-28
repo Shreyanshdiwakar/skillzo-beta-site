@@ -2,6 +2,7 @@
 import StatsStrip from "@/components/stats-strip";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { Trophy } from "lucide-react";
 
 const InstagramEmbed = dynamic(() => import("react-social-media-embed").then(a => a.InstagramEmbed), { ssr: false})
 
@@ -65,7 +66,9 @@ export default function CommunityPage() {
           <div className="relative rounded-2xl bg-neutral-900 p-6 flex flex-col items-center text-center shadow-lg h-full overflow-hidden">
             <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{background: "radial-gradient(circle at 60% 40%, #FF7B4A80 0%, #FF5B3733 70%, transparent 100%)"}}></div>
             <div className="relative z-10 flex flex-col items-center">
-              <svg className="mb-3" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#FFD600"/><path d="M12 8V12M12 16H12.01" stroke="#18181B" strokeWidth="2" strokeLinecap="round"/></svg>
+              <span className="mb-3 bg-yellow-400 rounded-full p-2 flex items-center justify-center" style={{ width: 36, height: 36 }}>
+                <Trophy size={24} color="#18181B" strokeWidth={2} />
+              </span>
               <h3 className="font-bold text-lg mb-2 text-yellow-400">Exclusive Opportunities</h3>
               <p className="text-gray-200 text-base">Access programs, internships, and resources only available to our community members. Unlock doors to your future.</p>
             </div>
