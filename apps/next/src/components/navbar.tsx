@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import { cn } from "@/lib/utils";
 
@@ -34,10 +34,38 @@ const navLinks : NavLink[] = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
+  const [showLogo, setShowLogo] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY.current && currentScrollY > 40) {
+        // Scrolling down
+        setShowLogo(false);
+      } else {
+        // Scrolling up
+        setShowLogo(true);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="w-full flex items-center justify-between px-4 md:px-8 py-4 bg-transparent backdrop-blur z-50 sticky top-0">
+    <nav
+      className={cn(
+        "w-full flex items-center justify-between px-4 md:px-8 py-4 bg-transparent backdrop-blur z-50 sticky top-0 transition-all duration-700",
+        showLogo ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0 pointer-events-none"
+      )}
+      style={{ willChange: 'transform, opacity' }}
+    >
       {/* Logo */}
-      <Link href="/" className="flex items-center gap-2">
+      <Link
+        href="/"
+        className="flex items-center gap-2"
+      >
         <Image priority src={"/skillzo_transparent.png"} width={352 / 3} height={87 / 3} alt="Skillzo Logo" />
       </Link>
 

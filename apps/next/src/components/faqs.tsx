@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
+import CTA from "./cta";
 
 const faqData = [
   {
@@ -168,6 +169,7 @@ export default function FAQs() {
           </Accordion>
         </div>
       ))}
+      <CTA heading="Question not found?" text="Contact us" href="/contact" />
     </section>
   );
 }

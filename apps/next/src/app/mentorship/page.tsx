@@ -32,9 +32,6 @@ export default function MentorshipPage() {
             <p className="text-base text-gray-200">
               Whether you need guidance on developing your business idea, honing your skills, or navigating challenges, a Skillzo mentor is here to help you succeed.
             </p>
-            <p className="text-base text-gray-200">
-              Whether you need guidance on developing your business idea, honing your skills, or navigating challenges, a Skillzo mentor is here to help you succeed.
-            </p>
           </div>
           {/* <div className="md:w-1/2 grid grid-cols-2 gap-4 place-items-center">
             <Image src="https://v0.dev/placeholder.svg?width=200&height=150" width={200} height={150} alt="Mentor visual" className="rounded shadow-md" />
@@ -69,7 +66,7 @@ export default function MentorshipPage() {
             <div className="bg-primary text-black rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mb-4">3</div>
             <h3 className="text-xl font-semibold mb-2">Connect & Grow</h3>
             <p className="text-base text-gray-300">
-              Begin your 1:1 mentorship sessions and start working towards your goals.
+              Begin your mentorship sessions and start working towards your goals.
             </p>
           </div>
         </div>

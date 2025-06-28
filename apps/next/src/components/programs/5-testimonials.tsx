@@ -12,7 +12,7 @@ export default function Testimonials({ links }: { links: string[] }) {
     <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-yellow-400">Community in Action</h2>
     <div className="flex flex-wrap gap-6 justify-center">
       {links.map(link => (
-      <InstagramEmbed key={link} url={link} width={328}   />
+      <InstagramEmbed  key={link} url={link} width={328}   />
 
       ))}
       {/* <InstagramEmbed url="https://www.instagram.com/p/DEiGq_kzV1a/?img_index=1" width={328}  />

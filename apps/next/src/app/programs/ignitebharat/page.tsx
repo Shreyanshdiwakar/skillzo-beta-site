@@ -1,7 +1,7 @@
 import Hero from '@/components/programs/0-hero';
 import Timeline from '@/components/programs/2-timeline';
 import Impact from '@/components/programs/3-impact';
-// import HowToApply from '@/components/programs/4-how-to-apply';
+import HowToApply from '@/components/programs/4-how-to-apply';
 import Testimonials from '@/components/programs/5-testimonials';
 import Video from '@/components/programs/7-video';
 
@@ -47,11 +47,11 @@ export default function IgniteBharatPage() {
         "200+ student-led project ideas initiated at the local level",
         "Several projects implemented with mentor support"
       ]} />
-      {/* <HowToApply steps={[
+      <HowToApply steps={[
         { title: "Apply", description: "Fill out our IgniteBharat application form to tell us about your goals." },
-        { title: "Selection", description: "We carefully review applications and select students based on their passion and potential." },
         { title: "Participate & Grow", description: "Join the program, attend sessions, and work on real projects with mentors and peers." },
-      ]} /> */}
+        { title: "Post Program Mentorship", description: "Receive the certificate and post program mentorship." },
+      ]} />
       <Video link='https://www.youtube.com/embed/TxgxJGdRsJE' />
       <Testimonials links={links} />
     </main>

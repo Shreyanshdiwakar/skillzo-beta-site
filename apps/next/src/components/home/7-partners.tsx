@@ -2,24 +2,37 @@ import Image from "next/image";
 
 const partners = [
   {
-    name: "Durga",
-    img: "https://skillzo.co/assets/img/partners/durga.png",
+    img: "/images/partners/1.png",
   },
   {
-    name: "E-Cell IIT Bombay",
-    img: "https://skillzo.co/assets/img/partners/ecell_iitb.png",
+    img: "/images/partners/2.png",
   },
   {
-    name: "IIT Bombay",
-    img: "https://skillzo.co/assets/img/partners/iitb.png",
+    img: "/images/partners/3.png",
   },
   {
-    name: "India",
-    img: "https://skillzo.co/assets/img/partners/india.png",
+    img: "/images/partners/4.png",
   },
   {
-    name: "Skilltank",
-    img: "https://skillzo.co/assets/img/partners/skilltank.png",
+    img: "/images/partners/5.png",
+  },
+  {
+    img: "/images/partners/6.png",
+  },
+  {
+    img: "/images/partners/7.png",
+  },
+  {
+    img: "/images/partners/8.png",
+  },
+  {
+    img: "/images/partners/9.webp",
+  },
+  {
+    img: "/images/partners/10.png",
+  },
+  {
+    img: "/images/partners/11.png",
   },
 ];
 
@@ -33,16 +46,15 @@ export default function Partners() {
         </p>
       </div>
       <div className="flex flex-wrap justify-center items-center gap-8 max-w-4xl mx-auto">
-        {partners.map((partner) => (
-          <div key={partner.name} className="flex flex-col items-center w-32 h-24">
+        {partners.map((partner, index) => (
+          <div key={index} className="flex flex-col items-center w-32 h-24">
             <Image
               src={partner.img}
-              alt={partner.name + ' logo'}
-              width={120}
+              alt="Partner logo"
+              width={120} // width and height will be changed later on to be dynamic
               height={80}
               className="object-contain w-full h-full"
-              unoptimized
-            />
+          />
           </div>
         ))}
       </div>
