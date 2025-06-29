@@ -122,7 +122,7 @@ export default function Navbar() {
       </div>
 
       {/* Join Button */}
-      <Link href="#join" className="hidden md:inline bg-primary text-black px-6 py-3 rounded-full font-bold text-lg shadow hover:bg-yellow-500 transition">
+      <Link href="/joincommunity" className="hidden md:inline bg-primary text-black px-6 py-3 rounded-full font-bold text-lg shadow hover:bg-yellow-500 transition">
         Join Skillzo
       </Link>
 

@@ -5,9 +5,9 @@ import StatsStrip from "../stats-strip";
 export default function Hero() {
     const stats = [
         { value: "19,500+", label: "Students" },
-        { value: "1,500+", label: "Mentors" },
-        { value: "75+", label: "Cities" },
-        { value: "10+", label: "Programs" }
+        // { value: "1,500+", label: "Mentors" },
+        { value: "25+", label: "States" },
+        { value: "7+", label: "Programs" }
     ] 
     return (
         <section className="flex flex-col items-center justify-center text-center px-4  relative overflow-hidden">
@@ -18,14 +18,12 @@ export default function Hero() {
                         Join India&apos;s
                     </h2>
                     <h1 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight tracking-wide ">
-                        #1 Teenpreneur
+                    #1 Platform for 
                         <br />
-                        Community
+                        <span className="bg-gradient-to-r from-yellow-300 via-pink-400  to-yellow-400 bg-clip-text text-transparent">ambitious</span> Teens
                     </h1>
                     <p className="text-base md:text-lg text-gray-200 mb-8 max-w-xl mx-auto">
-                        Skillzo is a community of high school students where we empower future teen
-                        leaders with exposure, experience, and networking opportunities to unlock
-                        their full potential.
+                    Skillzo is a impact first platform empowering high school students across India with exposure, experience, and networks to thrive in the 21st century.
                     </p>
                     <Link
                         href="/joincommunity"

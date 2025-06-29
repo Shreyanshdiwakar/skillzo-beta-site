@@ -2,12 +2,11 @@ import Hero from "@/components/home/0-hero";
 import WhatWeDo from "@/components/home/1-what-we-do";
 import HighlightedProgram from "@/components/home/2-highlighted-program";
 import FeaturedStories from "@/components/home/3-featured-stories";
-// import Photos from "@/components/home/4-photos";
+import Photos from "@/components/home/4-photos";
 import MentorsSection from "@/components/mentors";
 import Partners from "@/components/home/7-partners";
 import CTA from "@/components/home/8-cta";
 import ViewFAQs from "@/components/home/9-view-faqs";
-import ProgramImages from "@/components/programs/8-images";
 
 
 
@@ -84,12 +83,7 @@ export default function Home() {
       <WhatWeDo />
       <HighlightedProgram />
       {/* <Photos /> */}
-      <ProgramImages images={[
-        "/images/home/1.JPG",
-        "/images/home/2.jpg",
-        "/images/home/3.jpg",
-        "/images/home/4.jpg",
-      ]} />
+      <Photos images={Array.from({ length: 29 }, (_, i) => `/images/home/${i + 1}.jpg`)} />
       <MentorsSection mentors={mentors} />
       <FeaturedStories />
       <Partners />

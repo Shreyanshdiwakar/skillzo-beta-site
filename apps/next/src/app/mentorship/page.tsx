@@ -1,4 +1,5 @@
 import ProgramImages from "@/components/programs/8-images";
+import { applicationLinks } from "@/consts";
 // import Image from "next/image";
 import Link from "next/link";
 
@@ -82,7 +83,9 @@ export default function MentorshipPage() {
         "/images/mentorship/7.png",
 
 
-      ]} />
+      ]}
+        gridCols={3}
+      />
 
       {/* Mentor Highlights & Student Success Section */}
       <section className="px-4 py-12 max-w-3xl mx-auto text-center">
@@ -110,12 +113,13 @@ export default function MentorshipPage() {
       <section className="flex flex-col items-center justify-center text-center px-4 py-12">
         <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Ready to Get Started?</h2>
         <div className="flex flex-col md:flex-row gap-4">
-          <Link href="#become-mentor" className="bg-primary text-black px-8 py-3 rounded-full font-bold text-lg shadow transition">
-            Become a Mentor
-          </Link>
-          <Link href="#find-mentor" className="bg-primary text-black px-8 py-3 rounded-full font-bold text-lg shadow transition">
+        <Link href={applicationLinks.mentorship.find} className="bg-primary text-black px-8 py-3 rounded-full font-bold text-lg shadow transition">
             Find a Mentor
           </Link>
+          <Link href={applicationLinks.mentorship.join} className="border border-primary text-white px-8 py-3 rounded-full font-bold text-lg shadow transition">
+            Become a Mentor
+          </Link>
+
         </div>
         <p className="text-sm text-gray-400 mt-4">Links redirect to application forms.</p>
       </section>

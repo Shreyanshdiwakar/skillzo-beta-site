@@ -1,72 +1,73 @@
+"use client";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-export default function PhotosSection() {
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
+export default function PhotosSection({images}: {images: string[]}) {
   return (
-    <section className="px-12">
-      {/* Mobile: 2-column grid, all squares */}
-      <div className="block md:hidden">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="aspect-square rounded-md bg-muted overflow-hidden">
-            <Image src="/images/home/gallery-1.JPG" alt="Rungta" width={1600} height={1024} className="object-cover w-full h-full" />
-          </div>
-          <div className="aspect-square rounded-md bg-muted overflow-hidden">
-            <Image src="/images/home/gallery-2.JPG" alt="G20" width={960} height={1280} className="object-cover w-full h-full" />
-          </div>
-          <div className="aspect-square rounded-md bg-muted overflow-hidden">
-            <Image src="/images/home/gallery-3.jpg" alt="Team" width={4284} height={5712} className="object-cover w-full h-full" />
-          </div>
-          <div className="aspect-square rounded-md bg-muted overflow-hidden">
-            <Image src="/images/home/gallery-4.jpg" alt="TechIndia" width={4032} height={3024} className="object-cover w-full h-full" />
-          </div>
-        </div>
-      </div>
-      {/* Desktop: flexbox layout for wide/square rows */}
-      <div className="hidden md:block">
-        {/* First row: wide + square */}
-        <div className="flex gap-8 mb-8">
-          <div className="flex-1 rounded-md bg-muted overflow-hidden">
-            <Image
-              src="/images/home/gallery-1.JPG"
-              alt="Rungta"
-              width={1600}
-              height={1024}
-              className="object-cover w-full h-full"
-            />
-          </div>
-          <div className="w-1/2 flex-shrink-0 rounded-md bg-muted overflow-hidden">
-            <Image
-              src="/images/home/gallery-2.JPG"
-              alt="G20"
-              width={960}
-              height={1280}
-              className="object-cover w-full "
-            />
-          </div>
-        </div>
-        {/* Second row: square + wide */}
-        <div className="flex gap-8 ">
-          <div className="w-1/3 rounded-md bg-muted overflow-hidden">
-            <Image
-              src="/images/home/gallery-3.jpg"
-              alt="Team"
-              width={4284}
-              height={5712}
-              className="object-cover w-full h-full"
-            />
-          </div>
-          <div className="flex-1 rounded-md bg-muted overflow-hidden">
-            <Image
-              src="/images/home/gallery-4.jpg"
-              alt="TechIndia"
-              width={4032}
-              height={3024}
-              className="object-cover w-full h-full"
-            />
-          </div>
-        </div>
-      </div>
+    <section className="px-4 md:px-12 py-8">
+      <h2 className="text-3xl font-extrabold mb-8 text-primary text-center">Media</h2>
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={30}
+        slidesPerView={1}
+        navigation={true}
+        pagination={false}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        className="photos-swiper"
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3.5,
+            spaceBetween: 30,
+          },
+        }}
+      >
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div className="aspect-[4/3] rounded-lg overflow-hidden bg-muted">
+              <Image
+                src={image}
+                alt={`Gallery image ${index + 1}`}
+                width={1600}
+                height={1200}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      
+      <style jsx global>{`
+        .photos-swiper {
+          padding-bottom: 50px;
+        }
+        .photos-swiper .swiper-button-next,
+        .photos-swiper .swiper-button-prev {
+          color: #fbbf24;
+          background: rgba(0, 0, 0, 0.5);
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          backdrop-filter: blur(10px);
+        }
+        .photos-swiper .swiper-button-next:after,
+        .photos-swiper .swiper-button-prev:after {
+          font-size: 18px;
+        }
+      `}</style>
     </section>
-
   );
 }

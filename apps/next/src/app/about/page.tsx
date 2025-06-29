@@ -144,9 +144,7 @@ export default function AboutPage() {
             Our Story & Mission
           </h1>
           <p className="text-base md:text-lg text-gray-200 mb-6 max-w-xl mx-auto">
-            This is a placeholder for a jaw-dropping, minimalistic, and futuristic about page. <br className="hidden md:inline" />
-            Learn more about Skillzo, our journey, and the people behind the vision.<br className="hidden md:inline" />
-            All text and images are placeholders.
+          Skillzo empowers students by bridging education gaps through innovative mentorship and technology. Fueled by passion and resilience, we believe talent has no limits. Our dedicated team transforms potential into impact—one student, one story, one skill at a time—shaping the future of learning and leadership.
           </p>
           <Link href="#founder" className="bg-yellow-400 text-black px-10 py-3 rounded-full font-bold text-xl shadow hover:bg-yellow-500 transition">Meet the team</Link>
         </section>
@@ -167,20 +165,17 @@ export default function AboutPage() {
               {/* Our Mission */}
               <div className="flex-1 space-y-3">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading text-primary">Our Mission</h2>
-                <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body">
-                  Placeholder text for Skillzo&apos;s mission. Replace this with a compelling story about your vision, values, and what makes your platform unique. <br />
-                  Use this space to connect with your audience and share your journey. Add as much text as you need—this section is designed for readability and flow.
-                </p>
+                <p className="text-base  text-gray-200 leading-relaxed font-body">
+                Skillzo powers students by bridging the gap between potential and opportunity. We provide real-world education, mentorship, and community support to help youth transform their lives and communities. Driven by student leadership, our mission is to ignite change from the ground up, creating lasting impact across India.
+                                </p>
               </div>
               {/* Divider for desktop */}
               <div className="hidden md:block w-px bg-gray-700/40 h-32 self-center" />
               {/* What We Do */}
               <div className="flex-1 space-y-3">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading text-primary">What We Do</h2>
-                <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-body">
-                  Placeholder for a brief description of what Skillzo offers. Highlight your core features, approach, and the impact you aim to create. <br />
-                  This section can be expanded with more details as needed. The layout is open and text-friendly, perfect for longer content.
-                </p>
+                <p className="text-base text-gray-200 leading-relaxed font-body">
+                Skillzo offers entrepreneurship programs, mentorship, and peer communities focused on real-world skills and growth. We deliver accessible, impactful learning through specialised programs, workshops, and storytelling to inspire and equip students from diverse backgrounds. Our goal is to foster creativity, confidence, and leadership for meaningful social change.</p>
               </div>
             </div>
           </div>
