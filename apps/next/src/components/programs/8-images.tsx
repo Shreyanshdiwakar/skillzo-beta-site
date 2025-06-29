@@ -13,6 +13,7 @@ export default function ProgramImages({ images, gridCols=4 }: ProgramImagesProps
   }
   return (
     <section className={cn("w-full max-w-6xl mx-auto py-12 px-4", gridColsMap[gridCols as 3 | 4])}>
+      <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Program in action</h2>
       <div className={cn("grid grid-cols-2 gap-4 p-4", gridColsMap[gridCols as 4 | 3])}>
         {images.map((src, i) => (
           <div key={i} className="aspect-[4/3] rounded-lg overflow-hidden bg-neutral-800 flex items-center justify-center border border-primary">

@@ -4,6 +4,19 @@ import { applicationLinks } from "@/consts";
 import Link from "next/link";
 
 export default function MentorshipPage() {
+  const testimonials = [
+    {
+      quote: `"As a mentoring organisation, Skillzo offers mentorship that is unparalleled. The impact that they bring upon the mentee can be visible holistically. They don't solely hand you the opportunities, they make you able enough to grab them yourself."`,
+      author: "Dev Gupta",
+      className: "border border-primary bg-background"
+    },
+    {
+      quote: '"My mentor provided me with practical advice and motivation that helped me launch my first project. Highly recommend!"',
+      author: "Skillzo Student",
+      className: "border border-primary bg-[var(--success-bg,rgba(0,0,0,0.5))]"
+    }
+  ];
+
   return (
     <div className="relative font-cal-sans">
 
@@ -15,7 +28,7 @@ export default function MentorshipPage() {
         </h1>
         <p className="text-base md:text-lg text-gray-200 mb-6 max-w-xl mx-auto">
         What is it?
- Skillzo’s personalised mentorship program connects high school students with university mentors, professionals, and startup founders for individual guidance and long-term growth.
+ Skillzo's personalised mentorship program connects high school students with university mentors, professionals, and startup founders for individual guidance and long-term growth.
  The first mentorship call is always scheduled with the Skillzo team — typically the founder — and then students are connected with other mentors as per their goals.
         </p>
       </section>
@@ -94,18 +107,12 @@ export default function MentorshipPage() {
           Hear from our mentors and mentees about the transformative impact of the Skillzo mentorship program.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-6 rounded-lg shadow-md text-left border border-primary bg-background">
-            <p className="italic text-gray-300 mb-4">
-              &quot;Mentoring at Skillzo has been incredibly rewarding. Seeing my mentee develop their skills and confidence is a fantastic feeling.&quot;
-            </p>
-            <p className="font-semibold text-primary">- Experienced Mentor</p>
-          </div>
-          <div className="p-6 rounded-lg shadow-md text-left border border-primary bg-[var(--success-bg,rgba(0,0,0,0.5))]">
-            <p className="italic text-gray-300 mb-4">
-              &quot;My mentor provided me with practical advice and motivation that helped me launch my first project. Highly recommend!&quot;
-            </p>
-            <p className="font-semibold text-primary">- Skillzo Student</p>
-          </div>
+          {testimonials.map((t, i) => (
+            <div key={i} className={`p-6 rounded-lg shadow-md text-left ${t.className}`}>
+              <p className="italic text-gray-300 mb-4">{t.quote}</p>
+              <p className="font-semibold text-primary">- {t.author}</p>
+            </div>
+          ))}
         </div>
       </section>
 
