@@ -13,7 +13,7 @@ export default function MentorshipPage() {
     {
       quote: '"As a school student founding a startup, mentorship is crucial, and getting it from someone who’s done it in school is the best part of Skillzo. Adarsh personally guides, advises, and edits like an elder brother. That kind of support? It’s the best thing ever."',
       author: "Ayush Kumar Roy",
-      className: "border border-primary bg-primary"
+      className: "border border-primary bg-background"
     }
   ];
 
