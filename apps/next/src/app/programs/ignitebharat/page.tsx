@@ -55,7 +55,7 @@ export default function IgniteBharatPage() {
         { title: "Participate & Grow", description: "Join the program, attend sessions, and work on real projects with mentors and peers." },
         { title: "Post Program Mentorship", description: "Receive the certificate and post program mentorship." },
       ]} />
-      <Testimonials links={links} />
+      <Testimonials links={links} text='Social Media' />
       <CTA text='Join the program' href={applicationLinks.ignitebharat} />
     </main>
   );
