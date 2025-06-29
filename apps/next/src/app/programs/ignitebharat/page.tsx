@@ -20,10 +20,10 @@ const stats = [{
   label: "Students",
   value: "3000+"
 },
-{
-  label: "Projects",
-  value: "200+"
-}
+// {
+//   label: "Projects",
+//   value: "200+"
+// }
 ]
 
 
@@ -37,6 +37,7 @@ export default function IgniteBharatPage() {
         description="IgniteBharat is a nationwide program that brings entrepreneurship and innovation to schools & colleges across India, focusing on Tier 2, Tier 3 cities, and rural areas. It empowers students to become community-focused problem-solvers, innovators, and leaders through real-world, impact-driven learning."
         stats={stats}
       />
+      <Video link='https://www.youtube.com/embed/TxgxJGdRsJE' />
       <Timeline title="Timeline" steps={[
         { title: "Applications", description: "Submit your application to join IgniteBharat." },
         { title: "Bootcamp", description: "Participate in an intensive bootcamp to build skills and meet peers." },
@@ -44,9 +45,9 @@ export default function IgniteBharatPage() {
         { title: "Graduation", description: "Showcase your achievements and join the Skillzo alumni network." },
       ]} />
       <Impact outcomes={[
-        "Pilots conducted across schools in Bihar, Rajasthan, and Uttar Pradesh",
+        // "Pilots conducted across schools in Bihar, Rajasthan, and Uttar Pradesh",
         "3000+ students sensitized to entrepreneurship",
-        "200+ student-led project ideas initiated at the local level",
+        // "200+ student-led project ideas initiated at the local level",
         "Several projects implemented with mentor support"
       ]} />
       <HowToApply steps={[
@@ -54,7 +55,6 @@ export default function IgniteBharatPage() {
         { title: "Participate & Grow", description: "Join the program, attend sessions, and work on real projects with mentors and peers." },
         { title: "Post Program Mentorship", description: "Receive the certificate and post program mentorship." },
       ]} />
-      <Video link='https://www.youtube.com/embed/TxgxJGdRsJE' />
       <Testimonials links={links} />
       <CTA text='Join the program' href={applicationLinks.ignitebharat} />
     </main>

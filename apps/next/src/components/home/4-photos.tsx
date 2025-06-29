@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 export default function PhotosSection({images}: {images: string[]}) {
   return (
     <section className="px-4 md:px-12 py-8">
-      <h2 className="text-3xl font-extrabold mb-8 text-primary text-center">Media</h2>
+      <h2 className="text-3xl font-extrabold mb-8 text-primary text-center">Programs in action</h2>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}

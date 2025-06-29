@@ -1,9 +1,11 @@
+import CTA from '@/components/cta';
 import Hero from '@/components/programs/0-hero';
 import Timeline from '@/components/programs/2-timeline';
 import Impact from '@/components/programs/3-impact';
 // import HowToApply from '@/components/programs/4-how-to-apply';
 import Testimonials from '@/components/programs/5-testimonials';
 import ProgramImages from '@/components/programs/8-images';
+import { applicationLinks } from '@/consts';
 
 const links = [
   "https://www.instagram.com/p/DHdfgqvpiK6/?locale=zh_CN&img_index=4",
@@ -52,6 +54,8 @@ Organized in collaboration with E-Cell, IIT Guwahati — one of India's top tech
         "/images/sparkle/2.jpg",
       ]}  gridCols={3}/>
       <Testimonials links={links} />
+      <CTA href={applicationLinks.sparkle} />
+
     </main>
   );
 }

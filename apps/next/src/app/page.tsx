@@ -83,7 +83,7 @@ export default function Home() {
       <WhatWeDo />
       <HighlightedProgram />
       {/* <Photos /> */}
-      <Photos images={Array.from({ length: 29 }, (_, i) => `/images/home/${i + 1}.jpg`)} />
+      <Photos images={Array.from({ length: 28 }, (_, i) => `/images/home/${i + 1}.jpg`)} />
       <MentorsSection mentors={mentors} />
       <FeaturedStories />
       <Partners />

@@ -224,7 +224,7 @@ export function SocialIcons({ className }: { className?: ClassValue }) {
               d="M0.371094 5.58702V10.4343L12.4893 19.5229V3.7693L9.09617 1.22448C5.49708 -1.47181 0.371094 1.09118 0.371094 5.58702Z"
             />
           </svg>
-          <div className="absolute left-0 top-full z-0 size-full rounded-full bg-black transition-all duration-500 group-hover:top-0" />
+          <div className="absolute left-0 top-full z-0 size-full rounded-full bg-black transition-all duration-500 group-hover:top-0 group-hover:bg-red-600" />
         </Link>
         {/* LinkedIn */}
         <Link href={"https://www.linkedin.com/company/skillzoco/"} className={cn("group relative flex size-10 items-center justify-center overflow-hidden rounded-full bg-white shadow-md shadow-gray-200 transition-all duration-500")}
