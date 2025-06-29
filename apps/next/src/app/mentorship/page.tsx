@@ -27,9 +27,9 @@ export default function MentorshipPage() {
           Unlock Your Potential with 1:1 Mentorship
         </h1>
         <p className="text-base md:text-lg text-gray-200 mb-6 max-w-xl mx-auto">
-        What is it?
- Skillzo's personalised mentorship program connects high school students with university mentors, professionals, and startup founders for individual guidance and long-term growth.
- The first mentorship call is always scheduled with the Skillzo team — typically the founder — and then students are connected with other mentors as per their goals.
+          What is it?
+          Skillzo's personalised mentorship program connects high school students with university mentors, professionals, and startup founders for individual guidance and long-term growth.
+          The first mentorship call is always scheduled with the Skillzo team — typically the founder — and then students are connected with other mentors as per their goals.
         </p>
       </section>
 
@@ -104,8 +104,8 @@ export default function MentorshipPage() {
       <section className="px-4 py-12 max-w-3xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Hear from our students</h2>
         <p className="text-base text-gray-200 mb-8">
-        Hear from our mentees about the impact of the Skillzo mentorship program.
-                </p>
+          Hear from our mentees about the impact of the Skillzo mentorship program. 
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((t, i) => (
             <div key={i} className={`p-6 rounded-lg shadow-md text-left ${t.className}`}>
@@ -120,7 +120,7 @@ export default function MentorshipPage() {
       <section className="flex flex-col items-center justify-center text-center px-4 py-12">
         <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Ready to Get Started?</h2>
         <div className="flex flex-col md:flex-row gap-4">
-        <Link href={applicationLinks.mentorship.find} className="bg-primary text-black px-8 py-3 rounded-full font-bold text-lg shadow transition">
+          <Link href={applicationLinks.mentorship.find} className="bg-primary text-black px-8 py-3 rounded-full font-bold text-lg shadow transition">
             Find a Mentor
           </Link>
           <Link href={applicationLinks.mentorship.join} className="border border-primary text-white px-8 py-3 rounded-full font-bold text-lg shadow transition">
