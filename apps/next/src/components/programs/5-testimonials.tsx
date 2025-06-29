@@ -6,10 +6,10 @@ import dynamic from "next/dynamic";
 
 const InstagramEmbed = dynamic(() => import("react-social-media-embed").then(a => a.InstagramEmbed), { ssr: false})
 
-export default function Testimonials({ links }: { links: string[] }) {
+export default function Testimonials({ links, text="Community in action" }: { links: string[]; text?: string; }) {
   return (
     <section className=" mx-auto px-4 sm:px-6 py-12">
-    <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-yellow-400">Community in Action</h2>
+    <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-yellow-400">{text}</h2>
     <div className="flex flex-wrap gap-6 justify-center">
       {links.map(link => (
       <InstagramEmbed  key={link} url={link} width={328}   />

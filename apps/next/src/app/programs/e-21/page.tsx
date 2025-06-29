@@ -99,7 +99,7 @@ export default function IgniteBharatPage() {
         "/images/e-21/4.jpg",
       ]} />
       <MentorsSection mentors={mentors} text='And many more mentors...'/>
-      <Testimonials links={links} />
+      <Testimonials links={links} text='Social Media' />
       <CTA href={applicationLinks.e_21} />
     </main>
   );

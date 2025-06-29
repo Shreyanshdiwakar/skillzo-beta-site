@@ -39,7 +39,7 @@ export default function IgniteBharatPage() {
         { title: "Selection", description: "We carefully review applications and select students based on their passion and potential." },
         { title: "Participate & Grow", description: "Join the program, attend sessions, and work on real projects with mentors and peers." },
       ]} /> */}
-      <Testimonials links={links} />
+      <Testimonials text="Featured Stories" links={links} />
         
       <section className="py-16 px-4 md:px-12 lg:px-24 text-center">
         <h2 className="text-3xl md:text-4xl font-extrabold mb-6 font-cal-sans text-primary">Ready to explore or share?</h2>

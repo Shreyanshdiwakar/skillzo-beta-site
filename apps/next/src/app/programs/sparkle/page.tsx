@@ -53,7 +53,7 @@ Organized in collaboration with E-Cell, IIT Guwahati — one of India's top tech
         "/images/sparkle/9.jpg",
         "/images/sparkle/2.jpg",
       ]}  gridCols={3}/>
-      <Testimonials links={links} />
+      <Testimonials links={links} text="Social Media" />
       <CTA href={applicationLinks.sparkle} />
 
     </main>
