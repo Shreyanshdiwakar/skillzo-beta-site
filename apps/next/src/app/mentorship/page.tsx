@@ -26,7 +26,7 @@ export default function MentorshipPage() {
         <h1 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight tracking-wide font-cal-sans w-full sm:w-2/3 md:w-1/2">
           Unlock Your Potential with 1:1 Mentorship
         </h1>
-        <p className="text-base md:text-lg text-gray-200 mb-6 max-w-xl mx-auto">
+        <p className="text-base md:text-lg text-gray-200 mb-6 max-w-xl mx-auto"
           What is it?
           Skillzo's personalised mentorship program connects high school students with university mentors, professionals, and startup founders for individual guidance and long-term growth.
           The first mentorship call is always scheduled with the Skillzo team — typically the founder — and then students are connected with other mentors as per their goals.
@@ -120,7 +120,7 @@ export default function MentorshipPage() {
       <section className="flex flex-col items-center justify-center text-center px-4 py-12">
         <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Ready to Get Started?</h2>
         <div className="flex flex-col md:flex-row gap-4">
-          <Link href={applicationLinks.mentorship.find} className="bg-primary text-black px-8 py-3 rounded-full font-bold text-lg shadow transition">
+          <Link href={applicationLinks.mentorship.find} className="bg-primary text-black px-8 py-3 rounded-full font-bold text-lg shadow transition
             Find a Mentor
           </Link>
           <Link href={applicationLinks.mentorship.join} className="border border-primary text-white px-8 py-3 rounded-full font-bold text-lg shadow transition">
