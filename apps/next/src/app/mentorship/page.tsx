@@ -11,9 +11,9 @@ export default function MentorshipPage() {
       className: "border border-primary bg-background"
     },
     {
-      quote: '"My mentor provided me with practical advice and motivation that helped me launch my first project. Highly recommend!"',
-      author: "Skillzo Student",
-      className: "border border-primary bg-[var(--success-bg,rgba(0,0,0,0.5))]"
+      quote: '"As a school student founding a startup, mentorship is crucial, and getting it from someone who’s done it in school is the best part of Skillzo. Adarsh personally guides, advises, and edits like an elder brother. That kind of support? It’s the best thing ever."',
+      author: "Ayush Kumar Roy",
+      className: "border border-primary bg-primary"
     }
   ];
 
@@ -102,10 +102,10 @@ export default function MentorshipPage() {
 
       {/* Mentor Highlights & Student Success Section */}
       <section className="px-4 py-12 max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Success Stories</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">Hear from our students</h2>
         <p className="text-base text-gray-200 mb-8">
-          Hear from our mentors and mentees about the transformative impact of the Skillzo mentorship program.
-        </p>
+        Hear from our mentees about the impact of the Skillzo mentorship program.
+                </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((t, i) => (
             <div key={i} className={`p-6 rounded-lg shadow-md text-left ${t.className}`}>
