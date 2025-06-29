@@ -9,7 +9,7 @@ const links = [
   "https://www.instagram.com/p/DHdfgqvpiK6/?locale=zh_CN&img_index=4",
   "https://www.instagram.com/p/C1tdFNCvdmU/",
   "https://www.instagram.com/p/C3sJeqfy3MU/?img_index=1",
-  "https://www.instagram.com/p/DDwuKrXx7Rg/",
+  // "https://www.instagram.com/p/DDwuKrXx7Rg/",
   "https://www.instagram.com/p/DGdb0q-J7wa/",
 
 ]
@@ -22,7 +22,7 @@ export default function IgniteBharatPage() {
         tagline="Learn, build, and pitch like a founder — while you're still in school."
         description="  An intensive, solo entrepreneurship bootcamp for students in Grades 9 to 12. Sparkle guides students through a 3-stage startup journey — from idea to pitch — with mentorship, resources, and real-world exposure.
 Organized in collaboration with E-Cell, IIT Guwahati — one of India's top technical institutes known for fostering next-gen startup talent."
-        logos={["/images/partners/2.png"]}
+        logos={["/images/partners/10.png"]}
 
       />
       <Timeline title='Structure' steps={[
@@ -41,17 +41,16 @@ Organized in collaboration with E-Cell, IIT Guwahati — one of India's top tech
         { title: "Participate & Grow", description: "Join the program, attend sessions, and work on real projects with mentors and peers." },
       ]} /> */}
       <ProgramImages images={[
+        "/images/sparkle/7.jpg",
         "/images/sparkle/1.jpg",
-        "/images/sparkle/2.jpg",
         "/images/sparkle/3.jpg",
         "/images/sparkle/4.jpg",
         "/images/sparkle/5.jpg",
         "/images/sparkle/6.jpg",
-        "/images/sparkle/7.jpg",
         "/images/sparkle/8.jpg",
         "/images/sparkle/9.jpg",
-
-      ]} />
+        "/images/sparkle/2.jpg",
+      ]}  gridCols={3}/>
       <Testimonials links={links} />
     </main>
   );

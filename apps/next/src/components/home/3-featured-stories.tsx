@@ -41,14 +41,14 @@ export default function FeaturedStories() {
   ))}
 
       </div>
-      <div className="flex flex-col sm:flex-row gap-4">
+      {/* <div className="flex flex-col sm:flex-row gap-4">
         <Link href="#stories" className="bg-yellow-400 text-black px-8 py-3 rounded-full font-bold text-lg shadow hover:bg-yellow-500 transition">
           Read More Stories
         </Link>
         <Link href="#share-story" className="bg-neutral-800 border border-yellow-400 text-yellow-400 px-8 py-3 rounded-full font-bold text-lg shadow hover:bg-yellow-400 hover:text-black transition">
           Share Your Story
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 }

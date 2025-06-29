@@ -8,12 +8,11 @@ import { applicationLinks } from '@/consts';
 import Link from 'next/link';
 
 const links = [
-  "https://www.instagram.com/p/DJG_nxdR_gV/?img_index=1",
+  // "https://www.instagram.com/p/DJG_nxdR_gV/?img_index=1",
   "https://www.instagram.com/p/DK2RPnOgWoC/?img_index=1",
   "https://www.instagram.com/p/DJmjQdfK_tb/?img_index=1",
   "https://www.instagram.com/p/DLSPyfFgg_H/?img_index=1",
   "https://www.instagram.com/p/DLAaNzIMEdQ/?img_index=1",
-
 ]
 
 export default function IgniteBharatPage() {
@@ -46,13 +45,13 @@ export default function IgniteBharatPage() {
         <h2 className="text-3xl md:text-4xl font-extrabold mb-6 font-cal-sans text-primary">Ready to explore or share?</h2>
         <div className="flex flex-col sm:flex-row justify-center gap-6 mt-4">
           <Link
-            href="/stories"
+            href={applicationLinks.stories.explore}
             className="inline-block px-8 py-3 rounded-lg bg-primary text-primary-foreground font-bold text-lg shadow hover:bg-primary/90 transition"
           >
             Explore all stories
           </Link>
           <Link
-            href={applicationLinks.stories}
+            href={applicationLinks.stories.submit}
             className="inline-block px-8 py-3 rounded-lg border border-primary font-bold text-lg shadow hover:bg-primary/90 transition"
           >
             Submit your story

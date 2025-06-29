@@ -1,9 +1,11 @@
+import CTA from '@/components/cta';
 import Hero from '@/components/programs/0-hero';
 import Timeline from '@/components/programs/2-timeline';
 import Impact from '@/components/programs/3-impact';
 import HowToApply from '@/components/programs/4-how-to-apply';
 import Testimonials from '@/components/programs/5-testimonials';
 import Video from '@/components/programs/7-video';
+import { applicationLinks } from '@/consts';
 
 const links = [
   "https://www.instagram.com/p/C_CvHyMuM-S/?img_index=1",
@@ -32,7 +34,7 @@ export default function IgniteBharatPage() {
       <Hero 
         name="IgniteBharat" 
         tagline="Empowering students to ignite change"
-        description="IgniteBharat is a nationwide initiative that brings entrepreneurship and innovation directly to schools across India — especially in Tier 2, Tier 3 cities and rural regions. It helps students understand real-world problem-solving and build community-driven projects that spark change from the ground up. It’s not just about starting companies — it’s about igniting a mindset that transforms students into problem-solvers, innovators, and leaders in their own communities."
+        description="IgniteBharat is a nationwide program that brings entrepreneurship and innovation to schools & colleges across India, focusing on Tier 2, Tier 3 cities, and rural areas. It empowers students to become community-focused problem-solvers, innovators, and leaders through real-world, impact-driven learning."
         stats={stats}
       />
       <Timeline title="Timeline" steps={[
@@ -54,6 +56,7 @@ export default function IgniteBharatPage() {
       ]} />
       <Video link='https://www.youtube.com/embed/TxgxJGdRsJE' />
       <Testimonials links={links} />
+      <CTA text='Join the program' href={applicationLinks.ignitebharat} />
     </main>
   );
 }

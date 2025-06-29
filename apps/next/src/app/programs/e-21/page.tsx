@@ -42,8 +42,20 @@ const mentors = [
     role: "WEF Top Innovator",
     img: "/images/e-21/mentors/abheejit-k.jpg",
     linkedin: "https://www.linkedin.com/in/abheejitk/"
+  },
+  {
+    name: "Shashank Verma",
+    role: "Business Coach",
+    img: "/images/e-21/mentors/shashank-verma.jpg",
+    linkedin: "https://www.linkedin.com/in/shashank-verma-764786/"
+  },
+  {
+    name: "Aaquib Hussain",
+    role: "Founding Partner at Freeflow Ventures",
+    img: "/images/e-21/mentors/aaquib-hussain.jpg",
+    linkedin: "https://www.linkedin.com/in/aaquibh/"
   }
-];
+]
 
 
 export default function IgniteBharatPage() {
@@ -57,7 +69,7 @@ export default function IgniteBharatPage() {
           label: "Students Reached",
           value: "1,500+"
         }]}
-        logos={["/images/partners/10.png"]}
+        logos={["/images/partners/3.png"]}
       />
       {/* <Timeline steps={[
         { title: "Applications", description: "Submit your application to join IgniteBharat." },

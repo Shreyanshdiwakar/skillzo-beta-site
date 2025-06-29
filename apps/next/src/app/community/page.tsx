@@ -3,6 +3,7 @@ import StatsStrip from "@/components/stats-strip";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Trophy } from "lucide-react";
+import ProgramImages from "@/components/programs/8-images";
 
 const InstagramEmbed = dynamic(() => import("react-social-media-embed").then(a => a.InstagramEmbed), { ssr: false})
 
@@ -11,11 +12,11 @@ export default function CommunityPage() {
 
   const stats = [{
     label: "Active Members",
-    value: "600+"
+    value: "750+"
   },
   {
-    label: "Cities",
-    value: "100+"
+    label: "States",
+    value: "25+"
   }, {
     value: "Zero Cost",
     label: "Absolutely free to join"
@@ -84,6 +85,8 @@ export default function CommunityPage() {
           </div>
         </div>
       </section>
+
+        
 
       {/* Section 3: Why Join? */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
@@ -166,6 +169,37 @@ export default function CommunityPage() {
         <div className="bg-neutral-900 border border-yellow-400/20 rounded-xl shadow-md shadow-yellow-400/10 p-6 text-center">
           <p className="text-gray-200 text-lg mb-2">This is a growth-first, safe space.</p>
           <p className="text-gray-400">No spam. No distractions. Just support, access, and action.</p>
+        </div>
+      </section>
+
+      {/* Community Gallery Section */}
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-yellow-400">Community Gallery</h2>
+        {/* First two images in a row */}
+        <div className="flex flex-col md:flex-row gap-8 mb-8">
+          {[1, 2].map((n) => (
+            <div key={n} className="w-full md:w-1/2 rounded-lg overflow-hidden bg-muted">
+              <img
+                src={`/images/community/${n}.jpg`}
+                alt={`Community photo ${n}`}
+                className="w-full h-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+        {/* Remaining images as a column */}
+        <div className="flex flex-col gap-8">
+          {Array.from({ length: 5 }, (_, i) => (
+            <div key={i + 3} className="w-full rounded-lg overflow-hidden bg-muted">
+              <img
+                src={`/images/community/${i + 3}.jpg`}
+                alt={`Community photo ${i + 3}`}
+                className="w-full h-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
       </section>
     </main>

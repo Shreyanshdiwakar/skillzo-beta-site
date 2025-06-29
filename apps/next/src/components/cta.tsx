@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function CTA({text, href, heading="Ready to take the next step?"} : {text: string; href: string; heading?: string;}) {
+export default function CTA({text, href, text2="Join the community", href2="/joincommunity", heading="Ready to take the next step?"} : {text: string; href: string; heading?: string; text2?: string; href2?: string;}) {
   return (
     <section className="py-4 px-4 md:px-12 lg:px-24 text-center">
       <h2 className="text-3xl md:text-4xl font-extrabold mb-6 font-cal-sans text-primary">{heading}</h2>
@@ -11,12 +11,12 @@ export default function CTA({text, href, heading="Ready to take the next step?"}
         >
           {text}
         </Link>
-        {/* <Link
-          href="/apply"
+        <Link
+          href={href2}
           className="inline-block px-8 py-3 rounded-lg bg-primary text-primary-foreground font-bold text-lg shadow hover:bg-primary/90 transition"
         >
-          Apply to a Program
-        </Link> */}
+          {text2}
+        </Link>
       </div>
     </section>
   );
