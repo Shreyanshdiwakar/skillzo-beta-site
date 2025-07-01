@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { Rocket } from "lucide-react";
 
 const features = [
   {
@@ -7,7 +8,9 @@ const features = [
     description:
       "Curated hands-on programs and workshops designed to turn ideas into real projects and startups.",
     icon: (
-      <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><circle cx="18" cy="18" r="16" fill="#FFD600" /><path d="M12 18h12M18 12v12" stroke="#000" strokeWidth="2.5" strokeLinecap="round" /></svg>
+      <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-yellow-300">
+        <Rocket size={24} color="#18181B" strokeWidth={2.5} />
+      </span>
     ),
   },
   {

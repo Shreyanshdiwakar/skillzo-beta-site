@@ -4,7 +4,7 @@ import StatsStrip from "../stats-strip";
 
 export default function Hero() {
     const stats = [
-        { value: "19,500+", label: "Students" },
+        { value: "20,000+", label: "Students" },
         // { value: "1,500+", label: "Mentors" },
         { value: "25+", label: "States" },
         { value: "7+", label: "Programs" }
@@ -23,7 +23,7 @@ export default function Hero() {
                         <span className="bg-gradient-to-r from-yellow-300 via-pink-400  to-yellow-400 bg-clip-text text-transparent">ambitious</span> Teens
                     </h1>
                     <p className="text-base md:text-lg text-gray-200 mb-8 max-w-xl mx-auto">
-                    Skillzo is a impact first platform empowering high school students across India with exposure, experience, and networks to thrive in the 21st century.
+                    Skillzo is an impact first platform empowering high school students across India with exposure, experience, and networks to thrive in the 21st century.
                     </p>
                     <Link
                         href="/joincommunity"
