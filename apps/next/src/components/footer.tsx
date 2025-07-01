@@ -24,7 +24,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-3 text-primary">Quick Links</h3>
             <ul className="space-y-2 text-base">
               <li><Link href="/" className="hover:text-primary transition">Home</Link></li>
-              <li><Link href="/programs" className="hover:text-primary transition">Programs</Link></li>
+              {/* <li><Link href="/programs" className="hover:text-primary transition">Programs</Link></li> */}
               <li><Link href="/community" className="hover:text-primary transition">Community</Link></li>
               <li><Link href="/mentorship" className="hover:text-primary transition">Mentorship</Link></li>
               <li><Link href="/about" className="hover:text-primary transition">About</Link></li>

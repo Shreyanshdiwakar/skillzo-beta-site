@@ -18,12 +18,13 @@ type  NavLink =  {
 
 const navLinks : NavLink[] = [
   { name: "Programs", dropdown: [
-    { name: "Community", href: "/community", desc: "A curated WhatsApp-based peer community for daily opportunities, mentorship, and real-time updates." },
-    { name: "Skillzo Stories", href: "/programs/skillzo-stories", desc: "Inspiring the next generation." },
+    // { name: "Community", href: "/community", desc: "A curated WhatsApp-based peer community for daily opportunities, mentorship, and real-time updates." },
     { name: "Sparkle", href: "/programs/sparkle", desc: "Learn, build, and pitch like a founder — while you're still in school." },
     { name: "IgniteBharat", href: "/programs/ignitebharat", desc: "Turning grassroots passion into entrepreneurial action." },
     { name: "E-21", href: "/programs/e-21", desc: "Unlock your entrepreneurial spirit in school." },
     { name: "1:1 Mentorship", href: "/mentorship", desc: "Talk to someone who's been there." },
+    { name: "Skillzo Stories", href: "/programs/skillzo-stories", desc: "Inspiring the next generation." },
+
   ] },
   { name: "Community", href: "/community"},
   { name: "About", href: "/about" },
