@@ -72,6 +72,30 @@ const mentors = [
     img: "/images/mentors/gaunjan-taneja.jpg",
     linkedin: "https://www.linkedin.com/in/gunjantaneja11/",
   },
+  {
+    name: "Dr. Ananta Singh Raghuvanshi",
+    role: "Independent Board Director, NAREDCO Mahi (Founder & Chairperson)",
+    img: "/images/mentors/ananta-singh.jpg",
+    linkedin: "https://www.linkedin.com/in/dr-ananta-singh-raghuvanshi-mrics-40323364/",
+  },
+  {
+    name: "Chanakya Shah",
+    role: "Founder, Holistique Business Consulting Pvt. Ltd.",
+    img: "/images/mentors/chanakya-shah.jpg",
+    linkedin: "https://www.linkedin.com/in/chanakya-shah/",
+  },
+  {
+    name: "Priya Shah",
+    role: "Co-Founder, Holistique Business Consulting Pvt. Ltd.",
+    img: "/images/mentors/priya-shah.jpg",
+    linkedin: "https://www.linkedin.com/in/priya-shah-0826784/",
+  },
+  {
+    name: "Rahul Bapat",
+    role: "CIO, Creditsafe Japan",
+    img: "/images/mentors/rahul-bapat.jpg",
+    linkedin: "https://www.linkedin.com/in/rahul-bapat-6851a211/",
+  },
 
 ];
 
