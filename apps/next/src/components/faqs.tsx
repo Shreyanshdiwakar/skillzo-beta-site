@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import Link from "next/link";
 import CTA from "./cta";
+import { applicationLinks } from "@/consts";
 
 const faqData = [
   {
@@ -122,7 +123,7 @@ const faqData = [
       {
         q: "Can I volunteer or mentor with Skillzo?",
         a: (
-          <>Absolutely. We're always looking for mentors, speakers, facilitators, and volunteers. Fill out our <Link href="/get-involved" className="underline text-primary">Get Involved</Link> form and we'll connect with you.</>
+          <>Absolutely. We're always looking for mentors, speakers, facilitators, and volunteers. Fill out our <Link href={applicationLinks.mentorship.join} className="underline text-primary">Get Involved</Link> form and we'll connect with you.</>
         ),
       },
     ],
@@ -169,7 +170,7 @@ export default function FAQs() {
           </Accordion>
         </div>
       ))}
-      <CTA heading="Question not found?" text="Contact us" href="/contact" />
+      <CTA show2ndButton={false} heading="Question not found?" text="Contact us" href="/contact" />
     </section>
   );
 }
