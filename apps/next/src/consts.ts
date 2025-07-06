@@ -12,4 +12,4 @@ export const applicationLinks = {
     ignitebharat: "https://wa.me/917700824222?text=Hi%2C%20I%20want%20to%20register%20for%20IgniteBharat.%0AHere%E2%80%99s%20my%20profile%3A%20%5Byour%20LinkedIn%2Fbio%5D%0AMy%20grade%3A%20%5Byour%20grade%5D%0AMy%20school%2Fcollege%3A%20%5Byour%20institution%5D%0AMy%20city%20%26%20state%3A%20%5Byour%20location%5D",
     sparkle: "https://wa.me/917700824222?text=Hi%2C%20I%20want%20to%20register%20for%20the%20next%20Sparkle.%0AHere%E2%80%99s%20my%20profile%3A%20%5Byour%20LinkedIn%2Fbio%5D%0AMy%20grade%3A%20%5Byour%20grade%5D%0AMy%20school%3A%20%5Byour%20school%5D%0AMy%20city%20%26%20state%3A%20%5Byour%20location%5D",
     e_21: "https://wa.me/917700824222?text=Hi%2C%20I%20want%20to%20register%20for%20the%20next%20E-21.%0AHere%E2%80%99s%20my%20profile%3A%20%5Byour%20LinkedIn%2Fbio%5D%0AMy%20grade%3A%20%5Byour%20grade%5D%0AMy%20school%3A%20%5Byour%20school%5D%0AMy%20city%20%26%20state%3A%20%5Byour%20location%5D"
-}
+} as const;
