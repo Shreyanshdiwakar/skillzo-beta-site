@@ -1,10 +1,10 @@
 {
-  "name": "skillzo",
+  "name": "web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
+    "dev": "next dev",
+    "build": "pnpm --filter @skillzo/db db:deploy && pnpm --filter @skillzo/db db:generate && next build",
     "start": "next start",
     "lint": "next lint",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
@@ -29,7 +29,8 @@
     "resend": "^4.6.0",
     "simple-icons": "^15.3.0",
     "swiper": "^11.2.10",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "@skillzo/db": "workspace:*"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

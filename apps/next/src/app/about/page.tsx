@@ -76,21 +76,57 @@ import { useRef } from "react";
 //   },
 // ];
 
-// const teamMembers = [
-//   {
-//     name: `Priyanshu Kumar`,
-//     position: `Founder's Office`,
-//     school: `IIT Guwahati`,
-//     img: `/about/team/priyanshu-kumar.jpg`,
-//   },
-//   {
-//     name: "Shreyansh Diwakar",
-//     position: "Backend Developer",
-//     school: "TBD",
-//     img: "/about/team/shreyansh-diwakar.JPG"
-//   }
-//   // Add more team members as needed
-// ];
+const teamMembers = [
+  {
+    name: `Priyanshu Kumar`,
+    position: `Founder's Office`,
+    school: `IIT Guwahati`,
+    img: `/about/team/priyanshu-kumar.jpg`,
+  },
+  {
+    name: "Shreyansh Diwakar",
+    position: "Backend Developer",
+    school: "",
+    img: "/about/team/shreyansh-diwakar.JPG"
+  },
+  {
+    name: "Anushka Das",
+    position: "Founder's Office",
+    school: "",
+    img: "/about/team/anushka-das.jpg"
+  },
+  {
+    name: "Sanjith Shyam",
+    position: "Growth Associate",
+    school: "",
+    img: "/about/team/sanjith-shyam.jpg"
+  },
+  {
+    name: "Aadil Chawla",
+    position: "Intern",
+    school: "",
+    img: "/about/team/aadil-chawal.jpg"
+  },
+  {
+    name: "Anika Srivastava",
+    position: "Intern",
+    school: "",
+    img: "/about/team/anika-srivastava.jpg"
+  },
+  {
+    name: "Jassimrat Bhatia",
+    position: "Intern",
+    school: "",
+    img: "/about/team/jassimrat-bhatia.jpg"
+  },
+  {
+    name: "Rhea Divekar",
+    position: "Intern",
+    school: "",
+    img: "/about/team/rhea-divekar.jpg"
+  }
+  // Add more team members as needed
+];
 
 export default function AboutPage() {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -199,17 +235,17 @@ export default function AboutPage() {
           {/* Core Team Section */}
           <section className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl flex flex-col items-center my-8 md:my-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-8" style={{ color: "#ffcc00" }}>Core Team</h2>
-            <p className="text-center">Coming Soon!</p>
+            {/* <p className="text-center">Coming Soon!</p> */}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full    justify-center items-center">
-              {/* {teamMembers.map((member, i) => (
+              {teamMembers.map((member, i) => (
                 <div key={i} className="flex flex-col items-center text-center transition-transform duration-200 ease-out hover:scale-105 hover:shadow-lg hover:shadow-yellow-400/10 gap-1">
                   <Image unoptimized src={member.img} width={96} height={96} alt="Team Member" className="w-24 h-24 rounded-full object-cover mb-3" />
                   <div className="font-bold font-heading text-primary">{member.name}</div>
                   <div className="text-white text-sm font-semibold">{member.position}</div>
                   <div className="text-gray-400 text-xs font-body">{member.school}</div>
                 </div>
-              ))} */}
+              ))} 
             </div>
           </section>
           {/* Core Team highlight left */}
