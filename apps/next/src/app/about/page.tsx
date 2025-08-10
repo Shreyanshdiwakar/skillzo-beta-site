@@ -234,7 +234,7 @@ export default function AboutPage() {
           </div>
           {/* Core Team Section */}
           <section className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl flex flex-col items-center my-8 md:my-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-8" style={{ color: "#ffcc00" }}>Core Team</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading mb-8" style={{ color: "#ffcc00" }}>Team</h2>
             {/* <p className="text-center">Coming Soon!</p> */}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full    justify-center items-center">
