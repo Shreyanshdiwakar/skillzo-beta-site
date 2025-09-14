@@ -77,6 +77,12 @@ import { useRef } from "react";
 // ];
 
 const teamMembers = [
+      {
+    name: "Anay Paraswani",
+    position: "Web Developer",
+    school: "Jayshree Periwal International School",
+    img: "/about/team/anay-paraswani.jpg"
+  },
   {
     name: `Priyanshu Kumar`,
     position: `Founder's Office`,
@@ -124,7 +130,14 @@ const teamMembers = [
     position: "Intern",
     school: "",
     img: "/about/team/rhea-divekar.jpg"
-  }
+  },
+    {
+    name: "Srishti Purohit",
+    position: "Design",
+    school: "",
+    img: "/about/team/srishti-purohit.jpg"
+  },
+
   // Add more team members as needed
 ];
 
