@@ -6,8 +6,15 @@ import Link from 'next/link';
 export default function ChatbotPage() {
   const [iframeHeight, setIframeHeight] = useState('100vh');
   const [isLoading, setIsLoading] = useState(true);
+  const [chatbotUrl, setChatbotUrl] = useState('');
 
   useEffect(() => {
+    // Set chatbot URL based on environment
+    const url = process.env.NODE_ENV === 'production' 
+      ? process.env.NEXT_PUBLIC_CHATBOT_URL || 'https://your-chatbot-url.vercel.app'
+      : 'http://localhost:3001';
+    setChatbotUrl(url);
+
     // Adjust iframe height based on viewport
     const adjustHeight = () => {
       const navbarHeight = 80; // Approximate navbar height
@@ -22,6 +29,10 @@ export default function ChatbotPage() {
   }, []);
 
   const handleIframeLoad = () => {
+    setIsLoading(false);
+  };
+
+  const handleIframeError = () => {
     setIsLoading(false);
   };
 
@@ -60,16 +71,39 @@ export default function ChatbotPage() {
               </div>
             )}
             
+            {/* Error State */}
+            {!isLoading && !chatbotUrl.includes('localhost') && process.env.NODE_ENV === 'production' && (
+              <div className='flex items-center justify-center p-8' style={{ height: iframeHeight }}>
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mx-auto mb-4'>
+                    <svg className='w-8 h-8 text-yellow-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z' />
+                    </svg>
+                  </div>
+                  <h3 className='text-xl font-semibold mb-2'>Chatbot Temporarily Unavailable</h3>
+                  <p className='text-muted-foreground mb-4'>
+                    Our AI assistant is currently being deployed. Please check back soon!
+                  </p>
+                  <Link href='/' className='inline-flex items-center px-4 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition-colors'>
+                    Return to Home
+                  </Link>
+                </div>
+              </div>
+            )}
+            
             {/* Iframe */}
-            <iframe
-              src='http://localhost:3001'
-              className='w-full border-0'
-              style={{ height: iframeHeight }}
-              title='Skillzo AI Career Assistant'
-              allow='camera; microphone; geolocation'
-              loading='lazy'
-              onLoad={handleIframeLoad}
-            />
+            {chatbotUrl && (
+              <iframe
+                src={chatbotUrl}
+                className='w-full border-0'
+                style={{ height: iframeHeight }}
+                title='Skillzo AI Career Assistant'
+                allow='camera; microphone; geolocation'
+                loading='lazy'
+                onLoad={handleIframeLoad}
+                onError={handleIframeError}
+              />
+            )}
           </div>
         </div>
         
@@ -87,7 +121,7 @@ export default function ChatbotPage() {
                 <path fillRule='evenodd' d='M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z' clipRule='evenodd' />
               </svg>
               <span>Personalized Advice</span>
-            </div>
+            </div>  
             <div className='flex items-center gap-2'>
               <svg className='w-4 h-4 text-purple-500' fill='currentColor' viewBox='0 0 20 20'>
                 <path fillRule='evenodd' d='M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z' clipRule='evenodd' />
