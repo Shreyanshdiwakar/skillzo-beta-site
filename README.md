@@ -1,8 +1,82 @@
-﻿# Skillzo - AI Career Assistant Integration
+﻿# Skillzo AI Chatbot - Complete Website with AI Assistant
 
-A comprehensive platform for high school students featuring integrated AI career guidance and mentorship opportunities.
+A modern, full-featured educational website with an integrated AI-powered career counseling chatbot built with Next.js 15, OpenAI, and Tailwind CSS.
 
-##  AI Chatbot Integration
+## 🚀 Features
+
+### 🤖 AI-Powered Chatbot
+- **Career Planning**: Get personalized career guidance and path recommendations
+- **College Decisions**: Navigate college choices and application processes
+- **Academic Support**: Receive help with study strategies and coursework
+- **Personal Growth**: Discuss personal challenges and development
+- **Skill Development**: Learn about building valuable skills
+- **General Chat**: Open conversation about anything
+
+### 🎨 Beautiful UI/UX
+- Modern gradient design with professional styling
+- Responsive layout that works on all devices
+- Smooth animations and transitions
+- Topic selection with intuitive icons
+- Real-time message interface
+
+### 🧠 Smart AI Integration
+- Powered by OpenAI GPT-3.5 Turbo
+- Context-aware responses
+- Specialized career counseling prompts
+- Real-time chat functionality
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15.3.4, React 19, TypeScript
+- **Styling**: Tailwind CSS 4, Shadcn/UI components
+- **AI**: OpenAI API (GPT-3.5 Turbo)
+- **Icons**: Lucide React
+- **Package Manager**: pnpm
+- **Deployment**: Vercel-ready
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- pnpm
+- OpenAI API key
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Shreyanshdiwakar/skillzo-final-bot.git
+   cd skillzo-final-bot
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cd apps/next
+   cp .env.example .env.local
+   ```
+   
+   Add your OpenAI API key to `.env.local`:
+   ```env
+   OPENAI_API_KEY=your_openai_api_key_here
+   NODE_ENV=development
+   ```
+
+4. **Start the development server**
+   ```bash
+   cd ../../
+   pnpm dev
+   ```
+
+5. **Open your browser**
+   - Main website: `http://localhost:3000`
+   - Chatbot: `http://localhost:3000/chatbot`
+
+## 🤖 AI Chatbot Integration
 
 This repository contains the complete Skillzo website with an integrated AI Career Assistant chatbot that provides personalized career guidance to students.
 
