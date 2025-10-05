@@ -27,7 +27,7 @@ export default function ChatbotPage() {
         
         {/* Chatbot Container */}
         <div className="w-full max-w-6xl mx-auto">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card" style={{ height: '600px' }}>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border bg-card" style={{ height: '750px' }}>
             <ChatInterface />
           </div>
         </div>

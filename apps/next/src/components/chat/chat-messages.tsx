@@ -4,15 +4,52 @@ import { useEffect, useRef } from "react"
 import { Bot, User, MessageCircle } from "lucide-react"
 import type { Message } from "./chat-interface"
 
+// Component to format message content with basic markdown-like formatting
+function FormattedMessage({ content }: { content: string }) {
+  // Simple formatting function to handle basic markdown
+  const formatText = (text: string) => {
+    // Handle bold text **text**
+    let formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    
+    // Handle bullet points
+    formatted = formatted.replace(/^• (.*$)/gim, '<li class="ml-4 list-disc">$1</li>')
+    formatted = formatted.replace(/^- (.*$)/gim, '<li class="ml-4 list-disc">$1</li>')
+    
+    // Handle line breaks
+    formatted = formatted.replace(/\n\n/g, '</p><p class="mt-4">')
+    formatted = formatted.replace(/\n/g, '<br/>')
+    
+    // Wrap in paragraph if it doesn't already have paragraph tags
+    if (!formatted.includes('<p>') && !formatted.includes('<li>')) {
+      formatted = `<p>${formatted}</p>`
+    } else if (formatted.includes('<li>')) {
+      // Wrap lists in ul tags
+      formatted = formatted.replace(/(<li.*?<\/li>)/g, '<ul class="space-y-1">$1</ul>')
+    }
+    
+    return formatted
+  }
+
+  return (
+    <div 
+      className="formatted-message"
+      dangerouslySetInnerHTML={{ __html: formatText(content) }}
+    />
+  )
+}
+
 interface ChatMessagesProps {
   messages: Message[]
 }
 
 export function ChatMessages({ messages }: ChatMessagesProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+    if (messagesEndRef.current && scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight
+    }
   }, [messages])
 
   if (messages.length === 0) {
@@ -35,7 +72,7 @@ export function ChatMessages({ messages }: ChatMessagesProps) {
   }
 
   return (
-    <div className="h-full overflow-y-auto">
+    <div ref={scrollContainerRef} className="h-full overflow-y-auto scroll-smooth">
       <div className="mx-auto max-w-3xl space-y-6 px-4 py-8 pb-32 sm:px-6">
         {messages.map((message) => (
           <div key={message.id} className="group flex gap-4 animate-in fade-in slide-in-from-bottom-2 duration-300">
@@ -48,8 +85,8 @@ export function ChatMessages({ messages }: ChatMessagesProps) {
             </div>
 
             <div className="flex-1 space-y-2 pt-1">
-              <div className="text-[15px] leading-relaxed text-foreground prose prose-sm max-w-none dark:prose-invert">
-                <div className="whitespace-pre-wrap">{message.content}</div>
+              <div className="text-[15px] leading-relaxed text-foreground prose prose-sm max-w-none dark:prose-invert prose-headings:text-foreground prose-strong:text-foreground prose-p:text-foreground prose-li:text-foreground">
+                <FormattedMessage content={message.content} />
               </div>
             </div>
           </div>
