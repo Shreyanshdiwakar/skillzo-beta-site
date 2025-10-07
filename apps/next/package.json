@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "pnpm --filter @skillzo/db db:deploy && pnpm --filter @skillzo/db db:generate && next build",
+    "build": "next build",
+    "build:with-db": "pnpm --filter @skillzo/db db:deploy && pnpm --filter @skillzo/db db:generate && next build",
     "start": "next start",
     "lint": "next lint",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",

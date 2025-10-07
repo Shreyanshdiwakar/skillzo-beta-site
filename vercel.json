@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "buildCommand": "cd apps/next && pnpm build",
+  "outputDirectory": "apps/next/.next",
+  "installCommand": "pnpm install",
+  "devCommand": "cd apps/next && pnpm dev",
+  "rootDirectory": "./",
+  "env": {
+    "NEXT_PUBLIC_CHATBOT_URL": "@next-public-chatbot-url"
+  },
+  "build": {
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1"
+    }
+  },
+  "functions": {
+    "apps/next/src/app/api/chat/route.ts": {
+      "maxDuration": 30
+    }
+  }
+}
