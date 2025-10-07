@@ -125,7 +125,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/anayp/skillzo/packages/db/generated/prisma",
+      "value": "C:\\Users\\shrey\\skillzo-final-bot-for-website-\\packages\\db\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -134,17 +134,16 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "debian-openssl-3.0.x",
+        "value": "windows",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/anayp/skillzo/packages/db/schema.prisma",
+    "sourceFilePath": "C:\\Users\\shrey\\skillzo-final-bot-for-website-\\packages\\db\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../..",
   "clientVersion": "6.10.0",
