@@ -1,0 +1,7 @@
+packages/db/
+apps/vite/
+hackathons/
+.env*
+*.log
+node_modules
+.DS_Store
