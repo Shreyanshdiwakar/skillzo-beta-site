@@ -1,5 +1,19 @@
 {
-  "buildCommand": "cd apps/next && pnpm build",
-  "outputDirectory": "apps/next/.next",
+  "version": 2,
+  "builds": [
+    {
+      "src": "apps/next/next.config.ts",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": ".next"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "apps/next/$1"
+    }
+  ],
   "installCommand": "pnpm install"
 }
